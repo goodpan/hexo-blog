@@ -1,0 +1,7 @@
+{
+  "name": "hello",
+  "version": "0.0.0",
+  "description": "hello hexo theme",
+  "private": true,
+  "dependencies": {}
+}
