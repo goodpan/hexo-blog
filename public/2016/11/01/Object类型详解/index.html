@@ -1,0 +1,679 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="引用类型引用类型的值（对象）是引用类型的一个实例。在ECMAScript中，引用类型是一种数据结构，用于将数据和功能组织在一起。引用类型有时候也被成为对象定义，因为它们描述的是一类对象所具有的属性和方法。
+对象是某个特定引用类型的实例。新对象是使用new操作符后跟一个构造函数来创建的。构造函数本身就是一个函数，只不过该函数是出于创建新对象的目的而定义的。1var person = new Obje">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Object类型详解">
+<meta property="og:url" content="http://yoursite.com/2016/11/01/Object类型详解/index.html">
+<meta property="og:site_name" content="goodpan">
+<meta property="og:description" content="引用类型引用类型的值（对象）是引用类型的一个实例。在ECMAScript中，引用类型是一种数据结构，用于将数据和功能组织在一起。引用类型有时候也被成为对象定义，因为它们描述的是一类对象所具有的属性和方法。
+对象是某个特定引用类型的实例。新对象是使用new操作符后跟一个构造函数来创建的。构造函数本身就是一个函数，只不过该函数是出于创建新对象的目的而定义的。1var person = new Obje">
+<meta property="og:updated_time" content="2016-11-01T02:46:33.537Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Object类型详解">
+<meta name="twitter:description" content="引用类型引用类型的值（对象）是引用类型的一个实例。在ECMAScript中，引用类型是一种数据结构，用于将数据和功能组织在一起。引用类型有时候也被成为对象定义，因为它们描述的是一类对象所具有的属性和方法。
+对象是某个特定引用类型的实例。新对象是使用new操作符后跟一个构造函数来创建的。构造函数本身就是一个函数，只不过该函数是出于创建新对象的目的而定义的。1var person = new Obje">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6343434069862254000',
+      author: '文仔'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/01/Object类型详解/"/>
+
+
+  <title> Object类型详解 | goodpan </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">goodpan</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Object类型详解
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-01T09:15:29+08:00" content="2016-11-01">
+              2016-11-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h1><p>引用类型的值（对象）是引用类型的一个实例。在ECMAScript中，引用类型是一种数据结构，用于将数据和功能组织在一起。引用类型有时候也被成为对象定义，因为它们描述的是一类对象所具有的属性和方法。</p>
+<p>对象是某个特定引用类型的实例。新对象是使用new操作符后跟一个构造函数来创建的。构造函数本身就是一个函数，只不过该函数是出于创建新对象的目的而定义的。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var person = new Object();</div></pre></td></tr></table></figure></p>
+<p>这行代码创建了一个Object新实例，然后把该实例保存在了变量person中。使用的构造函数式Object，它只为新对象定义了默认的属性和方法。ECMAScript提供了很多原生引用类型（例如Object)，以便开发人员用以实现常见的计算任务。</p>
+<h1 id="Object实例的创建"><a href="#Object实例的创建" class="headerlink" title="Object实例的创建"></a>Object实例的创建</h1><ol>
+<li><p>new操作符方式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var person = new Object();</div><div class="line">person.name = <span class="string">"Nicholas"</span>;</div><div class="line">person.age = 29;</div></pre></td></tr></table></figure>
+</li>
+<li><p>对象字面量方式<br>对象字面量是对象定义的一个简写形式，目的在于简化创建包含大量属性的对象的过程。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var person = &#123;</div><div class="line">  name:<span class="string">"Nicholas"</span>,</div><div class="line">  age:29</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在对象字面量语法中，属性名也可以使用字符串。<br>使用对象字面量语法，可以通过’.’的方式访问对象属性，也可以使用”[属性名]”来访访问属性。从功能上看，这二者没有区别。但”[]”的优点是可以通过变量来访问属性：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var propertyName = <span class="string">"name"</span>;</div><div class="line">alert(person[propertyName]);//<span class="string">"Nicholas"</span></div></pre></td></tr></table></figure></p>
+<p>如果属性名中包含会导致语法错误的字符，或者属性名使用的是关键字或者保留字，也可以使用方括号表示法。</p>
+<h1 id="Object属性"><a href="#Object属性" class="headerlink" title="Object属性"></a>Object属性</h1><h2 id="Constructor"><a href="#Constructor" class="headerlink" title="Constructor"></a>Constructor</h2><p>保存用于创建当前对象的函数。</p>
+<h1 id="Object方法"><a href="#Object方法" class="headerlink" title="Object方法"></a>Object方法</h1><h2 id="Object-assign"><a href="#Object-assign" class="headerlink" title="Object.assign()"></a>Object.assign()</h2><p>Object.assign函数是ES2015的内容，使用该函数我们可以快速的复制一个或者多个对象到目标对象中<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.assign(target, ...sources)</div></pre></td></tr></table></figure></p>
+<h3 id="函数原型"><a href="#函数原型" class="headerlink" title="函数原型"></a>函数原型</h3><p>函数参数为一个目标对象（该对象作为最终的返回值）,源对象(此处可以为任意多个)。通过调用该函数可以拷贝所有可被枚举的自有属性值到目标对象中。<br>这里我们需要强调的三点是：</p>
+<ol>
+<li>可被枚举的属性</li>
+<li>自有属性</li>
+<li>string或者Symbol类型是可以被直接分配的<br>拷贝过程中将调用源对象的getter方法，并在target对象上使用setter方法实现目标对象的拷贝。</li>
+</ol>
+<h3 id="函数实例"><a href="#函数实例" class="headerlink" title="函数实例"></a>函数实例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var o1 = &#123; a: 1 &#125;;</div><div class="line">var o2 = &#123; b: 2 &#125;;</div><div class="line">var o3 = &#123; c: 3 &#125;;</div><div class="line"></div><div class="line">var obj = Object.assign(o1, o2, o3);</div><div class="line">console.log(obj); // &#123; a: 1, b: 2, c: 3 &#125;</div><div class="line">console.log(o1);  // &#123; a: 1, b: 2, c: 3 &#125;, target object itself is changed.</div></pre></td></tr></table></figure>
+<p>最开始的o1因为设置为target，则调用其setter方法设置了其他对象的属性到自身。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var obj = Object.create(&#123; foo: 1 &#125;, &#123; // foo is an inherit property.</div><div class="line">  bar: &#123;</div><div class="line">    value: 2  // bar is a non-enumerable property.</div><div class="line">  &#125;,</div><div class="line">  baz: &#123;</div><div class="line">    value: 3,</div><div class="line">    enumerable: <span class="literal">true</span>  // baz is an own enumerable property.</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">var copy = Object.assign(&#123;&#125;, obj);</div><div class="line">console.log(copy); // &#123; baz: 3 &#125;</div></pre></td></tr></table></figure></p>
+<p>我们自定义了一些对象，这些对象有一些包含了不可枚举的属性,另外注意使用 Object.defineProperty 初始化的对象默认是不可枚举的属性。对于可枚举的对象我们可以直接使用Object.keys()获得,或者使用for-in循环遍历出来.<br>对于不可枚举的属性，使用Object.assign的时候将被自动忽略。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var target = Object.defineProperty(&#123;&#125;, <span class="string">'foo'</span>, &#123;</div><div class="line">  value: 1,</div><div class="line">  writable: <span class="literal">false</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">Object.assign(target, &#123; bar: 2 &#125;)</div><div class="line"></div><div class="line">//&#123;bar: 2, foo: 1&#125;</div><div class="line"></div><div class="line">Object.assign(target, &#123; foo: 2 &#125;)</div><div class="line">//Uncaught TypeError: Cannot assign to <span class="built_in">read</span> only property <span class="string">'foo'</span> of object <span class="string">'#&lt;Object&gt;'</span>(…)</div></pre></td></tr></table></figure></p>
+<p>对于只读的属性，当分配新的对象覆盖他的时候，将抛出异常。</p>
+<h3 id="Polyfill"><a href="#Polyfill" class="headerlink" title="Polyfill"></a>Polyfill</h3><ol>
+<li>实现es5版本的Object.assign：</li>
+<li>判断是否原生支持该函数，如果不存在的话创建一个立即执行函数，该函数将创建一个assign函数绑定到Object上。</li>
+<li>判断参数是否正确(目的对象不能为空，我们可以直接设置{}传递进去,但必须设置该值)</li>
+<li>使用Object在原有的对象基础上返回该对象，并保存为out</li>
+<li>使用for…in循环遍历出所有的可枚举的自有对象。并复制给新的目标对象(hasOwnProperty返回非原型链上的属性)<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (typeof Object.assign != <span class="string">'function'</span>) &#123;</div><div class="line">  (<span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">	Object.assign = <span class="keyword">function</span> (target) &#123;</div><div class="line">	 <span class="string">'use strict'</span>;</div><div class="line">	 <span class="keyword">if</span> (target === undefined || target === null) &#123;</div><div class="line">	   throw new TypeError(<span class="string">'Cannot convert undefined or null to object'</span>);</div><div class="line">	 &#125;</div><div class="line"></div><div class="line">	 var output = Object(target);</div><div class="line">	 <span class="keyword">for</span> (var index = 1; index &lt; arguments.length; index++) &#123;</div><div class="line">	   var <span class="built_in">source</span> = arguments[index];</div><div class="line">	   <span class="keyword">if</span> (<span class="built_in">source</span> !== undefined &amp;&amp; <span class="built_in">source</span> !== null) &#123;</div><div class="line">	     <span class="keyword">for</span> (var nextKey <span class="keyword">in</span> <span class="built_in">source</span>) &#123;</div><div class="line">	       <span class="keyword">if</span> (source.hasOwnProperty(nextKey)) &#123;</div><div class="line">	         output[nextKey] = <span class="built_in">source</span>[nextKey];</div><div class="line">	       &#125;</div><div class="line">	     &#125;</div><div class="line">	   &#125;</div><div class="line">	 &#125;</div><div class="line">	 <span class="built_in">return</span> output;</div><div class="line">	&#125;;</div><div class="line">&#125;)();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Object-create"><a href="#Object-create" class="headerlink" title="Object.create()"></a>Object.create()</h2><p>创建一个具有指定原型且可选择性地包含指定属性的对象<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.create(prototype, descriptors)</div></pre></td></tr></table></figure></p>
+<p>参数:<br>prototype 必需。  要用作原型的对象。 可以为 null。<br>descriptors 可选。 包含一个或多个属性描述符的 JavaScript 对象。</p>
+<p>简单来讲，new Object()是一种通过构造函数来创建object的方式，而Object.create(proto, [ propertiesObject ])<br>不需要通过构造函数就可以创建一个object，Object.create()的第一个参数是必须要的，第二个参数可选。</p>
+<h2 id="Object-defineProperties"><a href="#Object-defineProperties" class="headerlink" title="Object.defineProperties()"></a>Object.defineProperties()</h2><p>将一个或多个属性添加到对象，并/或修改现有属性的特性。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">object.defineProperties(object, descriptors)</div></pre></td></tr></table></figure></p>
+<p>参数<br>object<br>必需。  对其添加或修改属性的对象。  这可以是本机 JavaScript 对象或 DOM 对象。<br>descriptors<br>必需。  包含一个或多个描述符对象的 JavaScript 对象。  每个描述符对象描述一个数据属性或访问器属性。  </p>
+<p>返回值<br>已传递给函数的对象。</p>
+<p>备注<br>descriptors 参数是一个包含一个或多个描述符对象的对象。<br>数据属性是可储存和检索值的属性。  数据属性描述符包含一个 value 特性和/或一个 writable 特性。  有关更多信息，请参见数据属性和访问器属性。<br>一旦设置或检索属性值，访问器属性就会调用用户提供的函数。<br>访问器属性描述符包含 set 特性和/或 get 特性。<br>如果对象已包含一个带指定名称的属性，则修改该属性的特性。<br>若要创建一个对象并向新对象添加属性，则可使用 Object.create 函数 (JavaScript)。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">var newLine = <span class="string">"&lt;br /&gt;"</span>;</div><div class="line"></div><div class="line">var obj = &#123;&#125;;</div><div class="line">Object.defineProperties(obj, &#123;</div><div class="line">    newDataProperty: &#123;</div><div class="line">        value: 101,</div><div class="line">        writable: <span class="literal">true</span>,</div><div class="line">        enumerable: <span class="literal">true</span>,</div><div class="line">        configurable: <span class="literal">true</span></div><div class="line">    &#125;,</div><div class="line">    newAccessorProperty: &#123;</div><div class="line">        <span class="built_in">set</span>: <span class="keyword">function</span> (x) &#123;</div><div class="line">            document.write(<span class="string">"in property set accessor"</span> + newLine);</div><div class="line">            this.newaccpropvalue = x;</div><div class="line">        &#125;,</div><div class="line">        get: <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">            document.write(<span class="string">"in property get accessor"</span> + newLine);</div><div class="line">            <span class="built_in">return</span> this.newaccpropvalue;</div><div class="line">        &#125;,</div><div class="line">        enumerable: <span class="literal">true</span>,</div><div class="line">        configurable: <span class="literal">true</span></div><div class="line">    &#125;&#125;);</div><div class="line"></div><div class="line">// Set the accessor property value.</div><div class="line">obj.newAccessorProperty = 10;</div><div class="line">document.write (<span class="string">"newAccessorProperty value: "</span> + obj.newAccessorProperty + newLine);</div><div class="line"></div><div class="line">// Output:</div><div class="line">// <span class="keyword">in</span> property <span class="built_in">set</span> accessor</div><div class="line">// <span class="keyword">in</span> property get accessor</div><div class="line">// newAccessorProperty value: 10</div></pre></td></tr></table></figure></p>
+<h2 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty()"></a>Object.defineProperty()</h2><p>将属性添加到对象，或修改现有属性的特性。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.defineProperty(object, propertyname, descriptor)</div></pre></td></tr></table></figure></p>
+<p>参数<br>object<br>必需。  要在其上添加或修改属性的对象。  这可能是一个本机 JavaScript 对象（即用户定义的对象或内置对象）或 DOM 对象。<br>propertyname<br>必需。  一个包含属性名称的字符串。<br>descriptor<br>必需。  属性描述符。  它可以针对数据属性或访问器属性。  </p>
+<p>返回值<br>已修改对象。</p>
+<p>备注<br>可使用 Object.defineProperty 函数来执行以下操作：<br>向对象添加新属性。  当对象不具有指定的属性名称时，发生此操作。<br>修改现有属性的特性。  当对象已具有指定的属性名称时，发成此操作。<br>描述符对象中会提供属性定义，用于描述数据属性或访问器属性的特性。  描述符对象是 Object.defineProperty 函数的参数。<br>若要向对象添加多个属性或修改多个现有属性，可使用 Object.defineProperties 函数 (JavaScript)。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">var newLine = <span class="string">"&lt;br /&gt;"</span>;</div><div class="line"></div><div class="line">// Create a user-defined object.</div><div class="line">var obj = &#123;&#125;;</div><div class="line"></div><div class="line">// Add a data property to the object.</div><div class="line">Object.defineProperty(obj, <span class="string">"newDataProperty"</span>, &#123;</div><div class="line">    value: 101,</div><div class="line">    writable: <span class="literal">true</span>,</div><div class="line">    enumerable: <span class="literal">true</span>,</div><div class="line">    configurable: <span class="literal">true</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">// Set the property value.</div><div class="line">obj.newDataProperty = 102;</div><div class="line">document.write(<span class="string">"Property value: "</span> + obj.newDataProperty + newLine);</div><div class="line"></div><div class="line">// Output:</div><div class="line">// Property value: 102</div></pre></td></tr></table></figure></p>
+<h2 id="Object-freeze"><a href="#Object-freeze" class="headerlink" title="Object.freeze()"></a>Object.freeze()</h2><p>阻止修改现有属性的特性和值，并阻止添加新属性。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.freeze(object)</div></pre></td></tr></table></figure></p>
+<p>参数<br>object<br>必需。在其上锁定特性的对象。<br>返回值<br>传递给函数的对象。</p>
+<h2 id="getOwnPropertyDescriptor"><a href="#getOwnPropertyDescriptor" class="headerlink" title="getOwnPropertyDescriptor()"></a>getOwnPropertyDescriptor()</h2><p>获取指定对象的自身属性描述符。自身属性描述符是指直接在对象上定义（而非从对象的原型继承）的描述符。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.getOwnPropertyDescriptor(object, propertyname)</div></pre></td></tr></table></figure></p>
+<p>参数<br>object<br>必需。包含属性的对象。<br>propertyname<br>必需。属性的名称。</p>
+<p>返回值<br>属性的描述符。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">// Create a user-defined object.</div><div class="line">var obj = &#123;&#125;;</div><div class="line"></div><div class="line">// Add a data property.</div><div class="line">obj.newDataProperty = <span class="string">"abc"</span>;</div><div class="line"></div><div class="line">// Get the property descriptor.</div><div class="line">var descriptor = Object.getOwnPropertyDescriptor(obj, <span class="string">"newDataProperty"</span>);</div><div class="line"></div><div class="line">// Change a property attribute.</div><div class="line">descriptor.writable = <span class="literal">false</span>;</div><div class="line">Object.defineProperty(obj, <span class="string">"newDataProperty"</span>, descriptor);</div></pre></td></tr></table></figure></p>
+<h2 id="getOwnPropertyDescriptors"><a href="#getOwnPropertyDescriptors" class="headerlink" title="getOwnPropertyDescriptors()"></a>getOwnPropertyDescriptors()</h2><p>Object.getOwnPropertyDescriptors(obj)</p>
+<h2 id="getOwnPropertyNames"><a href="#getOwnPropertyNames" class="headerlink" title="getOwnPropertyNames()"></a>getOwnPropertyNames()</h2><p>返回对象自己的属性的名称。一个对象的自己的属性是指直接对该对象定义的属性，而不是从该对象的原型继承的属性。对象的属性包括字段（对象）和函数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.getOwnPropertyNames(object)</div></pre></td></tr></table></figure></p>
+<p>参数<br>Object<br>必需。包含自己的属性的对象</p>
+<p>返回值<br>一个数组，其中包含对象自己的属性的名称。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Pasta(grain, width, shape) &#123;</div><div class="line">    // Define properties.</div><div class="line">    this.grain = grain;</div><div class="line">    this.width = width;</div><div class="line">    this.shape = shape;</div><div class="line">    this.toString = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">        <span class="built_in">return</span> (this.grain + <span class="string">", "</span> + this.width + <span class="string">", "</span> + this.shape);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Create an object.</div><div class="line">var spaghetti = new Pasta(<span class="string">"wheat"</span>, 0.2, <span class="string">"circle"</span>);</div><div class="line"></div><div class="line">// Get the own property names.</div><div class="line">var arr = Object.getOwnPropertyNames(spaghetti);</div><div class="line">document.write (arr);</div><div class="line"></div><div class="line">// Output:</div><div class="line">//   grain,width,shape,toString</div></pre></td></tr></table></figure></p>
+<h2 id="getOwnPropertySymbols"><a href="#getOwnPropertySymbols" class="headerlink" title="getOwnPropertySymbols()"></a>getOwnPropertySymbols()</h2><h2 id="getPrototypeOf"><a href="#getPrototypeOf" class="headerlink" title="getPrototypeOf()"></a>getPrototypeOf()</h2><h2 id="is"><a href="#is" class="headerlink" title="is()"></a>is()</h2><p>返回一个值，该值指示两个值是否相同。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.is(value1, value2)</div></pre></td></tr></table></figure>
+<p>参数<br>value1<br>必需。要测试的第一个值。<br>value2<br>必需。要测试的第二个值。</p>
+<p>返回值<br>如果值相同，则为 true；否则为 false。</p>
+<p>备注<br>与 = = 运算符不同，Object.is 在测试值时不会强制任何类型。<br>Object.is 应用的比较类似于 === 运算符所应用的比较，区别在于 Object.is 将 Number.isNaN 视作与 NaN 相同的值。它还将 + 0 和-0 视作不同值。</p>
+<h2 id="isExtensible"><a href="#isExtensible" class="headerlink" title="isExtensible()"></a>isExtensible()</h2><h2 id="isFrozen"><a href="#isFrozen" class="headerlink" title="isFrozen()"></a>isFrozen()</h2><h2 id="isSealed"><a href="#isSealed" class="headerlink" title="isSealed()"></a>isSealed()</h2><h2 id="keys"><a href="#keys" class="headerlink" title="keys()"></a>keys()</h2><h2 id="preventExtensions"><a href="#preventExtensions" class="headerlink" title="preventExtensions()"></a>preventExtensions()</h2><h2 id="hasOwnProperty-NaN"><a href="#hasOwnProperty-NaN" class="headerlink" title="hasOwnProperty()"></a>hasOwnProperty()</h2><h2 id="isPrototypeOf-NaN"><a href="#isPrototypeOf-NaN" class="headerlink" title="isPrototypeOf()"></a>isPrototypeOf()</h2><h2 id="propertyIsEnumerable-NaN"><a href="#propertyIsEnumerable-NaN" class="headerlink" title="propertyIsEnumerable()"></a>propertyIsEnumerable()</h2><h2 id="toLocaleString-NaN"><a href="#toLocaleString-NaN" class="headerlink" title="toLocaleString()"></a>toLocaleString()</h2><h2 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString()"></a>toString()</h2><h2 id="valueOf-NaN"><a href="#valueOf-NaN" class="headerlink" title="valueOf()"></a>valueOf()</h2><h2 id="watch"><a href="#watch" class="headerlink" title="watch()"></a>watch()</h2><h2 id="seal"><a href="#seal" class="headerlink" title="seal()"></a>seal()</h2><h2 id="setPrototypeOf"><a href="#setPrototypeOf" class="headerlink" title="setPrototypeOf()"></a>setPrototypeOf()</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/31/javascript中String类型详解/" rel="next" title="javascript中String类型详解">
+                <i class="fa fa-chevron-left"></i> javascript中String类型详解
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/02/HTML表单详解/" rel="prev" title="HTML表单详解">
+                HTML表单详解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/public/images/fg.png"
+               alt="Su Wen" />
+          <p class="site-author-name" itemprop="name">Su Wen</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/goodpan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/suwen0603" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引用类型"><span class="nav-number">1.</span> <span class="nav-text">引用类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object实例的创建"><span class="nav-number">2.</span> <span class="nav-text">Object实例的创建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object属性"><span class="nav-number">3.</span> <span class="nav-text">Object属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Constructor"><span class="nav-number">3.1.</span> <span class="nav-text">Constructor</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object方法"><span class="nav-number">4.</span> <span class="nav-text">Object方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-assign"><span class="nav-number">4.1.</span> <span class="nav-text">Object.assign()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数原型"><span class="nav-number">4.1.1.</span> <span class="nav-text">函数原型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数实例"><span class="nav-number">4.1.2.</span> <span class="nav-text">函数实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Polyfill"><span class="nav-number">4.1.3.</span> <span class="nav-text">Polyfill</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-create"><span class="nav-number">4.2.</span> <span class="nav-text">Object.create()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-defineProperties"><span class="nav-number">4.3.</span> <span class="nav-text">Object.defineProperties()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-defineProperty"><span class="nav-number">4.4.</span> <span class="nav-text">Object.defineProperty()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-freeze"><span class="nav-number">4.5.</span> <span class="nav-text">Object.freeze()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#getOwnPropertyDescriptor"><span class="nav-number">4.6.</span> <span class="nav-text">getOwnPropertyDescriptor()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#getOwnPropertyDescriptors"><span class="nav-number">4.7.</span> <span class="nav-text">getOwnPropertyDescriptors()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#getOwnPropertyNames"><span class="nav-number">4.8.</span> <span class="nav-text">getOwnPropertyNames()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#getOwnPropertySymbols"><span class="nav-number">4.9.</span> <span class="nav-text">getOwnPropertySymbols()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#getPrototypeOf"><span class="nav-number">4.10.</span> <span class="nav-text">getPrototypeOf()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#is"><span class="nav-number">4.11.</span> <span class="nav-text">is()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isExtensible"><span class="nav-number">4.12.</span> <span class="nav-text">isExtensible()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isFrozen"><span class="nav-number">4.13.</span> <span class="nav-text">isFrozen()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isSealed"><span class="nav-number">4.14.</span> <span class="nav-text">isSealed()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#keys"><span class="nav-number">4.15.</span> <span class="nav-text">keys()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#preventExtensions"><span class="nav-number">4.16.</span> <span class="nav-text">preventExtensions()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hasOwnProperty-NaN"><span class="nav-number">4.17.</span> <span class="nav-text">hasOwnProperty()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isPrototypeOf-NaN"><span class="nav-number">4.18.</span> <span class="nav-text">isPrototypeOf()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#propertyIsEnumerable-NaN"><span class="nav-number">4.19.</span> <span class="nav-text">propertyIsEnumerable()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toLocaleString-NaN"><span class="nav-number">4.20.</span> <span class="nav-text">toLocaleString()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toString-NaN"><span class="nav-number">4.21.</span> <span class="nav-text">toString()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#valueOf-NaN"><span class="nav-number">4.22.</span> <span class="nav-text">valueOf()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#watch"><span class="nav-number">4.23.</span> <span class="nav-text">watch()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#seal"><span class="nav-number">4.24.</span> <span class="nav-text">seal()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setPrototypeOf"><span class="nav-number">4.25.</span> <span class="nav-text">setPrototypeOf()</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Su Wen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

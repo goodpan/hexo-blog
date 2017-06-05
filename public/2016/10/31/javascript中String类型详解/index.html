@@ -1,0 +1,696 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="概念String类型用于表示由零或多个16位Unicode字符组成的字符序列，即字符串。可以由””和’’表示，两种写法都是有效的。(与PHP中的双引号和单引号会影响解释方式不同，ECMAscript的这两种语法形式没有区别)。
+字符串类型的创建字面量方式12345678\n  换行\t  制表\b  空格\r  回车\f  进纸\\  斜杠\&apos;  单引号\&quot;  双引号
+这些字符串可以出现在字符串中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript中String类型详解">
+<meta property="og:url" content="http://yoursite.com/2016/10/31/javascript中String类型详解/index.html">
+<meta property="og:site_name" content="goodpan">
+<meta property="og:description" content="概念String类型用于表示由零或多个16位Unicode字符组成的字符序列，即字符串。可以由””和’’表示，两种写法都是有效的。(与PHP中的双引号和单引号会影响解释方式不同，ECMAscript的这两种语法形式没有区别)。
+字符串类型的创建字面量方式12345678\n  换行\t  制表\b  空格\r  回车\f  进纸\\  斜杠\&apos;  单引号\&quot;  双引号
+这些字符串可以出现在字符串中">
+<meta property="og:updated_time" content="2016-10-31T02:38:36.315Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript中String类型详解">
+<meta name="twitter:description" content="概念String类型用于表示由零或多个16位Unicode字符组成的字符序列，即字符串。可以由””和’’表示，两种写法都是有效的。(与PHP中的双引号和单引号会影响解释方式不同，ECMAscript的这两种语法形式没有区别)。
+字符串类型的创建字面量方式12345678\n  换行\t  制表\b  空格\r  回车\f  进纸\\  斜杠\&apos;  单引号\&quot;  双引号
+这些字符串可以出现在字符串中">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6343434069862254000',
+      author: '文仔'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/31/javascript中String类型详解/"/>
+
+
+  <title> javascript中String类型详解 | goodpan </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">goodpan</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                javascript中String类型详解
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-31T09:13:54+08:00" content="2016-10-31">
+              2016-10-31
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>String类型用于表示由零或多个16位Unicode字符组成的字符序列，即字符串。可以由””和’’表示，两种写法都是有效的。(与PHP中的双引号和单引号会影响解释方式不同，ECMAscript的这两种语法形式没有区别)。</p>
+<h1 id="字符串类型的创建"><a href="#字符串类型的创建" class="headerlink" title="字符串类型的创建"></a>字符串类型的创建</h1><h2 id="字面量方式"><a href="#字面量方式" class="headerlink" title="字面量方式"></a>字面量方式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">\n  换行</div><div class="line">\t  制表</div><div class="line">\b  空格</div><div class="line">\r  回车</div><div class="line">\f  进纸</div><div class="line">\\  斜杠</div><div class="line">\<span class="string">'  单引号</span></div><div class="line">\"  双引号</div></pre></td></tr></table></figure>
+<p>这些字符串可以出现在字符串中的任意位置，而且也将作为一个字符来解析。</p>
+<h2 id="String构造函数创建"><a href="#String构造函数创建" class="headerlink" title="String构造函数创建"></a>String构造函数创建</h2><p>String类型是字符串的对象包装类型，可以像下面这样使用String构造函数创建：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var stringObject = new String(<span class="string">"hello world"</span>);</div></pre></td></tr></table></figure></p>
+<p>String对象的方法也可以在所有基本的字符串值中访问到。其中继承的valueOf().toLocalString()和toString()方法，都返回对象所表示的基本字符串值。<br>String类型的每个实例都有一个length属性，表示字符串中有多个字符。应该注意的是，即使字符串中包含双字节字符（不是占一个字节的ASCII字符），每个字符仍然算一个字符。</p>
+<h1 id="String类型方法"><a href="#String类型方法" class="headerlink" title="String类型方法"></a>String类型方法</h1><h2 id="字符方法"><a href="#字符方法" class="headerlink" title="字符方法"></a>字符方法</h2><p>两个用于访问字符串中特定字符的方法,charAt()和charCodeAt()。这两个方法都接收一个参数，即基于0的字符位置。</p>
+<ol>
+<li><p>charAt()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var stringValue = <span class="string">"hello world"</span>;</div><div class="line">alert(stringValue.charAt(1));//<span class="string">"e"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>charCodeAt()<br>charAt()得到的是字符，如果想得到不是字符而是字符编码，则用charCodeAt()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var stringValue = <span class="string">"hello world"</span>;</div><div class="line">alert(stringValue.charCodeAt(1));//<span class="string">"101"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>方括号加索引<br>ECMAscript提供了另一个访问字符串的方法，可以使用方括号加数字索引来访问字符串中的特定字符。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var stringValue = <span class="string">"hello world"</span>;</div><div class="line">alert(stringValue[1]);//<span class="string">"e"</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这种方式在IE7会返回undefined值。</p>
+<h2 id="字符串操作方法"><a href="#字符串操作方法" class="headerlink" title="字符串操作方法"></a>字符串操作方法</h2><ol>
+<li>concat()<br>将一个或多个字符串拼接起来，返回拼接得到的新字符串。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var stringValue = <span class="string">"hello"</span>;</div><div class="line">var result = stringValue.concat(<span class="string">"world"</span>);</div><div class="line">alert(result);//<span class="string">"hello world"</span></div><div class="line">alert(stringValue);//<span class="string">"hello"</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>concat可以接收任意多个参数，即可以拼接任意多个字符串。<br>虽然concat可以专门用来拼接字符串，但是实际中使用更多的是用+操作符。</p>
+<ol>
+<li>slice()</li>
+</ol>
+<ol>
+<li><p>substr()</p>
+</li>
+<li><p>subString()</p>
+</li>
+</ol>
+<h2 id="字符串位置方法"><a href="#字符串位置方法" class="headerlink" title="字符串位置方法"></a>字符串位置方法</h2><ol>
+<li><p>indexOf()</p>
+</li>
+<li><p>lastIndexOf()</p>
+</li>
+</ol>
+<h2 id="去空格trim-方法"><a href="#去空格trim-方法" class="headerlink" title="去空格trim()方法"></a>去空格trim()方法</h2><h2 id="字符串大小写转换方法"><a href="#字符串大小写转换方法" class="headerlink" title="字符串大小写转换方法"></a>字符串大小写转换方法</h2><ol>
+<li>toLowerCase()</li>
+</ol>
+<ol>
+<li><p>toLocaleLowerCase()</p>
+</li>
+<li><p>toUpperCase()</p>
+</li>
+<li><p>toLocaleUpperCase()</p>
+</li>
+</ol>
+<h2 id="字符串的模式匹配方法"><a href="#字符串的模式匹配方法" class="headerlink" title="字符串的模式匹配方法"></a>字符串的模式匹配方法</h2><ol>
+<li><p>match()</p>
+</li>
+<li><p>search()</p>
+</li>
+<li><p>replace()</p>
+</li>
+</ol>
+<h2 id="字符串比较方法localeCompare"><a href="#字符串比较方法localeCompare" class="headerlink" title="字符串比较方法localeCompare()"></a>字符串比较方法localeCompare()</h2><h2 id="fromCharCode-方法"><a href="#fromCharCode-方法" class="headerlink" title="fromCharCode()方法"></a>fromCharCode()方法</h2><h2 id="HTML方法"><a href="#HTML方法" class="headerlink" title="HTML方法"></a>HTML方法</h2><h1 id="字符串特点"><a href="#字符串特点" class="headerlink" title="字符串特点"></a>字符串特点</h1><p>字符串是不可变的，一旦创建，它们的值就不能改变。要改变某个变量保存的字符串，首先要销毁原来的字符串，然后再用另一个包含新值的字符串填充该变量：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var lang = <span class="string">"java"</span>;</div><div class="line">lang = lang + <span class="string">"script"</span>;</div></pre></td></tr></table></figure></p>
+<p>以上代码后台操作过程为：首先创建一个容纳10个字符的新字符串，然后在这个字符串中填充”java”和”script”,最后一步是销毁原来的字符串”java”和”script”,因为这两个字符串已经没有用了。</p>
+<h1 id="字符串类型转换"><a href="#字符串类型转换" class="headerlink" title="字符串类型转换"></a>字符串类型转换</h1><p>将一个值转换为字符串有两种方式：<br>1.toString()<br>数值、布尔值、对象和字符串（每个字符串也多有一个toString()方法，该方法返回字符串的副本)都有toString()方法。但null和undefined值没有这个方法。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var age = 11;</div><div class="line">var ageAsString = age.toString();//<span class="string">"11"</span></div><div class="line">var found = <span class="literal">true</span>;</div><div class="line">var foundAsString = found.toString();//<span class="string">"true"</span></div></pre></td></tr></table></figure></p>
+<p>通过给toString()方法传递参数可以输出以二进制、十进制、八进制、十六进制乃至其他任意有效进制格式表示的字符串。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var num = 10;</div><div class="line">alert(num.toString());//<span class="string">"10"</span></div><div class="line">alert(num.toString(2));//<span class="string">"1010"</span></div><div class="line">alert(num.toString(8));//<span class="string">"12"</span></div><div class="line">alert(num.toString(10));//<span class="string">"10"</span></div><div class="line">alert(num.toString(16));//<span class="string">"a"</span></div></pre></td></tr></table></figure></p>
+<p>2.String()转型函数<br>在不知道要转换的值是不是null或undefined的情况下，可以使用转型函数String()，这个函数能够将任何类型的值转换为字符串。String()函数遵循下列转换规则：</p>
+<ul>
+<li>如果值有toString()方法，则调用该方法（无参数）并返回相应的结果；</li>
+<li>如果值是null,则返回”null”;</li>
+<li>如果值是undefined，则返回”undefined”。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var value1 = 10;</div><div class="line">var value2 = <span class="literal">true</span>;</div><div class="line">var value3 = null;</div><div class="line">var value4;</div><div class="line">alert(String(value1));//<span class="string">"10"</span></div><div class="line">alert(String(value2));//<span class="string">"true"</span></div><div class="line">alert(String(value3));//<span class="string">"null"</span></div><div class="line">alert(String(value4));//<span class="string">"undefined"</span></div></pre></td></tr></table></figure>
+<ol>
+<li>+””方式</li>
+</ol>
+<h1 id="作为数组的字符串"><a href="#作为数组的字符串" class="headerlink" title="作为数组的字符串"></a>作为数组的字符串</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var s = <span class="string">"JavaScript"</span>;</div><div class="line">Array.prototype.join.call(s,<span class="string">" "</span>);//=&gt; <span class="string">"J a v a S c r i p t"</span></div><div class="line">Array.prototype.filter.call(s,<span class="keyword">function</span>(x)&#123;</div><div class="line">      <span class="built_in">return</span> x.match(/[^aeiou]/);</div><div class="line">  &#125;).join(<span class="string">""</span>) //=&gt; <span class="string">"JvScript"</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/28/javascript函数柯里化详解/" rel="next" title="javascript函数柯里化详解">
+                <i class="fa fa-chevron-left"></i> javascript函数柯里化详解
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/01/Object类型详解/" rel="prev" title="Object类型详解">
+                Object类型详解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/public/images/fg.png"
+               alt="Su Wen" />
+          <p class="site-author-name" itemprop="name">Su Wen</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/goodpan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/suwen0603" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串类型的创建"><span class="nav-number">2.</span> <span class="nav-text">字符串类型的创建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字面量方式"><span class="nav-number">2.1.</span> <span class="nav-text">字面量方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String构造函数创建"><span class="nav-number">2.2.</span> <span class="nav-text">String构造函数创建</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#String类型方法"><span class="nav-number">3.</span> <span class="nav-text">String类型方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符方法"><span class="nav-number">3.1.</span> <span class="nav-text">字符方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串操作方法"><span class="nav-number">3.2.</span> <span class="nav-text">字符串操作方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串位置方法"><span class="nav-number">3.3.</span> <span class="nav-text">字符串位置方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去空格trim-方法"><span class="nav-number">3.4.</span> <span class="nav-text">去空格trim()方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串大小写转换方法"><span class="nav-number">3.5.</span> <span class="nav-text">字符串大小写转换方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的模式匹配方法"><span class="nav-number">3.6.</span> <span class="nav-text">字符串的模式匹配方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串比较方法localeCompare"><span class="nav-number">3.7.</span> <span class="nav-text">字符串比较方法localeCompare()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fromCharCode-方法"><span class="nav-number">3.8.</span> <span class="nav-text">fromCharCode()方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML方法"><span class="nav-number">3.9.</span> <span class="nav-text">HTML方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串特点"><span class="nav-number">4.</span> <span class="nav-text">字符串特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串类型转换"><span class="nav-number">5.</span> <span class="nav-text">字符串类型转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作为数组的字符串"><span class="nav-number">6.</span> <span class="nav-text">作为数组的字符串</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Su Wen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

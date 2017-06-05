@@ -1,0 +1,619 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="javascript可以通过typeof、instanceof、constructor、toString.call()、jQuery方法来进行类型判断。
+typeoftypeof 是一元运算符，返回结果是一个说明运算数类型的字符串。用于判断一个变量的类型,常用于区别对象和原始类型。typeof判断类型时有几个特殊的地方：
+
+typeof null    结果为Object
+typeof undef">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript类型判断方法">
+<meta property="og:url" content="http://yoursite.com/2017/01/04/javascript类型判断方法/index.html">
+<meta property="og:site_name" content="goodpan">
+<meta property="og:description" content="javascript可以通过typeof、instanceof、constructor、toString.call()、jQuery方法来进行类型判断。
+typeoftypeof 是一元运算符，返回结果是一个说明运算数类型的字符串。用于判断一个变量的类型,常用于区别对象和原始类型。typeof判断类型时有几个特殊的地方：
+
+typeof null    结果为Object
+typeof undef">
+<meta property="og:updated_time" content="2017-01-04T01:55:32.394Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript类型判断方法">
+<meta name="twitter:description" content="javascript可以通过typeof、instanceof、constructor、toString.call()、jQuery方法来进行类型判断。
+typeoftypeof 是一元运算符，返回结果是一个说明运算数类型的字符串。用于判断一个变量的类型,常用于区别对象和原始类型。typeof判断类型时有几个特殊的地方：
+
+typeof null    结果为Object
+typeof undef">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6343434069862254000',
+      author: '文仔'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/01/04/javascript类型判断方法/"/>
+
+
+  <title> javascript类型判断方法 | goodpan </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">goodpan</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                javascript类型判断方法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-04T09:49:53+08:00" content="2017-01-04">
+              2017-01-04
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>javascript可以通过typeof、instanceof、constructor、toString.call()、jQuery方法来进行类型判断。</p>
+<h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p>typeof 是一元运算符，返回结果是一个说明运算数类型的字符串。用于判断一个变量的类型,常用于区别对象和原始类型。<br>typeof判断类型时有几个特殊的地方：</p>
+<ul>
+<li>typeof null    结果为Object</li>
+<li>typeof undefined和未定义的变量，结果都是undefined</li>
+<li>typeof     Date、RegExp、Array实例时均返回Object<br>由上可看出对象和数组返回都是object,所以typeof不能完美检测。</li>
+</ul>
+<h2 id="instanceof-不常用）"><a href="#instanceof-不常用）" class="headerlink" title="instanceof(不常用）"></a>instanceof(不常用）</h2><p>判断一个实例是否属于某种类型；<br>判断一个实例是否属于它的父类型（继承）;<br>可以用instanceof运算符来判断对象是否为数组类型。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> isArray(arr)&#123;</div><div class="line">    <span class="built_in">return</span> arr instanceof Array;</div><div class="line">&#125;</div><div class="line">var arr = [];//这种方式的本质也是new Array()，构造函数为Array</div><div class="line">console.log(isArray(arr));</div></pre></td></tr></table></figure></p>
+<h2 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h2><p>每个对象都有constructor属性， 指向初始化该对象的构造函数。常用于判断未知对象的类型检测各种对象类型。<br>判断数组的函数也可以这样写：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> isArray(arr)&#123;</div><div class="line">    <span class="built_in">return</span> typeof arr == <span class="string">"object"</span> &amp;&amp; arr.constructor == Array;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="toString-call"><a href="#toString-call" class="headerlink" title="toString.call()"></a>toString.call()</h2><p>toString是Object的一个方法，返回的结果都不一样。其实是Object.prototype.toString.call(str) ……….’[object  String]’<br>栗子：判断是否为数组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">funtion isArray(arr)&#123;</div><div class="line">    <span class="built_in">return</span> Object.prototype.toString.call(arr) === <span class="string">'[object Array]'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="jquery方式"><a href="#jquery方式" class="headerlink" title="jquery方式"></a>jquery方式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">jquery.isArray();</div><div class="line">jquery.isEmptyObject();</div><div class="line">jquery.isFunction();</div><div class="line">jquery.isNumeric();</div><div class="line">jquery.isPlainObject();</div><div class="line">jquery.isPlainOject();</div><div class="line">jquery.isWindow();</div><div class="line">jquery.isXMLDoc();</div></pre></td></tr></table></figure>
+<h2 id="检测各种对象类型"><a href="#检测各种对象类型" class="headerlink" title="检测各种对象类型"></a>检测各种对象类型</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var is =&#123;</div><div class="line">    types : [<span class="string">"Array"</span>, <span class="string">"Boolean"</span>, <span class="string">"Date"</span>, <span class="string">"Number"</span>, <span class="string">"Object"</span>, <span class="string">"RegExp"</span>, <span class="string">"String"</span>, <span class="string">"Window"</span>, <span class="string">"HTMLDocument"</span>]</div><div class="line">&#125;;</div><div class="line"><span class="keyword">for</span>(var i = 0, c; c = is.types[i ++ ]; )&#123;</div><div class="line">    is[c] = (<span class="keyword">function</span>(<span class="built_in">type</span>)&#123;</div><div class="line">        <span class="built_in">return</span> <span class="keyword">function</span>(obj)&#123;</div><div class="line">           <span class="built_in">return</span> Object.prototype.toString.call(obj) == <span class="string">"[object "</span> + <span class="built_in">type</span> + <span class="string">"]"</span>;</div><div class="line">        &#125;</div><div class="line">    )(c);</div><div class="line">&#125;</div><div class="line">alert(is.Array([])); // <span class="literal">true</span></div><div class="line">alert(is.Date(new Date)); // <span class="literal">true</span></div><div class="line">alert(is.RegExp(/reg/ig)); // <span class="literal">true</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/03/javascript继承方式汇总/" rel="next" title="javascript继承方式汇总">
+                <i class="fa fa-chevron-left"></i> javascript继承方式汇总
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/public/images/fg.png"
+               alt="Su Wen" />
+          <p class="site-author-name" itemprop="name">Su Wen</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/goodpan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/suwen0603" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#typeof"><span class="nav-number">1.</span> <span class="nav-text">typeof</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#instanceof-不常用）"><span class="nav-number">2.</span> <span class="nav-text">instanceof(不常用）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constructor-NaN"><span class="nav-number">3.</span> <span class="nav-text">constructor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toString-call"><span class="nav-number">4.</span> <span class="nav-text">toString.call()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jquery方式"><span class="nav-number">5.</span> <span class="nav-text">jquery方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检测各种对象类型"><span class="nav-number">6.</span> <span class="nav-text">检测各种对象类型</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Su Wen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

@@ -1,0 +1,1928 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="goodpan">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="goodpan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="goodpan">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6343434069862254000',
+      author: '文仔'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+  <title> goodpan </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">goodpan</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/04/javascript类型判断方法/" itemprop="url">
+                  javascript类型判断方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-04T09:49:53+08:00" content="2017-01-04">
+              2017-01-04
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>javascript可以通过typeof、instanceof、constructor、toString.call()、jQuery方法来进行类型判断。</p>
+<h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p>typeof 是一元运算符，返回结果是一个说明运算数类型的字符串。用于判断一个变量的类型,常用于区别对象和原始类型。<br>typeof判断类型时有几个特殊的地方：</p>
+<ul>
+<li>typeof null    结果为Object</li>
+<li>typeof undefined和未定义的变量，结果都是undefined</li>
+<li>typeof     Date、RegExp、Array实例时均返回Object<br>由上可看出对象和数组返回都是object,所以typeof不能完美检测。</li>
+</ul>
+<h2 id="instanceof-不常用）"><a href="#instanceof-不常用）" class="headerlink" title="instanceof(不常用）"></a>instanceof(不常用）</h2><p>判断一个实例是否属于某种类型；<br>判断一个实例是否属于它的父类型（继承）;<br>可以用instanceof运算符来判断对象是否为数组类型。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> isArray(arr)&#123;</div><div class="line">    <span class="built_in">return</span> arr instanceof Array;</div><div class="line">&#125;</div><div class="line">var arr = [];//这种方式的本质也是new Array()，构造函数为Array</div><div class="line">console.log(isArray(arr));</div></pre></td></tr></table></figure></p>
+<h2 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h2><p>每个对象都有constructor属性， 指向初始化该对象的构造函数。常用于判断未知对象的类型检测各种对象类型。<br>判断数组的函数也可以这样写：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> isArray(arr)&#123;</div><div class="line">    <span class="built_in">return</span> typeof arr == <span class="string">"object"</span> &amp;&amp; arr.constructor == Array;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="toString-call"><a href="#toString-call" class="headerlink" title="toString.call()"></a>toString.call()</h2><p>toString是Object的一个方法，返回的结果都不一样。其实是Object.prototype.toString.call(str) ……….’[object  String]’<br>栗子：判断是否为数组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">funtion isArray(arr)&#123;</div><div class="line">    <span class="built_in">return</span> Object.prototype.toString.call(arr) === <span class="string">'[object Array]'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="jquery方式"><a href="#jquery方式" class="headerlink" title="jquery方式"></a>jquery方式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">jquery.isArray();</div><div class="line">jquery.isEmptyObject();</div><div class="line">jquery.isFunction();</div><div class="line">jquery.isNumeric();</div><div class="line">jquery.isPlainObject();</div><div class="line">jquery.isPlainOject();</div><div class="line">jquery.isWindow();</div><div class="line">jquery.isXMLDoc();</div></pre></td></tr></table></figure>
+<h2 id="检测各种对象类型"><a href="#检测各种对象类型" class="headerlink" title="检测各种对象类型"></a>检测各种对象类型</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var is =&#123;</div><div class="line">    types : [<span class="string">"Array"</span>, <span class="string">"Boolean"</span>, <span class="string">"Date"</span>, <span class="string">"Number"</span>, <span class="string">"Object"</span>, <span class="string">"RegExp"</span>, <span class="string">"String"</span>, <span class="string">"Window"</span>, <span class="string">"HTMLDocument"</span>]</div><div class="line">&#125;;</div><div class="line"><span class="keyword">for</span>(var i = 0, c; c = is.types[i ++ ]; )&#123;</div><div class="line">    is[c] = (<span class="keyword">function</span>(<span class="built_in">type</span>)&#123;</div><div class="line">        <span class="built_in">return</span> <span class="keyword">function</span>(obj)&#123;</div><div class="line">           <span class="built_in">return</span> Object.prototype.toString.call(obj) == <span class="string">"[object "</span> + <span class="built_in">type</span> + <span class="string">"]"</span>;</div><div class="line">        &#125;</div><div class="line">    )(c);</div><div class="line">&#125;</div><div class="line">alert(is.Array([])); // <span class="literal">true</span></div><div class="line">alert(is.Date(new Date)); // <span class="literal">true</span></div><div class="line">alert(is.RegExp(/reg/ig)); // <span class="literal">true</span></div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/03/javascript继承方式汇总/" itemprop="url">
+                  javascript继承方式汇总
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-03T11:37:05+08:00" content="2017-01-03">
+              2017-01-03
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="拷贝继承"><a href="#拷贝继承" class="headerlink" title="拷贝继承"></a>拷贝继承</h2>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/03/flexbox兼容写法（包括微信，复制即用）/" itemprop="url">
+                  flexbox兼容写法（包括微信）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-03T11:12:34+08:00" content="2017-01-03">
+              2017-01-03
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="容器display"><a href="#容器display" class="headerlink" title="容器display"></a>容器display</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/*块级*/</div><div class="line">.box&#123;</div><div class="line">     display:-webkit-box;/* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */</div><div class="line">    display:-moz-box;/* 老版本语法: Firefox (buggy) */</div><div class="line">    display:-ms-flexbox;/* 混合版本语法: IE 10 */</div><div class="line">    display:-webkit-flex;/* 新版本语法: Chrome 21+ */</div><div class="line">    display: flex;/* 新版本语法: Opera 12.1, Firefox 22+ */</div><div class="line">    display: box;/*wexin x5*/</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/*精简去注释*/</div><div class="line">.box&#123;</div><div class="line">     display:-webkit-box;</div><div class="line">    display:-moz-box;</div><div class="line">    display:-ms-flexbox;</div><div class="line">    display:-webkit-flex;</div><div class="line">    display: flex;</div><div class="line">    display: box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/*行内*/</div><div class="line">.box&#123;</div><div class="line">    display: inline-flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="子元素的显示方向"><a href="#子元素的显示方向" class="headerlink" title="子元素的显示方向"></a>子元素的显示方向</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*从左到到右*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-direction: normal;</div><div class="line">    -webkit-box-orient: horizontal;</div><div class="line">    -moz-flex-direction: row;</div><div class="line">    -webkit-flex-direction: row;</div><div class="line">    flex-direction: row;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/*从右到左*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack:end;</div><div class="line">    -webkit-box-direction: reverse;</div><div class="line">    -webkit-box-orient: horizontal;</div><div class="line">    -moz-flex-direction: row-reverse;</div><div class="line">    -webkit-flex-direction: row-reverse;</div><div class="line">    flex-direction: row-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*从上到下*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-direction: normal;</div><div class="line">    -webkit-box-orient: vertical;</div><div class="line">    -moz-flex-direction: column;</div><div class="line">    -webkit-flex-direction: column;</div><div class="line">    flex-direction: column;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/*从下到上*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack:end;</div><div class="line">    -webkit-box-direction: reverse;</div><div class="line">    -webkit-box-orient: vertical;</div><div class="line">    -moz-flex-direction: column-reverse;</div><div class="line">    -webkit-flex-direction: column-reverse;</div><div class="line">    flex-direction: column-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="子元素主轴对齐方式"><a href="#子元素主轴对齐方式" class="headerlink" title="子元素主轴对齐方式"></a>子元素主轴对齐方式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*总*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack: flex-start | flex-end| center | space-between | space-around;</div><div class="line">    -moz-justify-content: flex-start | flex-end| center | space-between | space-around;</div><div class="line">    -webkit-justify-content: flex-start | flex-end| center | space-between | space-around;</div><div class="line">    justify-content: flex-start | flex-end| center | space-between | space-around;</div><div class="line">    box-pack: start |end| center | justify;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*左*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack: flex-start;</div><div class="line">    -moz-justify-content: flex-start;</div><div class="line">    -webkit-justify-content: flex-start;</div><div class="line">    justify-content: flex-start;</div><div class="line">    box-pack: start;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*右*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack: center ;</div><div class="line">    -moz-justify-content: center ;</div><div class="line">    -webkit-justify-content: center;</div><div class="line">    justify-content:center;</div><div class="line">    box-pack: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*中*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack: space-between;</div><div class="line">    -moz-justify-content: space-between;</div><div class="line">    -webkit-justify-content: space-between;</div><div class="line">    justify-content:space-between;</div><div class="line">    box-pack: justify;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/*左右*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack: flex-end;</div><div class="line">    -moz-justify-content: flex-end;</div><div class="line">    -webkit-justify-content: flex-end;</div><div class="line">    justify-content: flex-end;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*留空白*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack: space-around;</div><div class="line">    -moz-justify-content: space-around;</div><div class="line">    -webkit-justify-content: space-around;</div><div class="line">    justify-content: space-around;</div><div class="line">    box-pack: space-around;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="子元素交叉轴对齐方式"><a href="#子元素交叉轴对齐方式" class="headerlink" title="子元素交叉轴对齐方式"></a>子元素交叉轴对齐方式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*总*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-align: flex-start | flex-end| center | baseline | stretch;</div><div class="line">    -moz-align-items: flex-start | flex-end| center | baseline | stretch;</div><div class="line">    -webkit-align-items: flex-start | flex-end| center | baseline | stretch;</div><div class="line">    align-items: flex-start | flex-end| center | baseline | stretch;</div><div class="line">    box-align: start |end| center | baseline | stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*上*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-align: flex-start;</div><div class="line">    -moz-align-items: flex-start;</div><div class="line">    -webkit-align-items: flex-start;</div><div class="line">    align-items: flex-start;</div><div class="line">    box-align: start;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*下*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-align: center;</div><div class="line">    -moz-align-items:center ;</div><div class="line">    -webkit-align-items:center ;</div><div class="line">    align-items:center;</div><div class="line">    box-align: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*中*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-align: flex-end;</div><div class="line">    -moz-align-items: flex-end;</div><div class="line">    -webkit-align-items: flex-end;</div><div class="line">    align-items: flex-end;</div><div class="line">    box-align: end;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*基线*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-align: baseline ;</div><div class="line">    -moz-align-items: baseline ;</div><div class="line">    -webkit-align-items: baseline ;</div><div class="line">    align-items: baseline ;</div><div class="line">    box-align: baseline ;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*拉伸*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-align: stretch;</div><div class="line">    -moz-align-items: stretch;</div><div class="line">    -webkit-align-items: stretch;</div><div class="line">    align-items: stretch;</div><div class="line">    box-align: stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="子元素伸缩"><a href="#子元素伸缩" class="headerlink" title="子元素伸缩"></a>子元素伸缩</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">    -webkit-box-flex:1.0;</div><div class="line">    -moz-flex-grow:1;</div><div class="line">    -webkit-flex-grow:1;</div><div class="line">    flex-grow:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">    -webkit-box-flex:1.0;</div><div class="line">    -moz-flex-shrink:1;</div><div class="line">    -webkit-flex-shrink:1;</div><div class="line">    flex-shrink:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="子元素的显示次序"><a href="#子元素的显示次序" class="headerlink" title="子元素的显示次序"></a>子元素的显示次序</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">    -webkit-box-ordinal-group:1;</div><div class="line">    -moz-order:1;</div><div class="line">    -webkit-order:1;</div><div class="line">    order:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/*总*/</div><div class="line">.box&#123;</div><div class="line">    flex-wrap: nowrap | wrap | wrap-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/*不换行*/</div><div class="line">.box&#123;</div><div class="line">    flex-wrap: nowrap;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/*以相反的顺序换行*/</div><div class="line">.box&#123;</div><div class="line">    flex-wrap: wrap ;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/02/HTML表单详解/" itemprop="url">
+                  HTML表单详解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-02T10:41:48+08:00" content="2016-11-02">
+              2016-11-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>通常，HTML 表单的作用的是将数据发送到服务器上。服务器会处理这些数据并将结果返回给用户。这个过程似乎很容易，但是必须时刻注意要确保这些数据不能够破坏服务器或者给用户带来麻烦。</p>
+<h1 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单<form></form></h1><p>HTML的表单元素标签为<form></form>，它定义了数据将以怎样的方式发送到服务器。当按下“发送”按钮的时候，它将产生一个到服务器请求。需要牢记它的action和method方法。</p>
+<h2 id="action"><a href="#action" class="headerlink" title="action"></a>action</h2><p>这个方法定义了数据将被发送到的位置。它的值必须是一个合法的URL地址，如果没有包含该属性，数据将被发送到当前页面的地址。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;form action=<span class="string">"http://goodpan.github.io"</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>许多旧的编写方式如下所示，加上#来指示数据应该被发送到当前页面，这在HTML5出现之前都是必须要有的，但是现在不再需要了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;form action=<span class="string">"#"</span>&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="method方法"><a href="#method方法" class="headerlink" title="method方法"></a>method方法</h2><p>这个属性定义了数据是如何发送的。HTTP协议提供了一些处理请求的方法。HTML表单数据可以通过至少两种方式来发送：GET和POST方法。<br>为了理解这两种方法的差别，我们回过头分析下HTTP是如何工作的。每次你想在互联网上取得一个资源，浏览器就会发送一次请求。一个HTTP请求包含了两部分：一个“请求头”：包含了浏览器所具有能力的集合；还有一个“body”：包含了希望服务器可以处理的各种数据信息。</p>
+<p>1.GET方法<br>GET方法用来让浏览器向服务器请求并索取一个资源。在这种情况下，浏览器会发送一个空的body，由于body是空的，如果发送表单也是采用这种方式的话，数据将会以增加的方式追加到URL地址后面。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;form action=<span class="string">"http://foo.com"</span> method=<span class="string">"get"</span>&gt;</div><div class="line">  &lt;input name=<span class="string">"say"</span> value=<span class="string">"Hi"</span>&gt;</div><div class="line">  &lt;input name=<span class="string">"to"</span> value=<span class="string">"Mom"</span>&gt;</div><div class="line">  &lt;button&gt;Send my greetings&lt;/button&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure></p>
+<p>本次请求的结构如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">GET /?say=Hi&amp;to=Mom HTTP/1.1</div><div class="line">Host: foo.com</div></pre></td></tr></table></figure></p>
+<p>2.POST请求<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;form action=<span class="string">"http://foo.com"</span> method=<span class="string">"post"</span>&gt;</div><div class="line">  &lt;input name=<span class="string">"say"</span> value=<span class="string">"Hi"</span>&gt;</div><div class="line">  &lt;input name=<span class="string">"to"</span> value=<span class="string">"Mom"</span>&gt;</div><div class="line">  &lt;button&gt;Send my greetings&lt;/button&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure></p>
+<p>我们使用了POST方式来发送数据，本次HTTP请求结构如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">POST / HTTP/1.1</div><div class="line">Host: foo.com</div><div class="line">Content-Type: application/x-www-form-urlencoded</div><div class="line">Content-Length: 13</div><div class="line"></div><div class="line">say=Hi&amp;to=Mom</div></pre></td></tr></table></figure></p>
+<p>Content-Length 头指定了body的大小，Content-Type头指定了发送到服务器资源的类型。</p>
+<p>3.GET和POST区别<br>1). 如果你需要发送密码（或者其它敏感数据），请不要使用GET方法否则你会将密码展示到URL中。<br>2). 如果你要发送大量数据，推荐使用POST方法，因为一些浏览器限制了URL的大小以及长度。<br>无论你采用哪种HTTP方法，服务端都会将接收到的字符串解析成一对一对的键值对，以便获取数据。<br>每次你发送数据到服务端，你都需要考虑安全问题。HTML表单是攻击服务端的首选对象，这个问题并不是由HTML表单产生的，而是由服务端采用了不合理的处理方式而导致的。</p>
+<h1 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h1><h2 id="input"><a href="#input" class="headerlink" title="input"></a>input</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">'text'</span> name=<span class="string">''</span> placeholder=<span class="string">''</span> value=<span class="string">''</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"text"</span> pattern=<span class="string">"^cherry|banana$"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"email"</span> multiple&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"password"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"search"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"tel"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"url"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"radio"</span> checked&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"range"</span> min=<span class="string">"1"</span> max=<span class="string">"5"</span> step=<span class="string">"1"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"date"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"datetime-local"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"month"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"time"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"week"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"color"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"hidden"</span> name=<span class="string">"timestamp"</span> value=<span class="string">"1286705410"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"image"</span> alt=<span class="string">"Click me!"</span> src=<span class="string">"my-img.png"</span> width=<span class="string">"80"</span> height=<span class="string">"30"</span> /&gt;</div><div class="line">&lt;input id=<span class="string">"fileItem"</span> <span class="built_in">type</span>=<span class="string">"file"</span>&gt;</div></pre></td></tr></table></figure>
+<h2 id="textarea"><a href="#textarea" class="headerlink" title="textarea"></a>textarea</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;textarea cols=<span class="string">"20"</span> rows=<span class="string">"10"</span>&gt;&lt;/textarea&gt;</div></pre></td></tr></table></figure>
+<h2 id="select"><a href="#select" class="headerlink" title="select"></a>select</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;select&gt;</div><div class="line">  &lt;option&gt;Banana&lt;/option&gt;</div><div class="line">  &lt;option&gt;Cherry&lt;/option&gt;</div><div class="line">  &lt;option&gt;Lemon&lt;/option&gt;</div><div class="line">&lt;/select&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;select&gt;</div><div class="line">  &lt;optgroup label=<span class="string">"fruits"</span>&gt;</div><div class="line">    &lt;option&gt;Banana&lt;/option&gt;</div><div class="line">    &lt;option selected&gt;Cherry&lt;/option&gt;</div><div class="line">    &lt;option&gt;Lemon&lt;/option&gt;</div><div class="line">  &lt;/optgroup&gt;</div><div class="line">  &lt;optgroup label=<span class="string">"vegetables"</span>&gt;</div><div class="line">    &lt;option&gt;Carrot&lt;/option&gt;</div><div class="line">    &lt;option&gt;Eggplant&lt;/option&gt;</div><div class="line">    &lt;option&gt;Potatoe&lt;/option&gt;</div><div class="line">  &lt;/optgroup&gt;</div><div class="line">&lt;/select&gt;</div></pre></td></tr></table></figure>
+<h2 id="button"><a href="#button" class="headerlink" title="button"></a>button</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;button <span class="built_in">type</span>=<span class="string">"button"</span>&gt;</div><div class="line">    This an &lt;br&gt;&lt;strong&gt;anonymous button&lt;/strong&gt;</div><div class="line">&lt;/button&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"button"</span> value=<span class="string">"This is an anonymous button"</span>&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;button <span class="built_in">type</span>=<span class="string">"submit"</span>&gt;</div><div class="line">    This a &lt;br&gt;&lt;strong&gt;submit button&lt;/strong&gt;</div><div class="line">&lt;/button&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"submit"</span> value=<span class="string">"This is a submit button"</span>&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;button <span class="built_in">type</span>=<span class="string">"reset"</span>&gt;</div><div class="line">    This a &lt;br&gt;&lt;strong&gt;reset button&lt;/strong&gt;</div><div class="line">&lt;/button&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"reset"</span> value=<span class="string">"This is a reset button"</span>&gt;</div></pre></td></tr></table></figure>
+<h2 id="Meters-and-progress"><a href="#Meters-and-progress" class="headerlink" title="Meters and progress"></a>Meters and progress</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;progress max=<span class="string">"100"</span> value=<span class="string">"75"</span>&gt;75/100&lt;/progress&gt;</div><div class="line">&lt;meter min=<span class="string">"0"</span> max=<span class="string">"100"</span> value=<span class="string">"75"</span> low=<span class="string">"33"</span> high=<span class="string">"66"</span> optimum=<span class="string">"50"</span>&gt;75&lt;/meter&gt;</div></pre></td></tr></table></figure>
+<h2 id="文件上传File"><a href="#文件上传File" class="headerlink" title="文件上传File"></a>文件上传File</h2><p>通过File API,我们可以在用户选取一个或者多个文件之后,访问到代表了所选文件的一个或多个File对象,这些对象被包含在一个FileList对象中.<br>如果用户只选择了一个文件,那么我们只需要访问这个FileList对象中的第一个元素.</p>
+<p>可以使用传统的DOM选择方法来获取到用户所选择的文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;input id=<span class="string">"fileItem"</span> <span class="built_in">type</span>=<span class="string">"file"</span>&gt;</div><div class="line">var file = document.getElementById(<span class="string">'fileItem'</span>).files[0];</div></pre></td></tr></table></figure></p>
+<p>还可以使用jQuery选择器来选择：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var selectedfile = $(<span class="string">'#input'</span>).get(0).files[0];</div><div class="line">var selectedFile = $(<span class="string">'#input'</span>)[0].files[0];</div></pre></td></tr></table></figure></p>
+<p>以上可以返回一个FileList对象。<br>如果你的程序可以让用户选择多个文件,记得要在input元素上加上multiple属性。</p>
+<h3 id="获取所选文件的信息"><a href="#获取所选文件的信息" class="headerlink" title="获取所选文件的信息"></a>获取所选文件的信息</h3><p>用户所选择的文件都存储在了一个FileList对象上，其中每个文件都对应了一个File对象。你可以通过这个FileList对象的length属性知道用户一共选择了多少个文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var numFiles = files.length;</div></pre></td></tr></table></figure></p>
+<ol>
+<li><p>name<br>文件名,只读字符串,不包含任何路径信息.</p>
+</li>
+<li><p>size<br>文件大小,单位为字节,只读的64位整数.</p>
+</li>
+<li><p>type<br>MIME类型,只读字符串,如果类型未知,则返回空字符串.</p>
+</li>
+<li><p>item()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// fileInput is an HTML input element: &lt;input <span class="built_in">type</span>=<span class="string">"file"</span> id=<span class="string">"myfileinput"</span> multiple&gt;</div><div class="line">var fileInput = document.getElementById(<span class="string">"myfileinput"</span>);</div><div class="line"></div><div class="line">// files is a FileList object (similar to NodeList)</div><div class="line">var files = fileInput.files;</div><div class="line">var file;</div><div class="line"></div><div class="line">// loop through files</div><div class="line"><span class="keyword">for</span> (var i = 0; i &lt; files.length; i++) &#123;</div><div class="line"></div><div class="line">    // get item</div><div class="line">    file = files.item(i);</div><div class="line">    //or</div><div class="line">    file = files[i];</div><div class="line"></div><div class="line">    alert(file.name);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="通过拖放操作选择文件"><a href="#通过拖放操作选择文件" class="headerlink" title="通过拖放操作选择文件"></a>通过拖放操作选择文件</h3><p>你可以让用户将本地文件拖放到你的应用程序上.</p>
+<ol>
+<li>首先要创建一个拖放操作的目的区域。可根据您的应用程序的设计来决定哪部分的内容接受 drop，但创建一个接收drop事件的元素是简单的：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var dropbox;</div><div class="line"></div><div class="line">dropbox = document.getElementById(<span class="string">"dropbox"</span>);</div><div class="line">dropbox.addEventListener(<span class="string">"dragenter"</span>, dragenter, <span class="literal">false</span>);</div><div class="line">dropbox.addEventListener(<span class="string">"dragover"</span>, dragover, <span class="literal">false</span>);</div><div class="line">dropbox.addEventListener(<span class="string">"drop"</span>, drop, <span class="literal">false</span>);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在这个例子中，ID 为 dropbox 的元素所在的区域是我们的拖放目的区域。我们需要在该元素上绑定 dragenter，dragover，和drop 事件。<br>我们必须阻止dragenter和dragover事件的默认行为，这样才能触发 drop 事件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> dragenter(e) &#123;</div><div class="line">  e.stopPropagation();</div><div class="line">  e.preventDefault();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">function</span> dragover(e) &#123;</div><div class="line">  e.stopPropagation();</div><div class="line">  e.preventDefault();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>下面是 drop 函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> drop(e) &#123;</div><div class="line">  e.stopPropagation();</div><div class="line">  e.preventDefault();</div><div class="line"></div><div class="line">  var dt = e.dataTransfer;</div><div class="line">  var files = dt.files;</div><div class="line"></div><div class="line">  handleFiles(files);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在该函数中,我们从事件对象中获取到dataTransfer对象，把该对象包含的Filelist对象传入函数handleFiles()，这个函数会无区别的对待从input元素或拖放操作中来的文件列表。</p>
+<p>假设你正在开发下一个伟大的照片分享网站，并希望使用HTML5在用户上传他们图片之前进行缩略图预览。您可以如前面所讨论的建立一个输入元素或者拖放区域,并调用一个函数，如下面的 handleFiles 函数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> handleFiles(files) &#123;</div><div class="line">  <span class="keyword">for</span> (var i = 0; i &lt; files.length; i++) &#123;</div><div class="line">    var file = files[i];</div><div class="line">    var imageType = /^image\//;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> ( !imageType.test(file.type) ) &#123;</div><div class="line">      <span class="built_in">continue</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    var img = document.createElement(<span class="string">"img"</span>);</div><div class="line">    img.classList.add(<span class="string">"obj"</span>);</div><div class="line">    img.file = file;</div><div class="line">    // 假设 <span class="string">"preview"</span> 是将要展示图片的 div</div><div class="line">    preview.appendChild(img);</div><div class="line"></div><div class="line">    var reader = new FileReader();</div><div class="line">    reader.onload = (<span class="keyword">function</span>(aImg) &#123;</div><div class="line">      <span class="built_in">return</span> <span class="keyword">function</span>(e) &#123;</div><div class="line">        aImg.src = e.target.result;</div><div class="line">      &#125;;</div><div class="line">    &#125;)(img);</div><div class="line">    reader.readAsDataURL(file);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这里我们循环处理用户选择的文件，查看每个文件的类型属性，看看这是否是一个图像文件(通过一个正则表达式匹配字符串”image.*”)。<br>对于每个图片文件，我们创建一个新的img元素。CSS可以用于建立任何漂亮的边界,阴影,和指定图像的大小，所以，甚至不需要在这里完成。</p>
+<p>每张图片我们添加一个obj类，让他们更容易的在DOM树中被找到。我们也在图片上添加了一个file属性来确认每张图片的 File，这样可以帮助我们在之后真正的上传工作时获取到图片。最后我们使用 Node.appendChild() 把缩略图添加到我们先前的文档区域中。</p>
+<p>然后，我们建立了{ { domxref(FileReader)} }来处理图片的异步加载,并把它添加到img元素上。在创建新的FileReader对象之后,我们建立了onload函数,然后调用readAsDataURL()开始在后台进行读取操作。当图像文件的所有内容加载后，他们转换成一个 data: URL，传递到onload回调函数中。之后只需要把img元素的src属性设置为这个加载过的图像，就可以让图像的缩略图出现在用户的屏幕上。</p>
+<h3 id="使用对象URL"><a href="#使用对象URL" class="headerlink" title="使用对象URL"></a>使用对象URL</h3><p>Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)开始支持window.URL.createObjectURL()和 window.URL.revokeObjectURL()两个DOM方法。这两个方法创建简单的URL字符串对象，用于指向任何 DOM File 对象数据，包括用户电脑中的本地文件。</p>
+<p>当你想要在HTML中通过URL来引用File对象，你可以参考如下方式创建：</p>
+<p>var objectURL = window.URL.createObjectURL(fileObj);</p>
+<p>URL对象是 File 对象的一个字符串标识。 每次调用window.URL.createObjectURL()的时候，会创建一个唯一的URL对象，即使你已经为该文件创建了URL对象。这些对象都必须被释放。 当文档被卸载时，它们会自动释放，如果你的页面动态地使用它们，你应该明确地通过调用window.URL.revokeObjectURL()释放它们：</p>
+<p>window.URL.revokeObjectURL(objectURL);</p>
+<p>以下为完整示例：</p>
+<p>负责界面呈现的HTML如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"file"</span> id=<span class="string">"fileElem"</span> multiple accept=<span class="string">"image/\*"</span></div><div class="line">  style=<span class="string">"display：none"</span> onchange=<span class="string">"handleFiles(this.files)"</span>&gt;</div><div class="line">&lt;a href=<span class="string">"#"</span> id=<span class="string">"fileSelect"</span>&gt;Select some files&lt;/a&gt;</div><div class="line">&lt;div id=<span class="string">"fileList"</span>&gt;</div><div class="line">  &lt;p&gt;No files selected!&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>这建立文件的<input>元素就像一个调用文件选择器的链接（因为我们要隐藏文件输入，以防止表现出不友好的UI）。这部分将在 Using hidden file input elements using the click() method里解释，因为是调用文件选择器的方法。</p>
+<p>下面是 handleFiles()方法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">window.URL = window.URL || window.webkitURL;</div><div class="line"></div><div class="line">var fileSelect = document.getElementById(<span class="string">"fileSelect"</span>),</div><div class="line">    fileElem = document.getElementById(<span class="string">"fileElem"</span>),</div><div class="line">    fileList = document.getElementById(<span class="string">"fileList"</span>);</div><div class="line"></div><div class="line">fileSelect.addEventListener(<span class="string">"click"</span>, <span class="keyword">function</span> (e) &#123;</div><div class="line">  <span class="keyword">if</span> (fileElem) &#123;</div><div class="line">    fileElem.click();</div><div class="line">  &#125;</div><div class="line">  e.preventDefault(); // prevent navigation to <span class="string">"#"</span></div><div class="line">&#125;, <span class="literal">false</span>);</div><div class="line"></div><div class="line"><span class="keyword">function</span> handleFiles(files) &#123;</div><div class="line">  <span class="keyword">if</span> (!files.length) &#123;</div><div class="line">    fileList.innerHTML = <span class="string">"&lt;p&gt;No files selected!&lt;/p&gt;"</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    var list = document.createElement(<span class="string">"ul"</span>);</div><div class="line">    <span class="keyword">for</span> (var i = 0; i &lt; files.length; i++) &#123;</div><div class="line">      var li = document.createElement(<span class="string">"li"</span>);</div><div class="line">      list.appendChild(li);</div><div class="line"></div><div class="line">      var img = document.createElement(<span class="string">"img"</span>);</div><div class="line">      img.src = window.URL.createObjectURL(files[i]);</div><div class="line">      img.height = 60;</div><div class="line">      img.onload = <span class="keyword">function</span>(e) &#123;</div><div class="line">        window.URL.revokeObjectURL(this.src);</div><div class="line">      &#125;</div><div class="line">      li.appendChild(img);</div><div class="line"></div><div class="line">      var info = document.createElement(<span class="string">"span"</span>);</div><div class="line">      info.innerHTML = files[i].name + <span class="string">"： "</span> + files[i].size + <span class="string">" bytes"</span>;</div><div class="line">      li.appendChild(info);</div><div class="line">    &#125;</div><div class="line">    fileList.appendChild(list);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>通过 “fileList” ID 获取 <div>。我们将向这个 div 块插入文件列表和略缩图的地方。</div></p>
+<p>假如传递给 handleFiles() 函数的 FileList 对象为 null，那么就设置 div 块的 inner HTML 为 “No files selected!”。否则，我们将按下面的步骤建立文件列表：</p>
+<p>1.创建一个无序列表 (<ul>) 元素。<br>2.通过调用 element.appendChild() 方法向 <div> 块插入新的列表项。<br>3.files 即是 FileList，对于其中的每一个 File ：</div></ul></p>
+<ul>
+<li>创建一个 </li><li> 元素，并将其插入 list 中。</li>
+<li>创建一个 <img> 元素.</li>
+<li>使用 window.URL.createObjectURL() 创建URL，并设置图片的源为表示文件的新的 URL 对象。</li>
+<li>设置图片的 height 为 60 像素。</li>
+<li>创建图片的 load 事件句柄以其解除 URL 对象，因为图像载入之后就不再需要 URL。这是通过调用 window.URL.revokeObjectURL() 方法来完成的，用 img.src 传入指定的 URL 对象字符串。</li>
+<li>添加新的列表项到列表之中。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/01/Object类型详解/" itemprop="url">
+                  Object类型详解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-01T09:15:29+08:00" content="2016-11-01">
+              2016-11-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h1><p>引用类型的值（对象）是引用类型的一个实例。在ECMAScript中，引用类型是一种数据结构，用于将数据和功能组织在一起。引用类型有时候也被成为对象定义，因为它们描述的是一类对象所具有的属性和方法。</p>
+<p>对象是某个特定引用类型的实例。新对象是使用new操作符后跟一个构造函数来创建的。构造函数本身就是一个函数，只不过该函数是出于创建新对象的目的而定义的。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var person = new Object();</div></pre></td></tr></table></figure></p>
+<p>这行代码创建了一个Object新实例，然后把该实例保存在了变量person中。使用的构造函数式Object，它只为新对象定义了默认的属性和方法。ECMAScript提供了很多原生引用类型（例如Object)，以便开发人员用以实现常见的计算任务。</p>
+<h1 id="Object实例的创建"><a href="#Object实例的创建" class="headerlink" title="Object实例的创建"></a>Object实例的创建</h1><ol>
+<li><p>new操作符方式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var person = new Object();</div><div class="line">person.name = <span class="string">"Nicholas"</span>;</div><div class="line">person.age = 29;</div></pre></td></tr></table></figure>
+</li>
+<li><p>对象字面量方式<br>对象字面量是对象定义的一个简写形式，目的在于简化创建包含大量属性的对象的过程。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var person = &#123;</div><div class="line">  name:<span class="string">"Nicholas"</span>,</div><div class="line">  age:29</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在对象字面量语法中，属性名也可以使用字符串。<br>使用对象字面量语法，可以通过’.’的方式访问对象属性，也可以使用”[属性名]”来访访问属性。从功能上看，这二者没有区别。但”[]”的优点是可以通过变量来访问属性：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var propertyName = <span class="string">"name"</span>;</div><div class="line">alert(person[propertyName]);//<span class="string">"Nicholas"</span></div></pre></td></tr></table></figure></p>
+<p>如果属性名中包含会导致语法错误的字符，或者属性名使用的是关键字或者保留字，也可以使用方括号表示法。</p>
+<h1 id="Object属性"><a href="#Object属性" class="headerlink" title="Object属性"></a>Object属性</h1><h2 id="Constructor"><a href="#Constructor" class="headerlink" title="Constructor"></a>Constructor</h2><p>保存用于创建当前对象的函数。</p>
+<h1 id="Object方法"><a href="#Object方法" class="headerlink" title="Object方法"></a>Object方法</h1><h2 id="Object-assign"><a href="#Object-assign" class="headerlink" title="Object.assign()"></a>Object.assign()</h2><p>Object.assign函数是ES2015的内容，使用该函数我们可以快速的复制一个或者多个对象到目标对象中<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.assign(target, ...sources)</div></pre></td></tr></table></figure></p>
+<h3 id="函数原型"><a href="#函数原型" class="headerlink" title="函数原型"></a>函数原型</h3><p>函数参数为一个目标对象（该对象作为最终的返回值）,源对象(此处可以为任意多个)。通过调用该函数可以拷贝所有可被枚举的自有属性值到目标对象中。<br>这里我们需要强调的三点是：</p>
+<ol>
+<li>可被枚举的属性</li>
+<li>自有属性</li>
+<li>string或者Symbol类型是可以被直接分配的<br>拷贝过程中将调用源对象的getter方法，并在target对象上使用setter方法实现目标对象的拷贝。</li>
+</ol>
+<h3 id="函数实例"><a href="#函数实例" class="headerlink" title="函数实例"></a>函数实例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var o1 = &#123; a: 1 &#125;;</div><div class="line">var o2 = &#123; b: 2 &#125;;</div><div class="line">var o3 = &#123; c: 3 &#125;;</div><div class="line"></div><div class="line">var obj = Object.assign(o1, o2, o3);</div><div class="line">console.log(obj); // &#123; a: 1, b: 2, c: 3 &#125;</div><div class="line">console.log(o1);  // &#123; a: 1, b: 2, c: 3 &#125;, target object itself is changed.</div></pre></td></tr></table></figure>
+<p>最开始的o1因为设置为target，则调用其setter方法设置了其他对象的属性到自身。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var obj = Object.create(&#123; foo: 1 &#125;, &#123; // foo is an inherit property.</div><div class="line">  bar: &#123;</div><div class="line">    value: 2  // bar is a non-enumerable property.</div><div class="line">  &#125;,</div><div class="line">  baz: &#123;</div><div class="line">    value: 3,</div><div class="line">    enumerable: <span class="literal">true</span>  // baz is an own enumerable property.</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">var copy = Object.assign(&#123;&#125;, obj);</div><div class="line">console.log(copy); // &#123; baz: 3 &#125;</div></pre></td></tr></table></figure></p>
+<p>我们自定义了一些对象，这些对象有一些包含了不可枚举的属性,另外注意使用 Object.defineProperty 初始化的对象默认是不可枚举的属性。对于可枚举的对象我们可以直接使用Object.keys()获得,或者使用for-in循环遍历出来.<br>对于不可枚举的属性，使用Object.assign的时候将被自动忽略。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var target = Object.defineProperty(&#123;&#125;, <span class="string">'foo'</span>, &#123;</div><div class="line">  value: 1,</div><div class="line">  writable: <span class="literal">false</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">Object.assign(target, &#123; bar: 2 &#125;)</div><div class="line"></div><div class="line">//&#123;bar: 2, foo: 1&#125;</div><div class="line"></div><div class="line">Object.assign(target, &#123; foo: 2 &#125;)</div><div class="line">//Uncaught TypeError: Cannot assign to <span class="built_in">read</span> only property <span class="string">'foo'</span> of object <span class="string">'#&lt;Object&gt;'</span>(…)</div></pre></td></tr></table></figure></p>
+<p>对于只读的属性，当分配新的对象覆盖他的时候，将抛出异常。</p>
+<h3 id="Polyfill"><a href="#Polyfill" class="headerlink" title="Polyfill"></a>Polyfill</h3><ol>
+<li>实现es5版本的Object.assign：</li>
+<li>判断是否原生支持该函数，如果不存在的话创建一个立即执行函数，该函数将创建一个assign函数绑定到Object上。</li>
+<li>判断参数是否正确(目的对象不能为空，我们可以直接设置{}传递进去,但必须设置该值)</li>
+<li>使用Object在原有的对象基础上返回该对象，并保存为out</li>
+<li>使用for…in循环遍历出所有的可枚举的自有对象。并复制给新的目标对象(hasOwnProperty返回非原型链上的属性)<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (typeof Object.assign != <span class="string">'function'</span>) &#123;</div><div class="line">  (<span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">	Object.assign = <span class="keyword">function</span> (target) &#123;</div><div class="line">	 <span class="string">'use strict'</span>;</div><div class="line">	 <span class="keyword">if</span> (target === undefined || target === null) &#123;</div><div class="line">	   throw new TypeError(<span class="string">'Cannot convert undefined or null to object'</span>);</div><div class="line">	 &#125;</div><div class="line"></div><div class="line">	 var output = Object(target);</div><div class="line">	 <span class="keyword">for</span> (var index = 1; index &lt; arguments.length; index++) &#123;</div><div class="line">	   var <span class="built_in">source</span> = arguments[index];</div><div class="line">	   <span class="keyword">if</span> (<span class="built_in">source</span> !== undefined &amp;&amp; <span class="built_in">source</span> !== null) &#123;</div><div class="line">	     <span class="keyword">for</span> (var nextKey <span class="keyword">in</span> <span class="built_in">source</span>) &#123;</div><div class="line">	       <span class="keyword">if</span> (source.hasOwnProperty(nextKey)) &#123;</div><div class="line">	         output[nextKey] = <span class="built_in">source</span>[nextKey];</div><div class="line">	       &#125;</div><div class="line">	     &#125;</div><div class="line">	   &#125;</div><div class="line">	 &#125;</div><div class="line">	 <span class="built_in">return</span> output;</div><div class="line">	&#125;;</div><div class="line">&#125;)();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Object-create"><a href="#Object-create" class="headerlink" title="Object.create()"></a>Object.create()</h2><p>创建一个具有指定原型且可选择性地包含指定属性的对象<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.create(prototype, descriptors)</div></pre></td></tr></table></figure></p>
+<p>参数:<br>prototype 必需。  要用作原型的对象。 可以为 null。<br>descriptors 可选。 包含一个或多个属性描述符的 JavaScript 对象。</p>
+<p>简单来讲，new Object()是一种通过构造函数来创建object的方式，而Object.create(proto, [ propertiesObject ])<br>不需要通过构造函数就可以创建一个object，Object.create()的第一个参数是必须要的，第二个参数可选。</p>
+<h2 id="Object-defineProperties"><a href="#Object-defineProperties" class="headerlink" title="Object.defineProperties()"></a>Object.defineProperties()</h2><p>将一个或多个属性添加到对象，并/或修改现有属性的特性。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">object.defineProperties(object, descriptors)</div></pre></td></tr></table></figure></p>
+<p>参数<br>object<br>必需。  对其添加或修改属性的对象。  这可以是本机 JavaScript 对象或 DOM 对象。<br>descriptors<br>必需。  包含一个或多个描述符对象的 JavaScript 对象。  每个描述符对象描述一个数据属性或访问器属性。  </p>
+<p>返回值<br>已传递给函数的对象。</p>
+<p>备注<br>descriptors 参数是一个包含一个或多个描述符对象的对象。<br>数据属性是可储存和检索值的属性。  数据属性描述符包含一个 value 特性和/或一个 writable 特性。  有关更多信息，请参见数据属性和访问器属性。<br>一旦设置或检索属性值，访问器属性就会调用用户提供的函数。<br>访问器属性描述符包含 set 特性和/或 get 特性。<br>如果对象已包含一个带指定名称的属性，则修改该属性的特性。<br>若要创建一个对象并向新对象添加属性，则可使用 Object.create 函数 (JavaScript)。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">var newLine = <span class="string">"&lt;br /&gt;"</span>;</div><div class="line"></div><div class="line">var obj = &#123;&#125;;</div><div class="line">Object.defineProperties(obj, &#123;</div><div class="line">    newDataProperty: &#123;</div><div class="line">        value: 101,</div><div class="line">        writable: <span class="literal">true</span>,</div><div class="line">        enumerable: <span class="literal">true</span>,</div><div class="line">        configurable: <span class="literal">true</span></div><div class="line">    &#125;,</div><div class="line">    newAccessorProperty: &#123;</div><div class="line">        <span class="built_in">set</span>: <span class="keyword">function</span> (x) &#123;</div><div class="line">            document.write(<span class="string">"in property set accessor"</span> + newLine);</div><div class="line">            this.newaccpropvalue = x;</div><div class="line">        &#125;,</div><div class="line">        get: <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">            document.write(<span class="string">"in property get accessor"</span> + newLine);</div><div class="line">            <span class="built_in">return</span> this.newaccpropvalue;</div><div class="line">        &#125;,</div><div class="line">        enumerable: <span class="literal">true</span>,</div><div class="line">        configurable: <span class="literal">true</span></div><div class="line">    &#125;&#125;);</div><div class="line"></div><div class="line">// Set the accessor property value.</div><div class="line">obj.newAccessorProperty = 10;</div><div class="line">document.write (<span class="string">"newAccessorProperty value: "</span> + obj.newAccessorProperty + newLine);</div><div class="line"></div><div class="line">// Output:</div><div class="line">// <span class="keyword">in</span> property <span class="built_in">set</span> accessor</div><div class="line">// <span class="keyword">in</span> property get accessor</div><div class="line">// newAccessorProperty value: 10</div></pre></td></tr></table></figure></p>
+<h2 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty()"></a>Object.defineProperty()</h2><p>将属性添加到对象，或修改现有属性的特性。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.defineProperty(object, propertyname, descriptor)</div></pre></td></tr></table></figure></p>
+<p>参数<br>object<br>必需。  要在其上添加或修改属性的对象。  这可能是一个本机 JavaScript 对象（即用户定义的对象或内置对象）或 DOM 对象。<br>propertyname<br>必需。  一个包含属性名称的字符串。<br>descriptor<br>必需。  属性描述符。  它可以针对数据属性或访问器属性。  </p>
+<p>返回值<br>已修改对象。</p>
+<p>备注<br>可使用 Object.defineProperty 函数来执行以下操作：<br>向对象添加新属性。  当对象不具有指定的属性名称时，发生此操作。<br>修改现有属性的特性。  当对象已具有指定的属性名称时，发成此操作。<br>描述符对象中会提供属性定义，用于描述数据属性或访问器属性的特性。  描述符对象是 Object.defineProperty 函数的参数。<br>若要向对象添加多个属性或修改多个现有属性，可使用 Object.defineProperties 函数 (JavaScript)。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">var newLine = <span class="string">"&lt;br /&gt;"</span>;</div><div class="line"></div><div class="line">// Create a user-defined object.</div><div class="line">var obj = &#123;&#125;;</div><div class="line"></div><div class="line">// Add a data property to the object.</div><div class="line">Object.defineProperty(obj, <span class="string">"newDataProperty"</span>, &#123;</div><div class="line">    value: 101,</div><div class="line">    writable: <span class="literal">true</span>,</div><div class="line">    enumerable: <span class="literal">true</span>,</div><div class="line">    configurable: <span class="literal">true</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">// Set the property value.</div><div class="line">obj.newDataProperty = 102;</div><div class="line">document.write(<span class="string">"Property value: "</span> + obj.newDataProperty + newLine);</div><div class="line"></div><div class="line">// Output:</div><div class="line">// Property value: 102</div></pre></td></tr></table></figure></p>
+<h2 id="Object-freeze"><a href="#Object-freeze" class="headerlink" title="Object.freeze()"></a>Object.freeze()</h2><p>阻止修改现有属性的特性和值，并阻止添加新属性。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.freeze(object)</div></pre></td></tr></table></figure></p>
+<p>参数<br>object<br>必需。在其上锁定特性的对象。<br>返回值<br>传递给函数的对象。</p>
+<h2 id="getOwnPropertyDescriptor"><a href="#getOwnPropertyDescriptor" class="headerlink" title="getOwnPropertyDescriptor()"></a>getOwnPropertyDescriptor()</h2><p>获取指定对象的自身属性描述符。自身属性描述符是指直接在对象上定义（而非从对象的原型继承）的描述符。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.getOwnPropertyDescriptor(object, propertyname)</div></pre></td></tr></table></figure></p>
+<p>参数<br>object<br>必需。包含属性的对象。<br>propertyname<br>必需。属性的名称。</p>
+<p>返回值<br>属性的描述符。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">// Create a user-defined object.</div><div class="line">var obj = &#123;&#125;;</div><div class="line"></div><div class="line">// Add a data property.</div><div class="line">obj.newDataProperty = <span class="string">"abc"</span>;</div><div class="line"></div><div class="line">// Get the property descriptor.</div><div class="line">var descriptor = Object.getOwnPropertyDescriptor(obj, <span class="string">"newDataProperty"</span>);</div><div class="line"></div><div class="line">// Change a property attribute.</div><div class="line">descriptor.writable = <span class="literal">false</span>;</div><div class="line">Object.defineProperty(obj, <span class="string">"newDataProperty"</span>, descriptor);</div></pre></td></tr></table></figure></p>
+<h2 id="getOwnPropertyDescriptors"><a href="#getOwnPropertyDescriptors" class="headerlink" title="getOwnPropertyDescriptors()"></a>getOwnPropertyDescriptors()</h2><p>Object.getOwnPropertyDescriptors(obj)</p>
+<h2 id="getOwnPropertyNames"><a href="#getOwnPropertyNames" class="headerlink" title="getOwnPropertyNames()"></a>getOwnPropertyNames()</h2><p>返回对象自己的属性的名称。一个对象的自己的属性是指直接对该对象定义的属性，而不是从该对象的原型继承的属性。对象的属性包括字段（对象）和函数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.getOwnPropertyNames(object)</div></pre></td></tr></table></figure></p>
+<p>参数<br>Object<br>必需。包含自己的属性的对象</p>
+<p>返回值<br>一个数组，其中包含对象自己的属性的名称。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Pasta(grain, width, shape) &#123;</div><div class="line">    // Define properties.</div><div class="line">    this.grain = grain;</div><div class="line">    this.width = width;</div><div class="line">    this.shape = shape;</div><div class="line">    this.toString = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">        <span class="built_in">return</span> (this.grain + <span class="string">", "</span> + this.width + <span class="string">", "</span> + this.shape);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Create an object.</div><div class="line">var spaghetti = new Pasta(<span class="string">"wheat"</span>, 0.2, <span class="string">"circle"</span>);</div><div class="line"></div><div class="line">// Get the own property names.</div><div class="line">var arr = Object.getOwnPropertyNames(spaghetti);</div><div class="line">document.write (arr);</div><div class="line"></div><div class="line">// Output:</div><div class="line">//   grain,width,shape,toString</div></pre></td></tr></table></figure></p>
+<h2 id="getOwnPropertySymbols"><a href="#getOwnPropertySymbols" class="headerlink" title="getOwnPropertySymbols()"></a>getOwnPropertySymbols()</h2><h2 id="getPrototypeOf"><a href="#getPrototypeOf" class="headerlink" title="getPrototypeOf()"></a>getPrototypeOf()</h2><h2 id="is"><a href="#is" class="headerlink" title="is()"></a>is()</h2><p>返回一个值，该值指示两个值是否相同。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Object.is(value1, value2)</div></pre></td></tr></table></figure>
+<p>参数<br>value1<br>必需。要测试的第一个值。<br>value2<br>必需。要测试的第二个值。</p>
+<p>返回值<br>如果值相同，则为 true；否则为 false。</p>
+<p>备注<br>与 = = 运算符不同，Object.is 在测试值时不会强制任何类型。<br>Object.is 应用的比较类似于 === 运算符所应用的比较，区别在于 Object.is 将 Number.isNaN 视作与 NaN 相同的值。它还将 + 0 和-0 视作不同值。</p>
+<h2 id="isExtensible"><a href="#isExtensible" class="headerlink" title="isExtensible()"></a>isExtensible()</h2><h2 id="isFrozen"><a href="#isFrozen" class="headerlink" title="isFrozen()"></a>isFrozen()</h2><h2 id="isSealed"><a href="#isSealed" class="headerlink" title="isSealed()"></a>isSealed()</h2><h2 id="keys"><a href="#keys" class="headerlink" title="keys()"></a>keys()</h2><h2 id="preventExtensions"><a href="#preventExtensions" class="headerlink" title="preventExtensions()"></a>preventExtensions()</h2><h2 id="hasOwnProperty-NaN"><a href="#hasOwnProperty-NaN" class="headerlink" title="hasOwnProperty()"></a>hasOwnProperty()</h2><h2 id="isPrototypeOf-NaN"><a href="#isPrototypeOf-NaN" class="headerlink" title="isPrototypeOf()"></a>isPrototypeOf()</h2><h2 id="propertyIsEnumerable-NaN"><a href="#propertyIsEnumerable-NaN" class="headerlink" title="propertyIsEnumerable()"></a>propertyIsEnumerable()</h2><h2 id="toLocaleString-NaN"><a href="#toLocaleString-NaN" class="headerlink" title="toLocaleString()"></a>toLocaleString()</h2><h2 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString()"></a>toString()</h2><h2 id="valueOf-NaN"><a href="#valueOf-NaN" class="headerlink" title="valueOf()"></a>valueOf()</h2><h2 id="watch"><a href="#watch" class="headerlink" title="watch()"></a>watch()</h2><h2 id="seal"><a href="#seal" class="headerlink" title="seal()"></a>seal()</h2><h2 id="setPrototypeOf"><a href="#setPrototypeOf" class="headerlink" title="setPrototypeOf()"></a>setPrototypeOf()</h2>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/31/javascript中String类型详解/" itemprop="url">
+                  javascript中String类型详解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-31T09:13:54+08:00" content="2016-10-31">
+              2016-10-31
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>String类型用于表示由零或多个16位Unicode字符组成的字符序列，即字符串。可以由””和’’表示，两种写法都是有效的。(与PHP中的双引号和单引号会影响解释方式不同，ECMAscript的这两种语法形式没有区别)。</p>
+<h1 id="字符串类型的创建"><a href="#字符串类型的创建" class="headerlink" title="字符串类型的创建"></a>字符串类型的创建</h1><h2 id="字面量方式"><a href="#字面量方式" class="headerlink" title="字面量方式"></a>字面量方式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">\n  换行</div><div class="line">\t  制表</div><div class="line">\b  空格</div><div class="line">\r  回车</div><div class="line">\f  进纸</div><div class="line">\\  斜杠</div><div class="line">\<span class="string">'  单引号</span></div><div class="line">\"  双引号</div></pre></td></tr></table></figure>
+<p>这些字符串可以出现在字符串中的任意位置，而且也将作为一个字符来解析。</p>
+<h2 id="String构造函数创建"><a href="#String构造函数创建" class="headerlink" title="String构造函数创建"></a>String构造函数创建</h2><p>String类型是字符串的对象包装类型，可以像下面这样使用String构造函数创建：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var stringObject = new String(<span class="string">"hello world"</span>);</div></pre></td></tr></table></figure></p>
+<p>String对象的方法也可以在所有基本的字符串值中访问到。其中继承的valueOf().toLocalString()和toString()方法，都返回对象所表示的基本字符串值。<br>String类型的每个实例都有一个length属性，表示字符串中有多个字符。应该注意的是，即使字符串中包含双字节字符（不是占一个字节的ASCII字符），每个字符仍然算一个字符。</p>
+<h1 id="String类型方法"><a href="#String类型方法" class="headerlink" title="String类型方法"></a>String类型方法</h1><h2 id="字符方法"><a href="#字符方法" class="headerlink" title="字符方法"></a>字符方法</h2><p>两个用于访问字符串中特定字符的方法,charAt()和charCodeAt()。这两个方法都接收一个参数，即基于0的字符位置。</p>
+<ol>
+<li><p>charAt()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var stringValue = <span class="string">"hello world"</span>;</div><div class="line">alert(stringValue.charAt(1));//<span class="string">"e"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>charCodeAt()<br>charAt()得到的是字符，如果想得到不是字符而是字符编码，则用charCodeAt()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var stringValue = <span class="string">"hello world"</span>;</div><div class="line">alert(stringValue.charCodeAt(1));//<span class="string">"101"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>方括号加索引<br>ECMAscript提供了另一个访问字符串的方法，可以使用方括号加数字索引来访问字符串中的特定字符。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var stringValue = <span class="string">"hello world"</span>;</div><div class="line">alert(stringValue[1]);//<span class="string">"e"</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这种方式在IE7会返回undefined值。</p>
+<h2 id="字符串操作方法"><a href="#字符串操作方法" class="headerlink" title="字符串操作方法"></a>字符串操作方法</h2><ol>
+<li>concat()<br>将一个或多个字符串拼接起来，返回拼接得到的新字符串。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var stringValue = <span class="string">"hello"</span>;</div><div class="line">var result = stringValue.concat(<span class="string">"world"</span>);</div><div class="line">alert(result);//<span class="string">"hello world"</span></div><div class="line">alert(stringValue);//<span class="string">"hello"</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>concat可以接收任意多个参数，即可以拼接任意多个字符串。<br>虽然concat可以专门用来拼接字符串，但是实际中使用更多的是用+操作符。</p>
+<ol>
+<li>slice()</li>
+</ol>
+<ol>
+<li><p>substr()</p>
+</li>
+<li><p>subString()</p>
+</li>
+</ol>
+<h2 id="字符串位置方法"><a href="#字符串位置方法" class="headerlink" title="字符串位置方法"></a>字符串位置方法</h2><ol>
+<li><p>indexOf()</p>
+</li>
+<li><p>lastIndexOf()</p>
+</li>
+</ol>
+<h2 id="去空格trim-方法"><a href="#去空格trim-方法" class="headerlink" title="去空格trim()方法"></a>去空格trim()方法</h2><h2 id="字符串大小写转换方法"><a href="#字符串大小写转换方法" class="headerlink" title="字符串大小写转换方法"></a>字符串大小写转换方法</h2><ol>
+<li>toLowerCase()</li>
+</ol>
+<ol>
+<li><p>toLocaleLowerCase()</p>
+</li>
+<li><p>toUpperCase()</p>
+</li>
+<li><p>toLocaleUpperCase()</p>
+</li>
+</ol>
+<h2 id="字符串的模式匹配方法"><a href="#字符串的模式匹配方法" class="headerlink" title="字符串的模式匹配方法"></a>字符串的模式匹配方法</h2><ol>
+<li><p>match()</p>
+</li>
+<li><p>search()</p>
+</li>
+<li><p>replace()</p>
+</li>
+</ol>
+<h2 id="字符串比较方法localeCompare"><a href="#字符串比较方法localeCompare" class="headerlink" title="字符串比较方法localeCompare()"></a>字符串比较方法localeCompare()</h2><h2 id="fromCharCode-方法"><a href="#fromCharCode-方法" class="headerlink" title="fromCharCode()方法"></a>fromCharCode()方法</h2><h2 id="HTML方法"><a href="#HTML方法" class="headerlink" title="HTML方法"></a>HTML方法</h2><h1 id="字符串特点"><a href="#字符串特点" class="headerlink" title="字符串特点"></a>字符串特点</h1><p>字符串是不可变的，一旦创建，它们的值就不能改变。要改变某个变量保存的字符串，首先要销毁原来的字符串，然后再用另一个包含新值的字符串填充该变量：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var lang = <span class="string">"java"</span>;</div><div class="line">lang = lang + <span class="string">"script"</span>;</div></pre></td></tr></table></figure></p>
+<p>以上代码后台操作过程为：首先创建一个容纳10个字符的新字符串，然后在这个字符串中填充”java”和”script”,最后一步是销毁原来的字符串”java”和”script”,因为这两个字符串已经没有用了。</p>
+<h1 id="字符串类型转换"><a href="#字符串类型转换" class="headerlink" title="字符串类型转换"></a>字符串类型转换</h1><p>将一个值转换为字符串有两种方式：<br>1.toString()<br>数值、布尔值、对象和字符串（每个字符串也多有一个toString()方法，该方法返回字符串的副本)都有toString()方法。但null和undefined值没有这个方法。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var age = 11;</div><div class="line">var ageAsString = age.toString();//<span class="string">"11"</span></div><div class="line">var found = <span class="literal">true</span>;</div><div class="line">var foundAsString = found.toString();//<span class="string">"true"</span></div></pre></td></tr></table></figure></p>
+<p>通过给toString()方法传递参数可以输出以二进制、十进制、八进制、十六进制乃至其他任意有效进制格式表示的字符串。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var num = 10;</div><div class="line">alert(num.toString());//<span class="string">"10"</span></div><div class="line">alert(num.toString(2));//<span class="string">"1010"</span></div><div class="line">alert(num.toString(8));//<span class="string">"12"</span></div><div class="line">alert(num.toString(10));//<span class="string">"10"</span></div><div class="line">alert(num.toString(16));//<span class="string">"a"</span></div></pre></td></tr></table></figure></p>
+<p>2.String()转型函数<br>在不知道要转换的值是不是null或undefined的情况下，可以使用转型函数String()，这个函数能够将任何类型的值转换为字符串。String()函数遵循下列转换规则：</p>
+<ul>
+<li>如果值有toString()方法，则调用该方法（无参数）并返回相应的结果；</li>
+<li>如果值是null,则返回”null”;</li>
+<li>如果值是undefined，则返回”undefined”。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var value1 = 10;</div><div class="line">var value2 = <span class="literal">true</span>;</div><div class="line">var value3 = null;</div><div class="line">var value4;</div><div class="line">alert(String(value1));//<span class="string">"10"</span></div><div class="line">alert(String(value2));//<span class="string">"true"</span></div><div class="line">alert(String(value3));//<span class="string">"null"</span></div><div class="line">alert(String(value4));//<span class="string">"undefined"</span></div></pre></td></tr></table></figure>
+<ol>
+<li>+””方式</li>
+</ol>
+<h1 id="作为数组的字符串"><a href="#作为数组的字符串" class="headerlink" title="作为数组的字符串"></a>作为数组的字符串</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var s = <span class="string">"JavaScript"</span>;</div><div class="line">Array.prototype.join.call(s,<span class="string">" "</span>);//=&gt; <span class="string">"J a v a S c r i p t"</span></div><div class="line">Array.prototype.filter.call(s,<span class="keyword">function</span>(x)&#123;</div><div class="line">      <span class="built_in">return</span> x.match(/[^aeiou]/);</div><div class="line">  &#125;).join(<span class="string">""</span>) //=&gt; <span class="string">"JvScript"</span></div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/28/javascript函数柯里化详解/" itemprop="url">
+                  javascript函数柯里化详解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-28T08:50:19+08:00" content="2016-10-28">
+              2016-10-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>函数柯里化（curry）的定义很简单：传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数。<br>比如对于加法函数 var add = (x, y) =&gt;　x + y ，我们可以这样进行柯里化：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//ES5写法</div><div class="line">var add = <span class="keyword">function</span>(x)&#123;</div><div class="line">  <span class="built_in">return</span> <span class="keyword">function</span>(y)&#123;</div><div class="line">    <span class="built_in">return</span> x+y;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//ES6写法</div><div class="line">var add = x =&gt; (y =&gt; x + y);</div><div class="line">var add2 = add(2);  </div><div class="line">var add200 = add(200);</div><div class="line"></div><div class="line">add2(2);//4</div><div class="line">add2(50);//250</div></pre></td></tr></table></figure></p>
+<p>与函数绑定紧密相关的主题是函数柯里化(function currying)，它用于创建已经设置好了一个或多个参数的函数。函数柯里化的基本方法和函数绑定是一样的：使用一个闭包返回一个函数。两者的区别在于，当函数被调用时，返回的函数还需要设置一些传入的参数。<br>柯里化函数通常由以下步骤动态创建：调用另一个函数并为它传入要柯里化的函数和必要参数。下面是创建柯里化函数的通用方式。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> curry(fn)&#123;</div><div class="line">  var args = Array.prototype.slice.call(arguments,1);</div><div class="line">  <span class="built_in">return</span> <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    var innerArgs = Array.prototype.slice.call(arguments);</div><div class="line">    var finalArgs = args.concat(innerArgs);</div><div class="line">    <span class="built_in">return</span> fn.apply(null,finalArgs);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>柯里化示例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> add(num1,num2) &#123;</div><div class="line">  <span class="built_in">return</span> num1+num2;</div><div class="line">&#125;</div><div class="line">var curryAdd = curry(add,5);//调用以上柯里化函数</div><div class="line">curryAdd(2);//结果7</div></pre></td></tr></table></figure></p>
+<p>也可以这样：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> add(num1,num2) &#123;</div><div class="line">  <span class="built_in">return</span> num1+num2;</div><div class="line">&#125;</div><div class="line">var curryAdd = curry(add,5，12);//调用以上柯里化函数</div><div class="line">curryAdd();//结果17</div></pre></td></tr></table></figure></p>
+<p>事实上柯里化是一种“预加载”函数的方法，通过传递较少的参数，得到一个已经记住了这些参数的新函数，某种意义上讲，这是一种对参数的“缓存”，是一种非常高效的编写函数的方法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">import &#123; curry &#125; from <span class="string">'lodash'</span>;</div><div class="line">//首先柯里化两个纯函数</div><div class="line">var match = curry((reg,str) =&gt; str.match(reg));</div><div class="line">var filter = curry((f,str) =&gt; str.filter(f));</div><div class="line"></div><div class="line">//判断字符串里面有没有空格</div><div class="line">var haveSpace = match(/\s+/g);</div><div class="line"></div><div class="line">haveSpace(<span class="string">"ffffff"</span>);</div><div class="line">//=&gt;null</div><div class="line"></div><div class="line">haveSpace(<span class="string">"a b"</span>);</div><div class="line">//=&gt;[<span class="string">" "</span>]</div><div class="line"></div><div class="line">filter(haveSpace,[<span class="string">"abcdefg"</span>,<span class="string">"hello world"</span>]);</div><div class="line">//=&gt;[<span class="string">"hello world"</span>]</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/25/javascript数组详解（二）/" itemprop="url">
+                  javascript数组详解（二）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-25T08:35:11+08:00" content="2016-10-25">
+              2016-10-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="数组元素的添加和删除"><a href="#数组元素的添加和删除" class="headerlink" title="数组元素的添加和删除"></a>数组元素的添加和删除</h1><h2 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h2><ul>
+<li><p>为新索引赋值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [];//开始一个空数组</div><div class="line">a[0]=<span class="string">"zero"</span>;//然后向其中添加元素</div><div class="line">a[1]=<span class="string">"one"</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>push()方法<br>可以使用push方法在数组末尾增加一个或多个元素</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [];</div><div class="line">a.push(<span class="string">"zero"</span>);//a=[<span class="string">"zero"</span>];</div><div class="line">a.push(<span class="string">"one"</span>,<span class="string">"two"</span>);//a=[<span class="string">"zero"</span>,<span class="string">"one"</span>,<span class="string">"two"</span>];</div></pre></td></tr></table></figure>
+</li>
+<li><p>a[a.length]<br>在数组尾部压入一个元素与给数组a[a.length]赋值是一样的。</p>
+</li>
+<li>unshift()方法<br>向数组的首部插入一个元素，并且将其他元素依次移到更高的索引处。<h2 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h2></li>
+<li>delete运算符<br>可以像删除对象属性一样使用delete运算符来删除数组元素。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [1,2,3];</div><div class="line">delete a[1];//a在索引1的位置不再有元素</div><div class="line">1 <span class="keyword">in</span> a  //=&gt; <span class="literal">false</span>:数组索引1并未在数组中定义。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>删除数组元素与为其赋值undefined是一样的（但有一些微妙的区别）。<br>注意：对一个数组元素delete不会修改数组的length属性，也不会将数组元素从高索引处移下来填充已删除属性留下的空白。<br>如果从数组中删除一个元素，它就变成稀疏数组。</p>
+<ul>
+<li>给length属性赋值删除数组元素<br>可以简单地给数组属性length赋一个期望的长度来删除数组尾部的元素。</li>
+<li>pop()方法<br>从尾部移除数组元素，一次使减少长度1并返回被删除元素的值。</li>
+<li>shift()方法<br>从数组头部删除一个元素。和delete不同的是，shift()方法将所有元素下移到比当前索引低1的地方。<h2 id="splice-方法"><a href="#splice-方法" class="headerlink" title="splice()方法"></a>splice()方法</h2>splice()方法是一个通用方法，可以插入、删除或替换数组元素。它会根据需要修改length属性并移动元素到更高或较低的索引处。<h1 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h1><h2 id="for循环遍历"><a href="#for循环遍历" class="headerlink" title="for循环遍历"></a>for循环遍历</h2>for循环遍历是最常见的方法：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var keys = Object.keys(o);//获得o对象属性名组成的数组。</div><div class="line">var values = [];//在数组中存储匹配属性的值。</div><div class="line"><span class="keyword">for</span>(var i = 0;i &lt; keys.length;i++)&#123;</div><div class="line">  var key = key[i];</div><div class="line">  values[i] = o[key];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在嵌套循环或其他性能非常重要的上下文中，可以看到这种基本的数组遍历需要优化，数组的长度应该只查询一次而非每次循环都要查询：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(var i = 0,len = keys.length;i&lt;len;i++)&#123;</div><div class="line">  var key = key[i];</div><div class="line">  values[i] = o[key];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>排除null,undefined和不存在的元素：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(var i = 0;i&lt;a.length;i++)&#123;</div><div class="line">  <span class="keyword">if</span>(!a[i]) <span class="built_in">continue</span>;//跳过null、undefined和不存在的元素</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>跳过undefined和不存在的元素：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(var i = 0;i&lt;a.length;i++)&#123;</div><div class="line">  <span class="keyword">if</span>(a[i] === undefined) <span class="built_in">continue</span>;//跳过null、undefined和不存在的元素</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>跳过不存在的元素而仍然要处理存在undefined元素：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(var i = 0;i&lt;a.length;i++)&#123;</div><div class="line">  <span class="keyword">if</span>(!(i <span class="keyword">in</span> a)) <span class="built_in">continue</span>;//跳过null、undefined和不存在的元素</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="for-in循环"><a href="#for-in循环" class="headerlink" title="for in循环"></a>for in循环</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(var index <span class="keyword">in</span> sparseArray)&#123;</div><div class="line">  var value = sparseArray[index];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>for/in循环能够枚举继承的属性名，如添加到Array.prototype中的方法。由于这个原因，在数组上不应该使用for/in循环，除非使用额外的检测方法来过滤不想要的属性。如下检测代码取其一即可：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(var i <span class="keyword">in</span> a)&#123;</div><div class="line">  <span class="keyword">if</span>(!a.hasOwnProperty(i)) <span class="built_in">continue</span>;//跳过继承的属性</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span>(var i <span class="keyword">in</span> a)&#123;</div><div class="line">  //跳过不是非负整数的i</div><div class="line">  <span class="keyword">if</span>(String(Math.floor(Math.abs(Number(i))))!==i) <span class="built_in">continue</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>ECMAScript规范允许for/in循环以不同的顺序遍历对象的属性。通常数组元素的遍历实现是升序的，但不能保证一定是这样的。特别地，如果数组同时拥有对象属性和数组元素，返回的属性名很可能是按照创建的顺序而非数组的大小顺序。如何处理这个问题的实现各不相同，如果算法依赖于遍历的顺序，那么最好不要用for/in而用常规的for循环。</p>
+<h2 id="forEach方法"><a href="#forEach方法" class="headerlink" title="forEach方法"></a>forEach方法</h2><p>ECMAScript5定义了一些遍历数组元素的新方法，按照索引的顺序按个传递给定义的一个函数。这些方法中最常用的就是forEach方法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3,4,5];</div><div class="line">var sumOfSquares = 0;//要得到数据的平方和</div><div class="line">arr.forEach(<span class="keyword">function</span>(x)&#123;//把每个元素传递给此函数</div><div class="line">  sumOfSquares+=x*x;//平方相加</div><div class="line">&#125;)</div><div class="line">sumOfSquares</div></pre></td></tr></table></figure></p>
+<p>forEach()和相关的遍历方法使得数组拥有简单而强大的函数式编程风格。</p>
+<h1 id="ECMAScript3数组的方法"><a href="#ECMAScript3数组的方法" class="headerlink" title="ECMAScript3数组的方法"></a>ECMAScript3数组的方法</h1><p>在Array.prototype中定义了一些有用的操作数组的函数，这意味着这些函数作为任何数组的方法都是可用的。</p>
+<h2 id="join-方法"><a href="#join-方法" class="headerlink" title="join()方法"></a>join()方法</h2><p>Array.join()将数组中所有元素转化为字符串并连接在一起，返回最后生成的字符串。可以指定分隔符来分隔数组元素，如果不指定则默认用逗号。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3];</div><div class="line">arr.join();//<span class="string">"1,2,3"</span></div><div class="line">arr.join(<span class="string">" "</span>);//<span class="string">"1 2 3"</span></div><div class="line">arr.join(<span class="string">""</span>);//<span class="string">"123"</span></div><div class="line">var b = new Array(10);</div><div class="line">b.join(<span class="string">"-"</span>);//=&gt; <span class="string">"---------"</span>，结果为9个连字号组成的字符串</div></pre></td></tr></table></figure></p>
+<p>split()方法是Array.join()的逆向操作，用来将字符串分隔成若干块来创建一个数组</p>
+<h2 id="reverce-方法"><a href="#reverce-方法" class="headerlink" title="reverce()方法"></a>reverce()方法</h2><p>Array.reverce()方法将数组中的元素颠倒顺序。返回逆序的数组。它采取了替换；换句话说，它不通过重新排列的元素创建新的数组，而是在原先数组中重新排序。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3];</div><div class="line">arr.reverce().join();//=&gt;<span class="string">"3,2,1"</span>,并且现在的arr是[3,2,1]</div></pre></td></tr></table></figure></p>
+<h2 id="sort-方法"><a href="#sort-方法" class="headerlink" title="sort()方法"></a>sort()方法</h2><p>Array.sort()方法将数组中的元素排序并返回排序后的数组。</p>
+<ul>
+<li><p>不带参数，按字母表排序<br>当不带参数调用sort()的时候，数组元素以字母表顺序排序（如有必要将临时转化为字符串进行比较）。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = new Array(<span class="string">"banana"</span>,<span class="string">"cherry"</span>,<span class="string">"apple"</span>);</div><div class="line">a.sort();</div><div class="line">var s = a.join(<span class="string">", "</span>);//s==<span class="string">"apple,banana,cherry"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>包含undefined</p>
+</li>
+</ul>
+<p>如果数组包含undefined元素，它们会被排到数组的尾部。</p>
+<ul>
+<li><p>传递函数，按非字母表排序<br>为了按照其他方式而非字母表排序进行数组排序，必须给sort()方法传递一个比较函数。该函数决定了它的两个参数在排好序的数组中的先后顺序。假设第一个参数应该在前，那么比较函数应该返回一个小于0的数值。反之，假设第一个参数应该在后，那么函数返回一个大于0的数值。如果两个数相等，函数应该返回0。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var a = [33,4,1111,222];</div><div class="line">a.sort();//字母排序：1111,222,33,4</div><div class="line">a.sort(<span class="keyword">function</span>(a,b)&#123;//数值顺序：4,33,222,111</div><div class="line">  <span class="built_in">return</span> a-b;//根据顺序，返回负数、0、整数</div><div class="line">&#125;)</div><div class="line">a.sort(<span class="keyword">function</span>(a,b)&#123;//数值大小相反的排序</div><div class="line">  <span class="built_in">return</span> b<span class="_">-a</span>;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>按不区分大小写的字母排序<br>如果要对一个字符串数组进行不区分大小写排序，那么传递的比较函数首先要将参数转化为小写字符串（使用toLowerCase()方法），然后再进行比较:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var arr = [<span class="string">'ant'</span>,<span class="string">'Bug'</span>,<span class="string">'cat'</span>,<span class="string">'Dog'</span>];</div><div class="line">arr.sort();//区分大小写的排序[<span class="string">"Bug"</span>, <span class="string">"Dog"</span>, <span class="string">"ant"</span>, <span class="string">"cat"</span>]</div><div class="line">arr.sort(<span class="keyword">function</span>(s,t)&#123;</div><div class="line">    var a = s.toLowerCase();</div><div class="line">    var b = t.toLowerCase();</div><div class="line">    <span class="keyword">if</span>(a&lt;b) <span class="built_in">return</span> -1;</div><div class="line">    <span class="keyword">if</span>(b&lt;a) <span class="built_in">return</span> 1;</div><div class="line">    <span class="built_in">return</span> 0;</div><div class="line">&#125;);//=&gt; [<span class="string">"ant"</span>, <span class="string">"Bug"</span>, <span class="string">"cat"</span>, <span class="string">"Dog"</span>]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="concat-方法"><a href="#concat-方法" class="headerlink" title="concat()方法"></a>concat()方法</h2><p>Array.concat()方法创建并返回一个新数组，它的元素包括调用concat()的原始数组的元素和concat()的每个元素。如果这些参数中的任何一个自身是数组，则连接的是数组的元素，而非数组本身。但要注意，concat()不会递归扁平化数组的数组。concat()也不会修改调用的数组。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3];</div><div class="line">arr.concat(4,5);//[1, 2, 3, 4, 5]</div><div class="line">arr.concat([4,5]);//[1, 2, 3, 4, 5]</div><div class="line">arr.concat([4,5],[6,7]);//[1, 2, 3, 4, 5]</div><div class="line">arr.concat(4,[5,[6,7]]);//[1, 2, 3, 4, 5,[6,7]]</div></pre></td></tr></table></figure></p>
+<h2 id="slice-方法"><a href="#slice-方法" class="headerlink" title="slice()方法"></a>slice()方法</h2><p>Array.slice()方法返回指定数组的一个片段或子数组。它的两个参数分别指定了片段的开始和结束的位置。</p>
+<ul>
+<li><p>无参数<br>返回原数组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3,4,5];arr.slice()</div><div class="line">[1, 2, 3, 4, 5]</div></pre></td></tr></table></figure>
+</li>
+<li><p>一个参数<br>如果只指定一个参数，返回的数组将包含从开始位置到数组结尾的所有元素。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3,4,5];</div><div class="line">arr.slice(2);</div><div class="line">[3, 4, 5]</div></pre></td></tr></table></figure>
+</li>
+<li><p>两个参数<br>返回的数组包含第一个参数指定的位置和所有到但不含第二个参数指定的位置之间的所有数组元素。<br>如参数中出现负数，它表示相对于数组中最后一个元素的位置。例如，参数-1指定了最后一个元素，而-3指定了倒数第三个元素。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,3,4,5];</div><div class="line">arr.slice(0,3);//[1,2,3]</div><div class="line">arr.slice(3);//[4,5]</div><div class="line">arr.slice(1,-1);//[2,3,4]</div><div class="line">arr.slice(-3,-2);//[3]</div><div class="line">注意：slice()不会修改调用的数组。</div><div class="line">``` bash</div><div class="line">var arr = [1,2,3,4,5];</div><div class="line">arr.slice(2);</div><div class="line">[3, 4, 5]</div><div class="line">arr</div><div class="line">[1, 2, 3, 4, 5]//数组不变</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="splice-方法-1"><a href="#splice-方法-1" class="headerlink" title="splice()方法"></a>splice()方法</h2><p>Array.splice()是在数组中插入或者删除元素的通用方法。<br>不同于slice()、concat(),splice()会修改调用的数组。<br>splice()能够从数组中删除元素、插入元素到数组或者同时完成这两种操作。在插入或删除点之后的数组元素会根据需要增加或减少它们的索引值，因此数组的其他部分仍然保持连续的。<br>splice()的第一个参数指定了插入和（或）删除的起始位置。第二个参数指定了应该从数组中删除的元素的个数。如果省略第二个参数，从起始点开始到数组结尾的所有元素都将被删除。splice()返回一个由删除元素组成的数组，或者如果没有删除元素就返回一个空数组。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = [1,2,3,4,5,6,7,8];</div><div class="line">a.splice(4);//返回[5, 6, 7, 8]，a是[1, 2, 3, 4]</div><div class="line">a.splice(1,2);//[2,3],a是[1, 4, 5, 6, 7, 8]</div><div class="line">a.splice(1,1);//[4],a是[1, 5, 6, 7, 8]</div></pre></td></tr></table></figure></p>
+<p>splice()的前2个参数指定了需要删除的数组元素。紧随其后的任意个数的参数指定了需要插入到数组的元素，从第一个参数指定的位置开始插入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [1,2,3,4,5];</div><div class="line">a.splice(2,0,<span class="string">'a'</span>,<span class="string">'b'</span>);//返回[],a是[1, 2, <span class="string">"a"</span>, <span class="string">"b"</span>, 3, 4, 5]</div><div class="line">a.splice(2,2,[1,2],3);//返回[<span class="string">"a"</span>, <span class="string">"b"</span>]，a是[1, 2, [1,2], 3, 3, 4, 5]</div></pre></td></tr></table></figure></p>
+<p>注意：区别于slice()、concat(),splice()会插入数组本身而非数组的元素。</p>
+<h2 id="push-和pop-方法"><a href="#push-和pop-方法" class="headerlink" title="push()和pop()方法"></a>push()和pop()方法</h2><p>push()和pop()方法允许将数组当做栈来使用。push()方法在数组的末尾添加一个或多个元素，并返回数组新的长度。pop()方法则相反：<br>它删除数组的最后一个元素，减少数组长度并返回它删除的值。<br>注意：两个方法都修改并替换原始数组而非生成一个修改版的新数组。<br>组合使用push()和pop()可以实现js数组的先进后出的栈。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var stack = [];</div><div class="line">stack.push(1,2);</div><div class="line">stack.pop();</div><div class="line">stack.push(3);</div><div class="line">stack.pop();</div><div class="line">stack.push([4,5]);</div><div class="line">stack.pop();</div><div class="line">stack.pop();</div></pre></td></tr></table></figure></p>
+<h2 id="unshift-和shift-方法"><a href="#unshift-和shift-方法" class="headerlink" title="unshift()和shift()方法"></a>unshift()和shift()方法</h2><p>unshift()和shift()方法非常类似于push()和pop()方法，不一样的是前者是在数组的头部而非尾部进行元素的插入和删除操作。unshift()在数组的头部添加一个或多个元素，并将已存在的元素移动到更高索引的位置来获得足够的空间，最后返回数组新的长度。shift()删除数组的第一个元素并将其返回，然后把所有随后的元素下移一个位置来填补数组头部的空缺。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var a = [];</div><div class="line">a.unshift(1);//a:[1] 返回1</div><div class="line">a.unshift(22);//a:[22,1] 返回2</div><div class="line">a.shift();//a:[1]  返回22</div><div class="line">a.unshift(3,[4,5]);//a:[3,[4,5],1]  返回3</div><div class="line">a.shift();  //a:[[4,5],1] 返回3</div><div class="line">a.shift();  //a:[1] 返回[4,5]</div><div class="line">a.shift();  //a:[]  返回1</div></pre></td></tr></table></figure></p>
+<p>注意：当使用多个参数调用unshift()时它的行为令人惊讶。参数是一次性插入的(就像splice()方法)而非一次一个地插入。这意味着最终的数组插入的元素的顺序和它们在参数列表的顺序一致。而假如元素是一次一个地插入，它们的顺序应该是反过来。</p>
+<h2 id="toString-和toLocaleString-方法"><a href="#toString-和toLocaleString-方法" class="headerlink" title="toString()和toLocaleString()方法"></a>toString()和toLocaleString()方法</h2><p>数组和其他的javascript对象一样拥有toString()方法。针对数组，该方法将其每个元素转化为字符串(如有必要将调用元素的toString()方法)并且输出用逗号分隔的字符串列表。<br>注意：输出不包括方括号或其他任何形式的包裹数组值的分隔号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[1,2,3].toString();//生成<span class="string">'1,2,3'</span></div><div class="line">[<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>].toString();//生成<span class="string">'a,b,c'</span></div><div class="line">[1,[2,<span class="string">'c'</span>]].toString();//生成<span class="string">'1,2,c'</span></div></pre></td></tr></table></figure></p>
+<p>注意：这里与不使用任何参数调用join()方法返回的字符串是一样的。<br>toLocaleString()是toString()方法的本地化版本。它调用元素的toLocaleString()方法将每个数组元素转化为字符串，并且使用本地化（和自定义实现的）分隔符将这些字符串连接起来生成最终的字符串。</p>
+<h1 id="ECMAScript5中的数组方法"><a href="#ECMAScript5中的数组方法" class="headerlink" title="ECMAScript5中的数组方法"></a>ECMAScript5中的数组方法</h1><p>ECMAScript5定义了9个新的数组方法来遍历、映射、过滤、检测、简化和检索数组。</p>
+<h2 id="forEach-方法"><a href="#forEach-方法" class="headerlink" title="forEach()方法"></a>forEach()方法</h2><p>forEach()方法从头至尾遍历数组，为每个数组元素调用指定的函数。传递的函数作为forEach()的第一个参数。然后forEach()使用第三个参数调用该函数：数组元素、元素的索引和数组本身。如果只关心数组元素的值，可以编写只有一个参数的函数—额外的参数将被忽略：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var data = [1,2,3,4,5];   //要求和的数组</div><div class="line">//计算数组元素的和值</div><div class="line">var sum = 0;</div><div class="line">data.forEach(<span class="keyword">function</span> (value) &#123;</div><div class="line">    sum+=value;</div><div class="line">&#125;)//  sum = 15</div><div class="line">//每个数组元素的值自加1</div><div class="line">data.forEach(<span class="keyword">function</span> (v,i,a) &#123;</div><div class="line">  a[i] = v+1;</div><div class="line">&#125;)//  =&gt; [2,3,4,5,6]</div></pre></td></tr></table></figure></p>
+<p>注意：forEach()中不能用break语句终止遍历。如果要提前终止遍历，必须要把forEach()方法放在一个try块中，并能抛出一个异常。如果forEach()调用的函数抛出foreach.break异常，循环会提前终止:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> foreach(a,f,t)&#123;</div><div class="line">  try&#123;&#125;</div><div class="line">  catch(e)&#123;</div><div class="line">    <span class="keyword">if</span>(e===foreach.break)<span class="built_in">return</span>;</div><div class="line">    <span class="keyword">else</span> throw e;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">foreach.break = new Error(<span class="string">"StopIteration"</span>)</div></pre></td></tr></table></figure></p>
+<h2 id="map-方法"><a href="#map-方法" class="headerlink" title="map()方法"></a>map()方法</h2><p>map()方法将调用的数组的每个元素传递给指定的函数，并返回一个数组，它包含该函数的返回值。如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">a=[1,2,3];</div><div class="line">b=a.map(<span class="keyword">function</span>(x)&#123;<span class="built_in">return</span> x*x;&#125;);  //b是[1,4,9]</div></pre></td></tr></table></figure></p>
+<p>传递给map()的调用方式和传递给forEach()的调用方式一致。但传递给map()的函数应该有返回值。注意,map()返回的是数组：它不修改调用的数组。如果是稀疏数组，返回的也是相同方式的稀疏数组：它具有相同的长度，相同的缺失函数。</p>
+<h2 id="filter-方法"><a href="#filter-方法" class="headerlink" title="filter()方法"></a>filter()方法</h2><p>filter()方法返回的数组元素是调用的数组的一个子集。传递的函数是用来逻辑判定的：该函数返回true或false。调用判定函数就像调用forEach()和map()一样。如果返回值为true或能转化为true的值，那么传递给判定函数的元素就是这个子集的成员，它将被添加到一个作为返回值的数组中。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [1,2,3,4,5];</div><div class="line">smallvalues = a.filter(<span class="keyword">function</span>(x)&#123;<span class="built_in">return</span> x&lt;3&#125;); //[2,1]</div><div class="line">everother = a.filter(<span class="keyword">function</span>(x,i)&#123;<span class="built_in">return</span> i%2==0&#125;); //[1, 3, 5]</div></pre></td></tr></table></figure></p>
+<h2 id="every-和some-方法"><a href="#every-和some-方法" class="headerlink" title="every()和some()方法"></a>every()和some()方法</h2><p>every()和some()方法是数组的逻辑判断:它们对数组元素应用指定的函数进行判定，返回true和false。<br>every()方法就像数学中“针对所有”的量词，当前仅当针对数组中的所有元素调用判定函数都返回true，它才返回true:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [1,2,3,4,5];</div><div class="line">a.every(<span class="keyword">function</span>(x)&#123;<span class="built_in">return</span> x&lt;10&#125;);  //=&gt;<span class="literal">true</span>:所有的值是&lt;10</div><div class="line">a.every(<span class="keyword">function</span>(x)&#123;<span class="built_in">return</span> x%2==0&#125;); //=&gt;<span class="literal">false</span>:不是所有的值都是偶数</div></pre></td></tr></table></figure></p>
+<p>some()方法就像数学中的“存在”量词：当数组中至少有一个元素调用判定函数返回true，它就返回true；并且当且仅当数值中的所有元素调用判定函数都返回false，它才返回false。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [1,2,3,4,5];</div><div class="line">a.some(<span class="keyword">function</span>(x)&#123;<span class="built_in">return</span> x%2 ===0;&#125;);  //=&gt;<span class="literal">true</span></div><div class="line">a.some(isNaN);  //=&gt;<span class="literal">false</span> a不包含非数值元素</div></pre></td></tr></table></figure></p>
+<p>注意：一旦every()和some()确认该返回什么值它们就会停止遍历数组元素。<br>根据数学上的惯例，在空数组上调用时，every()返回true，some()返回false<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = [];a.some(<span class="function"><span class="title">function</span></span>()&#123;<span class="built_in">return</span>&#125;);</div><div class="line"><span class="literal">false</span></div><div class="line">var a = [];a.every(<span class="function"><span class="title">function</span></span>()&#123;<span class="built_in">return</span>&#125;);</div><div class="line"><span class="literal">true</span></div></pre></td></tr></table></figure></p>
+<h2 id="reduce-和reduceRight-方法"><a href="#reduce-和reduceRight-方法" class="headerlink" title="reduce()和reduceRight()方法"></a>reduce()和reduceRight()方法</h2><p>reduce()和reduceRight()方法使用指定的函数将数组元素进行组合，生成单个值。这个在函数式编程中是常见的操作，也可以称作“注入”和“折叠”。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = [1,2,3,4,5];</div><div class="line">var sum = a.reduce(<span class="keyword">function</span>(x,y)&#123;<span class="built_in">return</span> x+y&#125;,0);  //数组求和</div><div class="line">var product = a.reduce(<span class="keyword">function</span>(x,y)&#123;<span class="built_in">return</span> x*y&#125;,1);  //数组求积</div><div class="line">var max = a.reduce(<span class="keyword">function</span>(x,y)&#123;<span class="built_in">return</span> (x&gt;y)?x:y;&#125;); //求最大值</div></pre></td></tr></table></figure></p>
+<h2 id="indexOf-和lastIndexOf-方法"><a href="#indexOf-和lastIndexOf-方法" class="headerlink" title="indexOf()和lastIndexOf()方法"></a>indexOf()和lastIndexOf()方法</h2><p>indexOf()和lastIndexOf()方法搜索整个数组中具有给定值的元素，返回找到的第一个元素的索引或者如果没有找到返回-1。indexOf()从头到尾搜索，而lastIndexOf()则反向搜索。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = [0,1,2,1,0];</div><div class="line">a.indexOf(1); // =&gt;1:a[1]是1</div><div class="line">a.lastIndexOf(1); //=&gt;3:a[3]是1</div><div class="line">a.indexOf(3); // =&gt;-1：没有值为3的元素</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/24/javascript数组详解（一）/" itemprop="url">
+                  javascript数组详解(一)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-24T10:44:19+08:00" content="2016-10-24">
+              2016-10-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>数组是值的有序集合，每个值叫做一个元素，每个元素在数组中有一个位置，以数字表示，称为索引。 和其他强类型语言不同，在 JavaScript 中，数组是无类型的，可以容纳任何类型的值，可以是字符串、数字、对象（ object ），甚至是其他数组（多维数组就是通过这种方式来实现的）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = [ 1, <span class="string">"2"</span>, [3] ];</div><div class="line">a.length; // 3</div><div class="line">a[0] === 1; // <span class="literal">true</span></div><div class="line">a[2][0] === 3; // <span class="literal">true</span></div></pre></td></tr></table></figure>
+<p>对数组声明后即可向其中加入值，不需要预先设定大小</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var a = [ ];</div><div class="line">a.length; // 0</div><div class="line">a[0] = 1;</div><div class="line">a[1] = <span class="string">"2"</span>;</div><div class="line">a[2] = [ 3 ];</div><div class="line">a.length; // 3</div></pre></td></tr></table></figure>
+<p>使用 delete 运算符可以将单元从数组中删除，但是请注意，单元删除后，数组的 length 属性并不会发生变化。 在创建 “ 稀疏 “ 数组（ sparse array ，即含有空白或空缺单元的数组）时要特别注意：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var a = [ ];</div><div class="line">a[0] = 1;</div><div class="line">//  此处没有设置 a[1] 单元</div><div class="line">a[2] = [ 3 ];</div><div class="line">a[1]; // undefined</div><div class="line">a.length; // 3</div></pre></td></tr></table></figure>
+<p>上面的代码可以正常运行，但其中的 “ 空白单元 “ （ empty slot ）可能会导致出人意料的结果。 a[1] 的值为 undefined ，但这 与将其显式赋值为 undefined （ a[1] = undefined ）还是有所区别。 数组通过数字进行索引，但有趣的是它们也是对象，所以也可以包含字符串键值和属性（但这些并不计算在数组长度内）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var a = [ ];</div><div class="line">a[0] = 1;</div><div class="line">a[<span class="string">"foobar"</span>] = 2;</div><div class="line">a.length; // 1</div><div class="line">a[<span class="string">"foobar"</span>]; // 2</div><div class="line">a.foobar; // 2</div></pre></td></tr></table></figure>
+<p>这里有个问题需要特别注意，如果字符串键值能够被强制类型转换为十进制数字的话，它就会被当作数字索引来处理。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [ ];</div><div class="line">a[<span class="string">"13"</span>] = 42;</div><div class="line">a.length; // 14</div></pre></td></tr></table></figure>
+<p>在数组中加入字符串键值 / 属性并不是一个好主意。建议使用对象来存放键值 / 属性值，用数组来存放数字索引值。</p>
+<p>数组继承自Array.prototype中的属性，它定义了一套丰富的数组操作方法。</p>
+<h1 id="类数组（伪数组）"><a href="#类数组（伪数组）" class="headerlink" title="类数组（伪数组）"></a>类数组（伪数组）</h1><p>有时需要将类数组（一组通过数字索引的值）转换为真正的数组，这一般通过数组工具函数（如 indexOf(..) 、 concat(..) 、 forEach(..) 等）来实现。</p>
+<p>例如，一些 DOM 查询操作会返回 DOM 元素列表，它们并非真正意义上的数组，但十分类似。另一个例子是通过 arguments 对象（类数组）将函数的参数当作列表来访问（从 ES6 开始已废止）。 工具函数 slice(..) 经常被用于这类转换：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">foo</span></span>() &#123;</div><div class="line">var arr = Array.prototype.slice.call( arguments );</div><div class="line">arr.push( <span class="string">"bam"</span> );</div><div class="line">console.log( arr );</div><div class="line">&#125;</div><div class="line">foo( <span class="string">"bar"</span>, <span class="string">"baz"</span> ); // [<span class="string">"bar"</span>,<span class="string">"baz"</span>,<span class="string">"bam"</span>]</div></pre></td></tr></table></figure>
+<p>如上所示， slice() 返回参数列表（上例中是一个类数组）的一个数组复本。 用 ES6 中的内置工具函数 Array.from(..) 也能实现同样的功能：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">var arr = Array.from( arguments );</div></pre></td></tr></table></figure>
+<h1 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h1><h2 id="字面量方式"><a href="#字面量方式" class="headerlink" title="字面量方式"></a>字面量方式</h2><p>使用字面量是创建数组的最简单的方法。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var empty = []; var primes = [1,2,3,4,5]; var misc = [1.1,<span class="literal">true</span>,<span class="string">"a"</span>];</div></pre></td></tr></table></figure>
+<p>数组字面量中的值，不一定要是常量，它可以是任意的表达式：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var base = 1024; var table = [base,base+1,base+2,base+3];</div></pre></td></tr></table></figure>
+<p>它可以包含对象直接量或其他数组直接量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var b = [[1,&#123;x:1,y:2&#125;],[2,&#123;x:3,y:4&#125;]];</div></pre></td></tr></table></figure>
+<p>如果省略数组直接量中的某个值，省略的元素将被赋予undefined值：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var count = [1,,3];//数组有3个元素，中间元素值为undefined</div><div class="line">var undefs = [,,];//数组有2个元素，都是undefined</div></pre></td></tr></table></figure></p>
+<p>因为数组直接量语法允许有可选的结尾的逗号，所以[,,]只有2个元素而非3个。</p>
+<h2 id="调用构造函数Array-创建数组"><a href="#调用构造函数Array-创建数组" class="headerlink" title="调用构造函数Array()创建数组"></a>调用构造函数Array()创建数组</h2><ul>
+<li>调用时没有参数<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr = new Array();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>该方法创建一个没有任何元素的空数组，等同于数组字面量[]。</p>
+<ul>
+<li>调用时传入 数值参数，指定数组长度<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr = new Array(10);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>该方式创建指定长度的数组。当预先知道所需元素个数时，这种形式的Array()构造函数可以用来预先分配一个数组空间。注意，数组中没有存储值，甚至数组的索引”0”、”1”等还未定义。</p>
+<ul>
+<li>显示指定2个或者多个数组元素或数组的一个非数值元素：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr = new Array(5,4,3,2,1,<span class="string">"testing,testing"</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>以这种形式，构造函数的参数将会成为新数组的元素。使用数组字面量比这样使用Array()构造函数简单多了。</p>
+<h1 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h1><p>稀疏数组就是包含从0开始的不连续索引的数组。通常，数组的length属性值代表数组中元素的个数。如果数组是稀疏的，length属性值大于元素的个数。可以用Array()构造函数或简单地指定数组的索引值大于当前的数组长度来创建稀疏数组。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = new Array(5);//数组没有元素，但是a.length是5。</div><div class="line">arr = [];//创建一个空数组，length = 0;</div><div class="line">arr[1000] = 0;//赋值添加一个元素，但是设置length为1001；</div></pre></td></tr></table></figure></p>
+<p>足够稀疏的数组实际上比稠密的数组更慢，内存利用率更高，在这样的数组中查找元素的时间与常规对象属性的查找时间一样。<br>注意：当在数组字面量中省略值时不会创建稀疏数组。省略元素在数组中是存在的，其值为undefined。这和数组元素根本不存在是有一些微妙的区别的。可以用in操作符检测两者之间的区别。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a1 = [,,,];//数组是[undefinded,undefinded,undefinded];</div><div class="line">var a2 = new Array(3);//该数组根本没有元素</div><div class="line">0 <span class="keyword">in</span> a1     //=&gt; <span class="literal">true</span>:a1 在索引0处有一个元素。</div><div class="line">0 <span class="keyword">in</span> a2     //=&gt; <span class="literal">false</span>:a2 在索引0处没有元素</div></pre></td></tr></table></figure></p>
+<p>在一些旧版本的浏览器中，在存在连续逗号的情况下，插入undefined值的操作则与此不同，在这些实现中，[1,,3]和[1,undefinde,3]是一模一样的。</p>
+<h1 id="length属性"><a href="#length属性" class="headerlink" title="length属性"></a>length属性</h1><p>每个数组都有一个length属性，就是这个属性使其区别于常规的javascript对象。稠密数组的length值比数组最大索引大1。<br>而稀疏数组的length属性则大于元素的个数。<br>当设置length属性为一个小于当前长度的非负整数n时，当前数组中那些索引值大于或等于n的元素将从中删除。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [1,2,3,4,5];//从5个元素的数组开始</div><div class="line">a.length = 3;//现在a为[1,2,3]</div><div class="line">a.length = 5;//长度为5，但是没有元素，就像new Array(5);</div></pre></td></tr></table></figure></p>
+<p>当设置length属性为一个大于当前长度的非负整数n时，实际上这不会向数组中添加新的元素，它只是在数组尾部创建一个空的区域。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [1,2,3];</div><div class="line">Object.defineProperty(a,<span class="string">"length"</span>,&#123;writable,<span class="literal">false</span>&#125;);</div><div class="line">a.length = 0;</div></pre></td></tr></table></figure></p>
+<p>在ECMAScript 5中，可以用Object.defineProperty()让数组的length属性变成只读的。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/21/javascript类型详解/" itemprop="url">
+                  javascript类型详解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-21T08:48:58+08:00" content="2016-10-21">
+              2016-10-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>ECMAScript中所有的值都有一个对应的语言类型。ECMAScript语言类型包括：Undefined、Null、 Booken、String、Number、和Object。<br>对语言引擎和开发人员来说， 类型是值的内部特征，它定义了值的行为，以使其区别于其他值。<br>换句话说，如果语言引擎和开发人员对 42 （数字）和 “42” （字符串）采取不同的处理方式，那就说明它们是不同的 类型<br>，一个是 number ，一个是 string 。通常我们对数字 42 进行数学运算，而对字符串 “42” 进行字符串操作，比如输出到<br>页面。它们是不同的类型。</p>
+<h2 id="类型分类"><a href="#类型分类" class="headerlink" title="类型分类"></a>类型分类</h2><ul>
+<li>内置类型<br>javaScript  有七种内置类型：</li>
+<li>空值（ null ）</li>
+<li>未定义（ undefined ）</li>
+<li>布尔值（ boolean ）</li>
+<li>数字（ number ）</li>
+<li>字符串（ string ）</li>
+<li>对象（ object ）</li>
+<li>符号（ symbol ， ES6  中新增）<br>除对象（对象类型）之外，其他统称为 “ 基本类型 ”（原始类型） 。</li>
+<li>基本类型<br>基本类型也叫原始类型，包括：数字、字符串、布尔值、null和undefined。</li>
+<li>对象类型<br>对象（Object）是属性（property）的集合，每个属性都由“名/值”（值可以是原始值，比如数字、字符串，也可以是对象）构成。<br>对象分为：全局对象、普通对象、数组、函数。<h2 id="检测类型"><a href="#检测类型" class="headerlink" title="检测类型"></a>检测类型</h2>我们可以用 typeof 运算符来查看值的类型，它返回的是类型的字符串值。有意思的是，这七种类型和它们的字符串值并不<br>一一对应：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">typeof undefined === <span class="string">"undefined"</span>; // <span class="literal">true</span></div><div class="line">typeof <span class="literal">true</span> === <span class="string">"boolean"</span>; // <span class="literal">true</span></div><div class="line">typeof 42 === <span class="string">"number"</span>; // <span class="literal">true</span></div><div class="line">typeof <span class="string">"42"</span> === <span class="string">"string"</span>; // <span class="literal">true</span></div><div class="line">typeof &#123; life: 42 &#125; === <span class="string">"object"</span>; // <span class="literal">true</span></div><div class="line">// ES6 中新加入的类型</div><div class="line">typeof Symbol() === <span class="string">"symbol"</span>; // <span class="literal">true</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>以上六种类型均有同名的字符串值与之对应。符号是 ES6  中新加入的类型。<br>你可能注意到 null 类型不在此列。它比较 特殊 ， typeof 对它的处理有问题：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">typeof null === <span class="string">"object"</span>; // <span class="literal">true</span></div></pre></td></tr></table></figure></p>
+<p>正确的返回结果应该是 “null” ，但这个 bug  由来已久，在 JavaScript  中已经存在了将近二十年，也许永远也不会修复，因为<br>这牵涉到太多的 Web  系统， “ 修复 ” 它会 产生 更多的 bug ，令许多系统无法正常工作。<br>我们需要使用复合条件来检测 null 值的类型：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var a = null;</div><div class="line">(!a &amp;&amp; typeof a === <span class="string">"object"</span>); // <span class="literal">true</span></div></pre></td></tr></table></figure></p>
+<p>null 是基本类型中唯一的一个 “ 假值 ” 类型， typeof 对它的返回值为 “object” 。<br>还有一种情况：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">typeof <span class="keyword">function</span> <span class="function"><span class="title">a</span></span>()&#123; /* .. */ &#125; === <span class="string">"function"</span>; // <span class="literal">true</span></div></pre></td></tr></table></figure></p>
+<p>这样看来， function （函数）也是 JavaScript  的一个内置类型。然而查阅规范就会知道，它实际上是 object 的一个 “ 子类<br>型 ” 。具体来说，函数是 “ 可调用对象 ” ，它有一个内部属性 [[Call]] ，该属性使其可以被调用。<br>函数对象的 length 属性是其声明的参数的个数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a.length; // 2</div></pre></td></tr></table></figure></p>
+<p>因为该函数声明了两个命名参数， b 和 c ，所以其 length 值为 2 。<br>再来看看数组。 JavaScript  支持数组，那么它是否也是一个特殊类型？<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">typeof [1,2,3] === <span class="string">"object"</span>; // <span class="literal">true</span></div></pre></td></tr></table></figure></p>
+<p>不，数组也是对象。确切地说，它也是 object 的一个 “ 子类型 ” ，数组的元素按数字顺序来进行索引（而非普<br>通像对象那样通过字符串键值），其 length 属性是元素的个数。</p>
+<h2 id="值和类型"><a href="#值和类型" class="headerlink" title="值和类型"></a>值和类型</h2><p>JavaScript  中的变量是没有类型的， 只有值才有 。变量可以随时持有任何类型的值。<br>换个角度来理解就是， JavaScript  不做 “ 类型强制 ” ；也就是说，语言引擎不要求 变量 总是持有与其 初始值同类型 的值。一个变<br>量可以现在被赋值为字符串类型值，随后又被赋值为数字类型值。<br>42 的类型为 number ，并且无法更改。而 “42” 的类型为 string 。数字 42 可以通过 强制类型转换 （ coercion ）为字符串<br>“42”<br>在对变量执行 typeof 操作时，得到的结果并不是该变量的类型，而是该变量持有的值的类型，因为 JavaScript中的变量没有<br>类型。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = 42;</div><div class="line">typeof a; // <span class="string">"number"</span></div><div class="line">a = <span class="literal">true</span>;</div><div class="line">typeof a; // <span class="string">"boolean"</span></div></pre></td></tr></table></figure></p>
+<p>typeof 运算符总是会返回一个字符串：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">typeof typeof 42; // <span class="string">"string"</span></div></pre></td></tr></table></figure></p>
+<p>typeof 42 首先返回字符串 “number” ，然后 typeof “number” 返回 “string” 。</p>
+<h2 id="undefined-和-undeclared"><a href="#undefined-和-undeclared" class="headerlink" title="undefined  和 undeclared"></a>undefined  和 undeclared</h2><p>变量在未持有值的时候为 undefined 。此时 typeof 返回 “undefined” ：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var a;</div><div class="line">typeof a; // <span class="string">"undefined"</span></div><div class="line">var b = 42;</div><div class="line">var c;</div><div class="line">// later</div><div class="line">b = c;</div><div class="line">typeof b; // <span class="string">"undefined"</span></div><div class="line">typeof c; // <span class="string">"undefined"</span></div></pre></td></tr></table></figure></p>
+<p>已在作用域中声明但还没有赋值的变量，是 undefined  的。相反，还没有在作用域中声明过的变量，是 undeclared  的。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a;</div><div class="line">a; // undefined</div><div class="line">b; // ReferenceError: b is not defined</div></pre></td></tr></table></figure></p>
+<p>浏览器对这类情况的处理很让人抓狂。上例中， “b is not defined” 容易让人误以为是 “b is undefined” 。这里再强调一<br>遍， “undefined” 和 “is not defined” 是两码事。此时如果浏览器报错成 “b is not found” 或者 “b is not declared” 会更准确。<br>更让人抓狂的是 typeof 处理 undeclared  变量的方式。例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a;</div><div class="line">typeof a; // <span class="string">"undefined"</span></div><div class="line">typeof b; // <span class="string">"undefined"</span></div></pre></td></tr></table></figure></p>
+<p>对于 undeclared （或者 not defined ）变量， typeof 照样返回 “undefined” 。请注意虽然 b 是一个 undeclared  变量，但<br>typeof b 并没有报错。这是因为 typeof 有一个特殊的安全防范机制。<br>此时 typeof 如果能返回 undeclared （而非 undefined ）的话，情况会好很多。</p>
+<ul>
+<li>typeof Undeclared<br>该安全防范机制对在浏览器中运行的 JavaScript  代码来说还是很有帮助的，因为多个脚本文件会在共享的全局命名空间中加载<br>变量。<br>举个简单的例子，在程序中使用全局变量 DEBUG 作为 “ 调试模式 ” 的开关。在输出调试信息到控制台之前，我们会检查 DEBUG<br>变量是否已被声明。顶层的全局变量声明 var DEBUG = true 只在 debug.js  文件中才有，而该文件只在开发和测试时才被<br>加载到浏览器，在生产环境中不予加载。<br>问题是如何在程序中检查全局变量 DEBUG 才不会出现 ReferenceError 错误。这时 typeof 的安全防范机制就成了我们<br>的好帮手：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//  这样会抛出错误</div><div class="line"><span class="keyword">if</span> (DEBUG) &#123;</div><div class="line">console.log( <span class="string">"Debugging is starting"</span> );</div><div class="line">&#125;</div><div class="line">//  这样是安全的</div><div class="line"><span class="keyword">if</span> (typeof DEBUG !== <span class="string">"undefined"</span>) &#123;</div><div class="line">  console.log( <span class="string">"Debugging is starting"</span> );</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这不仅对用户定义的变量（比如 DEBUG ）有用，对内建的 API  也有帮助：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (typeof atob === <span class="string">"undefined"</span>) &#123;</div><div class="line">  atob = <span class="function"><span class="title">function</span></span>() &#123; /*..*/ &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如果要为某个缺失的功能写<br>polyfill （即衬垫代码或者补充代码，用来补充当前运行环境中缺失的功能），一般不会用 var atob 来声明变量<br>atob 。如果在 if 语句中使用 var atob ，声明会被提升（ hoisted ，参见《你不知道的 JavaScript （上卷）》 中<br>的 “ 作用域和闭包 ” 部分）到作用域（即当前脚本或函数的作用域）的最顶层，即使 if 条件不成立也是如此（因为<br>atob 全局变量已经存在）。在有些浏览器中，对于一些特殊的内建全局变量（通常称为 “ 宿主对象 ” ， host<br>object ），这样的重复声明会报错。去掉 var 则可以防止声明被提升。</p>
+<p>还有一种不用通过 typeof 的安全防范机制的方法，就是检查所有全局变量是否是全局对象的属性，浏览器中的全局对象是<br>window 。所以前面的例子也可以这样来实现：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (window.DEBUG) &#123;</div><div class="line">// ..</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> (!window.atob) &#123;</div><div class="line">// ..</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>与 undeclared  变量不同，访问不存在的对象属性（甚至是在全局对象 window 上）不会产生 ReferenceError 错误<br>一些开发人员不喜欢通过 window 来访问全局对象，尤其当代码需要运行在多种 JavaScript  环境中时（不仅仅是浏览器，还有<br>服务器端，如 node.js  等），因为此时全局对象并非总是 window 。<br>从技术角度来说， typeof 的安全防范机制对于非全局变量也很管用，虽然这种情况并不多见，也有一些开发人员不大愿意这<br>样做。如果想让别人在他们的程序或模块中复制粘贴你的代码，就需要检查你用到的变量是否已经在宿主程序中定义过：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">doSomethingCool</span></span>() &#123;</div><div class="line">var helper =</div><div class="line">(typeof FeatureXYZ !== <span class="string">"undefined"</span>) ?</div><div class="line">FeatureXYZ :</div><div class="line"><span class="function"><span class="title">function</span></span>() &#123; /*.. default feature ..*/ &#125;;</div><div class="line">var val = helper();</div><div class="line">// ..</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>其他模块和程序引入 doSomethingCool() 时， doSomethingCool() 会检查 FeatureXYZ 变量是否已经在宿主程序中<br>定义过；如果是，就用现成的，否则就自己定义：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//  一个立即执行函数表达式（ IIFE ，参见《你不知道的 JavaScript （上卷）》 “ 作用域和闭包 ”</div><div class="line">//  部分的 3.3.2 节）</div><div class="line">(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">FeatureXYZ</span></span>() &#123; /*.. my XYZ feature ..*/ &#125;</div><div class="line">//  包含 <span class="keyword">do</span>SomethingCool(..)</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">doSomethingCool</span></span>() &#123;</div><div class="line">var helper =</div><div class="line">(typeof FeatureXYZ !== <span class="string">"undefined"</span>) ?</div><div class="line">FeatureXYZ :</div><div class="line"><span class="function"><span class="title">function</span></span>() &#123; /*.. default feature ..*/ &#125;;</div><div class="line">var val = helper();</div><div class="line">// ..</div><div class="line">&#125;</div><div class="line"><span class="keyword">do</span>SomethingCool();</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
+<p>这里， FeatureXYZ 并不是一个全局变量，但我们还是可以使用 typeof 的安全防范机制来做检查，因为这里没有全局对象<br>可用（像前面提到的 window.___ ）。<br>还有一些人喜欢使用 “ 依赖注入 ” （ dependency injection ）设计模式，就是将依赖通过参数显式地传递到函数中，如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="keyword">do</span>SomethingCool(FeatureXYZ) &#123;</div><div class="line">var helper = FeatureXYZ ||</div><div class="line"><span class="function"><span class="title">function</span></span>() &#123; /*.. default feature ..*/ &#125;;</div><div class="line">var val = helper();</div><div class="line">// ..</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上述种种选择和方法各有利弊。好在 typeof 的安全防范机制为我们提供了更多选择。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>JavaScript  有七种内置类 型： null 、 undefined 、 boolean 、 number 、 string 、 object 和 symbol ，可以使用<br>typeof 运算符来查看。<br>变量没有类型，但它们持有的值有类型。类型定义了值的行为特征。<br>很多开发人员将 undefined  和 undeclared  混为一谈，但在 JavaScript  中它们是两码事。 undefined 是值的一种。 undeclared  则表<br>示变量还没有被声明过。<br>遗憾的是， JavaScript  却将它们混为一谈，在我们试图访问 “undeclared” 变量时这样报错： ReferenceError: a is not defined ，<br>并且 typeof 对 undefined  和 undeclared  变量都返回 “undefined” 。<br>然而，通过 typeof 的安全防范机制（阻止报错）来检查 undeclared  变量，有时是个不错的办法。</p>
+<p>参考：《你不知道的 JavaScript （中卷）》</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/public/images/fg.png"
+               alt="Su Wen" />
+          <p class="site-author-name" itemprop="name">Su Wen</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/goodpan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/suwen0603" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Su Wen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

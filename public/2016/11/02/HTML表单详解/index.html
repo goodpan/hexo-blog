@@ -1,0 +1,691 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="form," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="概念通常，HTML 表单的作用的是将数据发送到服务器上。服务器会处理这些数据并将结果返回给用户。这个过程似乎很容易，但是必须时刻注意要确保这些数据不能够破坏服务器或者给用户带来麻烦。
+表单HTML的表单元素标签为，它定义了数据将以怎样的方式发送到服务器。当按下“发送”按钮的时候，它将产生一个到服务器请求。需要牢记它的action和method方法。
+action这个方法定义了数据将被发送到的位置。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML表单详解">
+<meta property="og:url" content="http://yoursite.com/2016/11/02/HTML表单详解/index.html">
+<meta property="og:site_name" content="goodpan">
+<meta property="og:description" content="概念通常，HTML 表单的作用的是将数据发送到服务器上。服务器会处理这些数据并将结果返回给用户。这个过程似乎很容易，但是必须时刻注意要确保这些数据不能够破坏服务器或者给用户带来麻烦。
+表单HTML的表单元素标签为，它定义了数据将以怎样的方式发送到服务器。当按下“发送”按钮的时候，它将产生一个到服务器请求。需要牢记它的action和method方法。
+action这个方法定义了数据将被发送到的位置。">
+<meta property="og:updated_time" content="2016-11-02T06:38:15.926Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML表单详解">
+<meta name="twitter:description" content="概念通常，HTML 表单的作用的是将数据发送到服务器上。服务器会处理这些数据并将结果返回给用户。这个过程似乎很容易，但是必须时刻注意要确保这些数据不能够破坏服务器或者给用户带来麻烦。
+表单HTML的表单元素标签为，它定义了数据将以怎样的方式发送到服务器。当按下“发送”按钮的时候，它将产生一个到服务器请求。需要牢记它的action和method方法。
+action这个方法定义了数据将被发送到的位置。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6343434069862254000',
+      author: '文仔'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/02/HTML表单详解/"/>
+
+
+  <title> HTML表单详解 | goodpan </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">goodpan</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HTML表单详解
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-02T10:41:48+08:00" content="2016-11-02">
+              2016-11-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>通常，HTML 表单的作用的是将数据发送到服务器上。服务器会处理这些数据并将结果返回给用户。这个过程似乎很容易，但是必须时刻注意要确保这些数据不能够破坏服务器或者给用户带来麻烦。</p>
+<h1 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单<form></form></h1><p>HTML的表单元素标签为<form></form>，它定义了数据将以怎样的方式发送到服务器。当按下“发送”按钮的时候，它将产生一个到服务器请求。需要牢记它的action和method方法。</p>
+<h2 id="action"><a href="#action" class="headerlink" title="action"></a>action</h2><p>这个方法定义了数据将被发送到的位置。它的值必须是一个合法的URL地址，如果没有包含该属性，数据将被发送到当前页面的地址。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;form action=<span class="string">"http://goodpan.github.io"</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>许多旧的编写方式如下所示，加上#来指示数据应该被发送到当前页面，这在HTML5出现之前都是必须要有的，但是现在不再需要了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;form action=<span class="string">"#"</span>&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="method方法"><a href="#method方法" class="headerlink" title="method方法"></a>method方法</h2><p>这个属性定义了数据是如何发送的。HTTP协议提供了一些处理请求的方法。HTML表单数据可以通过至少两种方式来发送：GET和POST方法。<br>为了理解这两种方法的差别，我们回过头分析下HTTP是如何工作的。每次你想在互联网上取得一个资源，浏览器就会发送一次请求。一个HTTP请求包含了两部分：一个“请求头”：包含了浏览器所具有能力的集合；还有一个“body”：包含了希望服务器可以处理的各种数据信息。</p>
+<p>1.GET方法<br>GET方法用来让浏览器向服务器请求并索取一个资源。在这种情况下，浏览器会发送一个空的body，由于body是空的，如果发送表单也是采用这种方式的话，数据将会以增加的方式追加到URL地址后面。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;form action=<span class="string">"http://foo.com"</span> method=<span class="string">"get"</span>&gt;</div><div class="line">  &lt;input name=<span class="string">"say"</span> value=<span class="string">"Hi"</span>&gt;</div><div class="line">  &lt;input name=<span class="string">"to"</span> value=<span class="string">"Mom"</span>&gt;</div><div class="line">  &lt;button&gt;Send my greetings&lt;/button&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure></p>
+<p>本次请求的结构如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">GET /?say=Hi&amp;to=Mom HTTP/1.1</div><div class="line">Host: foo.com</div></pre></td></tr></table></figure></p>
+<p>2.POST请求<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;form action=<span class="string">"http://foo.com"</span> method=<span class="string">"post"</span>&gt;</div><div class="line">  &lt;input name=<span class="string">"say"</span> value=<span class="string">"Hi"</span>&gt;</div><div class="line">  &lt;input name=<span class="string">"to"</span> value=<span class="string">"Mom"</span>&gt;</div><div class="line">  &lt;button&gt;Send my greetings&lt;/button&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure></p>
+<p>我们使用了POST方式来发送数据，本次HTTP请求结构如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">POST / HTTP/1.1</div><div class="line">Host: foo.com</div><div class="line">Content-Type: application/x-www-form-urlencoded</div><div class="line">Content-Length: 13</div><div class="line"></div><div class="line">say=Hi&amp;to=Mom</div></pre></td></tr></table></figure></p>
+<p>Content-Length 头指定了body的大小，Content-Type头指定了发送到服务器资源的类型。</p>
+<p>3.GET和POST区别<br>1). 如果你需要发送密码（或者其它敏感数据），请不要使用GET方法否则你会将密码展示到URL中。<br>2). 如果你要发送大量数据，推荐使用POST方法，因为一些浏览器限制了URL的大小以及长度。<br>无论你采用哪种HTTP方法，服务端都会将接收到的字符串解析成一对一对的键值对，以便获取数据。<br>每次你发送数据到服务端，你都需要考虑安全问题。HTML表单是攻击服务端的首选对象，这个问题并不是由HTML表单产生的，而是由服务端采用了不合理的处理方式而导致的。</p>
+<h1 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h1><h2 id="input"><a href="#input" class="headerlink" title="input"></a>input</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">'text'</span> name=<span class="string">''</span> placeholder=<span class="string">''</span> value=<span class="string">''</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"text"</span> pattern=<span class="string">"^cherry|banana$"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"email"</span> multiple&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"password"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"search"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"tel"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"url"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"radio"</span> checked&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"range"</span> min=<span class="string">"1"</span> max=<span class="string">"5"</span> step=<span class="string">"1"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"date"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"datetime-local"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"month"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"time"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"week"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"color"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"hidden"</span> name=<span class="string">"timestamp"</span> value=<span class="string">"1286705410"</span>&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"image"</span> alt=<span class="string">"Click me!"</span> src=<span class="string">"my-img.png"</span> width=<span class="string">"80"</span> height=<span class="string">"30"</span> /&gt;</div><div class="line">&lt;input id=<span class="string">"fileItem"</span> <span class="built_in">type</span>=<span class="string">"file"</span>&gt;</div></pre></td></tr></table></figure>
+<h2 id="textarea"><a href="#textarea" class="headerlink" title="textarea"></a>textarea</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;textarea cols=<span class="string">"20"</span> rows=<span class="string">"10"</span>&gt;&lt;/textarea&gt;</div></pre></td></tr></table></figure>
+<h2 id="select"><a href="#select" class="headerlink" title="select"></a>select</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;select&gt;</div><div class="line">  &lt;option&gt;Banana&lt;/option&gt;</div><div class="line">  &lt;option&gt;Cherry&lt;/option&gt;</div><div class="line">  &lt;option&gt;Lemon&lt;/option&gt;</div><div class="line">&lt;/select&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;select&gt;</div><div class="line">  &lt;optgroup label=<span class="string">"fruits"</span>&gt;</div><div class="line">    &lt;option&gt;Banana&lt;/option&gt;</div><div class="line">    &lt;option selected&gt;Cherry&lt;/option&gt;</div><div class="line">    &lt;option&gt;Lemon&lt;/option&gt;</div><div class="line">  &lt;/optgroup&gt;</div><div class="line">  &lt;optgroup label=<span class="string">"vegetables"</span>&gt;</div><div class="line">    &lt;option&gt;Carrot&lt;/option&gt;</div><div class="line">    &lt;option&gt;Eggplant&lt;/option&gt;</div><div class="line">    &lt;option&gt;Potatoe&lt;/option&gt;</div><div class="line">  &lt;/optgroup&gt;</div><div class="line">&lt;/select&gt;</div></pre></td></tr></table></figure>
+<h2 id="button"><a href="#button" class="headerlink" title="button"></a>button</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;button <span class="built_in">type</span>=<span class="string">"button"</span>&gt;</div><div class="line">    This an &lt;br&gt;&lt;strong&gt;anonymous button&lt;/strong&gt;</div><div class="line">&lt;/button&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"button"</span> value=<span class="string">"This is an anonymous button"</span>&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;button <span class="built_in">type</span>=<span class="string">"submit"</span>&gt;</div><div class="line">    This a &lt;br&gt;&lt;strong&gt;submit button&lt;/strong&gt;</div><div class="line">&lt;/button&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"submit"</span> value=<span class="string">"This is a submit button"</span>&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;button <span class="built_in">type</span>=<span class="string">"reset"</span>&gt;</div><div class="line">    This a &lt;br&gt;&lt;strong&gt;reset button&lt;/strong&gt;</div><div class="line">&lt;/button&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"reset"</span> value=<span class="string">"This is a reset button"</span>&gt;</div></pre></td></tr></table></figure>
+<h2 id="Meters-and-progress"><a href="#Meters-and-progress" class="headerlink" title="Meters and progress"></a>Meters and progress</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;progress max=<span class="string">"100"</span> value=<span class="string">"75"</span>&gt;75/100&lt;/progress&gt;</div><div class="line">&lt;meter min=<span class="string">"0"</span> max=<span class="string">"100"</span> value=<span class="string">"75"</span> low=<span class="string">"33"</span> high=<span class="string">"66"</span> optimum=<span class="string">"50"</span>&gt;75&lt;/meter&gt;</div></pre></td></tr></table></figure>
+<h2 id="文件上传File"><a href="#文件上传File" class="headerlink" title="文件上传File"></a>文件上传File</h2><p>通过File API,我们可以在用户选取一个或者多个文件之后,访问到代表了所选文件的一个或多个File对象,这些对象被包含在一个FileList对象中.<br>如果用户只选择了一个文件,那么我们只需要访问这个FileList对象中的第一个元素.</p>
+<p>可以使用传统的DOM选择方法来获取到用户所选择的文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;input id=<span class="string">"fileItem"</span> <span class="built_in">type</span>=<span class="string">"file"</span>&gt;</div><div class="line">var file = document.getElementById(<span class="string">'fileItem'</span>).files[0];</div></pre></td></tr></table></figure></p>
+<p>还可以使用jQuery选择器来选择：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var selectedfile = $(<span class="string">'#input'</span>).get(0).files[0];</div><div class="line">var selectedFile = $(<span class="string">'#input'</span>)[0].files[0];</div></pre></td></tr></table></figure></p>
+<p>以上可以返回一个FileList对象。<br>如果你的程序可以让用户选择多个文件,记得要在input元素上加上multiple属性。</p>
+<h3 id="获取所选文件的信息"><a href="#获取所选文件的信息" class="headerlink" title="获取所选文件的信息"></a>获取所选文件的信息</h3><p>用户所选择的文件都存储在了一个FileList对象上，其中每个文件都对应了一个File对象。你可以通过这个FileList对象的length属性知道用户一共选择了多少个文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var numFiles = files.length;</div></pre></td></tr></table></figure></p>
+<ol>
+<li><p>name<br>文件名,只读字符串,不包含任何路径信息.</p>
+</li>
+<li><p>size<br>文件大小,单位为字节,只读的64位整数.</p>
+</li>
+<li><p>type<br>MIME类型,只读字符串,如果类型未知,则返回空字符串.</p>
+</li>
+<li><p>item()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// fileInput is an HTML input element: &lt;input <span class="built_in">type</span>=<span class="string">"file"</span> id=<span class="string">"myfileinput"</span> multiple&gt;</div><div class="line">var fileInput = document.getElementById(<span class="string">"myfileinput"</span>);</div><div class="line"></div><div class="line">// files is a FileList object (similar to NodeList)</div><div class="line">var files = fileInput.files;</div><div class="line">var file;</div><div class="line"></div><div class="line">// loop through files</div><div class="line"><span class="keyword">for</span> (var i = 0; i &lt; files.length; i++) &#123;</div><div class="line"></div><div class="line">    // get item</div><div class="line">    file = files.item(i);</div><div class="line">    //or</div><div class="line">    file = files[i];</div><div class="line"></div><div class="line">    alert(file.name);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="通过拖放操作选择文件"><a href="#通过拖放操作选择文件" class="headerlink" title="通过拖放操作选择文件"></a>通过拖放操作选择文件</h3><p>你可以让用户将本地文件拖放到你的应用程序上.</p>
+<ol>
+<li>首先要创建一个拖放操作的目的区域。可根据您的应用程序的设计来决定哪部分的内容接受 drop，但创建一个接收drop事件的元素是简单的：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var dropbox;</div><div class="line"></div><div class="line">dropbox = document.getElementById(<span class="string">"dropbox"</span>);</div><div class="line">dropbox.addEventListener(<span class="string">"dragenter"</span>, dragenter, <span class="literal">false</span>);</div><div class="line">dropbox.addEventListener(<span class="string">"dragover"</span>, dragover, <span class="literal">false</span>);</div><div class="line">dropbox.addEventListener(<span class="string">"drop"</span>, drop, <span class="literal">false</span>);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在这个例子中，ID 为 dropbox 的元素所在的区域是我们的拖放目的区域。我们需要在该元素上绑定 dragenter，dragover，和drop 事件。<br>我们必须阻止dragenter和dragover事件的默认行为，这样才能触发 drop 事件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> dragenter(e) &#123;</div><div class="line">  e.stopPropagation();</div><div class="line">  e.preventDefault();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">function</span> dragover(e) &#123;</div><div class="line">  e.stopPropagation();</div><div class="line">  e.preventDefault();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>下面是 drop 函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> drop(e) &#123;</div><div class="line">  e.stopPropagation();</div><div class="line">  e.preventDefault();</div><div class="line"></div><div class="line">  var dt = e.dataTransfer;</div><div class="line">  var files = dt.files;</div><div class="line"></div><div class="line">  handleFiles(files);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在该函数中,我们从事件对象中获取到dataTransfer对象，把该对象包含的Filelist对象传入函数handleFiles()，这个函数会无区别的对待从input元素或拖放操作中来的文件列表。</p>
+<p>假设你正在开发下一个伟大的照片分享网站，并希望使用HTML5在用户上传他们图片之前进行缩略图预览。您可以如前面所讨论的建立一个输入元素或者拖放区域,并调用一个函数，如下面的 handleFiles 函数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> handleFiles(files) &#123;</div><div class="line">  <span class="keyword">for</span> (var i = 0; i &lt; files.length; i++) &#123;</div><div class="line">    var file = files[i];</div><div class="line">    var imageType = /^image\//;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> ( !imageType.test(file.type) ) &#123;</div><div class="line">      <span class="built_in">continue</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    var img = document.createElement(<span class="string">"img"</span>);</div><div class="line">    img.classList.add(<span class="string">"obj"</span>);</div><div class="line">    img.file = file;</div><div class="line">    // 假设 <span class="string">"preview"</span> 是将要展示图片的 div</div><div class="line">    preview.appendChild(img);</div><div class="line"></div><div class="line">    var reader = new FileReader();</div><div class="line">    reader.onload = (<span class="keyword">function</span>(aImg) &#123;</div><div class="line">      <span class="built_in">return</span> <span class="keyword">function</span>(e) &#123;</div><div class="line">        aImg.src = e.target.result;</div><div class="line">      &#125;;</div><div class="line">    &#125;)(img);</div><div class="line">    reader.readAsDataURL(file);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这里我们循环处理用户选择的文件，查看每个文件的类型属性，看看这是否是一个图像文件(通过一个正则表达式匹配字符串”image.*”)。<br>对于每个图片文件，我们创建一个新的img元素。CSS可以用于建立任何漂亮的边界,阴影,和指定图像的大小，所以，甚至不需要在这里完成。</p>
+<p>每张图片我们添加一个obj类，让他们更容易的在DOM树中被找到。我们也在图片上添加了一个file属性来确认每张图片的 File，这样可以帮助我们在之后真正的上传工作时获取到图片。最后我们使用 Node.appendChild() 把缩略图添加到我们先前的文档区域中。</p>
+<p>然后，我们建立了{ { domxref(FileReader)} }来处理图片的异步加载,并把它添加到img元素上。在创建新的FileReader对象之后,我们建立了onload函数,然后调用readAsDataURL()开始在后台进行读取操作。当图像文件的所有内容加载后，他们转换成一个 data: URL，传递到onload回调函数中。之后只需要把img元素的src属性设置为这个加载过的图像，就可以让图像的缩略图出现在用户的屏幕上。</p>
+<h3 id="使用对象URL"><a href="#使用对象URL" class="headerlink" title="使用对象URL"></a>使用对象URL</h3><p>Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)开始支持window.URL.createObjectURL()和 window.URL.revokeObjectURL()两个DOM方法。这两个方法创建简单的URL字符串对象，用于指向任何 DOM File 对象数据，包括用户电脑中的本地文件。</p>
+<p>当你想要在HTML中通过URL来引用File对象，你可以参考如下方式创建：</p>
+<p>var objectURL = window.URL.createObjectURL(fileObj);</p>
+<p>URL对象是 File 对象的一个字符串标识。 每次调用window.URL.createObjectURL()的时候，会创建一个唯一的URL对象，即使你已经为该文件创建了URL对象。这些对象都必须被释放。 当文档被卸载时，它们会自动释放，如果你的页面动态地使用它们，你应该明确地通过调用window.URL.revokeObjectURL()释放它们：</p>
+<p>window.URL.revokeObjectURL(objectURL);</p>
+<p>以下为完整示例：</p>
+<p>负责界面呈现的HTML如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"file"</span> id=<span class="string">"fileElem"</span> multiple accept=<span class="string">"image/\*"</span></div><div class="line">  style=<span class="string">"display：none"</span> onchange=<span class="string">"handleFiles(this.files)"</span>&gt;</div><div class="line">&lt;a href=<span class="string">"#"</span> id=<span class="string">"fileSelect"</span>&gt;Select some files&lt;/a&gt;</div><div class="line">&lt;div id=<span class="string">"fileList"</span>&gt;</div><div class="line">  &lt;p&gt;No files selected!&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>这建立文件的<input>元素就像一个调用文件选择器的链接（因为我们要隐藏文件输入，以防止表现出不友好的UI）。这部分将在 Using hidden file input elements using the click() method里解释，因为是调用文件选择器的方法。</p>
+<p>下面是 handleFiles()方法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">window.URL = window.URL || window.webkitURL;</div><div class="line"></div><div class="line">var fileSelect = document.getElementById(<span class="string">"fileSelect"</span>),</div><div class="line">    fileElem = document.getElementById(<span class="string">"fileElem"</span>),</div><div class="line">    fileList = document.getElementById(<span class="string">"fileList"</span>);</div><div class="line"></div><div class="line">fileSelect.addEventListener(<span class="string">"click"</span>, <span class="keyword">function</span> (e) &#123;</div><div class="line">  <span class="keyword">if</span> (fileElem) &#123;</div><div class="line">    fileElem.click();</div><div class="line">  &#125;</div><div class="line">  e.preventDefault(); // prevent navigation to <span class="string">"#"</span></div><div class="line">&#125;, <span class="literal">false</span>);</div><div class="line"></div><div class="line"><span class="keyword">function</span> handleFiles(files) &#123;</div><div class="line">  <span class="keyword">if</span> (!files.length) &#123;</div><div class="line">    fileList.innerHTML = <span class="string">"&lt;p&gt;No files selected!&lt;/p&gt;"</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    var list = document.createElement(<span class="string">"ul"</span>);</div><div class="line">    <span class="keyword">for</span> (var i = 0; i &lt; files.length; i++) &#123;</div><div class="line">      var li = document.createElement(<span class="string">"li"</span>);</div><div class="line">      list.appendChild(li);</div><div class="line"></div><div class="line">      var img = document.createElement(<span class="string">"img"</span>);</div><div class="line">      img.src = window.URL.createObjectURL(files[i]);</div><div class="line">      img.height = 60;</div><div class="line">      img.onload = <span class="keyword">function</span>(e) &#123;</div><div class="line">        window.URL.revokeObjectURL(this.src);</div><div class="line">      &#125;</div><div class="line">      li.appendChild(img);</div><div class="line"></div><div class="line">      var info = document.createElement(<span class="string">"span"</span>);</div><div class="line">      info.innerHTML = files[i].name + <span class="string">"： "</span> + files[i].size + <span class="string">" bytes"</span>;</div><div class="line">      li.appendChild(info);</div><div class="line">    &#125;</div><div class="line">    fileList.appendChild(list);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>通过 “fileList” ID 获取 <div>。我们将向这个 div 块插入文件列表和略缩图的地方。</div></p>
+<p>假如传递给 handleFiles() 函数的 FileList 对象为 null，那么就设置 div 块的 inner HTML 为 “No files selected!”。否则，我们将按下面的步骤建立文件列表：</p>
+<p>1.创建一个无序列表 (<ul>) 元素。<br>2.通过调用 element.appendChild() 方法向 <div> 块插入新的列表项。<br>3.files 即是 FileList，对于其中的每一个 File ：</div></ul></p>
+<ul>
+<li>创建一个 </li><li> 元素，并将其插入 list 中。</li>
+<li>创建一个 <img> 元素.</li>
+<li>使用 window.URL.createObjectURL() 创建URL，并设置图片的源为表示文件的新的 URL 对象。</li>
+<li>设置图片的 height 为 60 像素。</li>
+<li>创建图片的 load 事件句柄以其解除 URL 对象，因为图像载入之后就不再需要 URL。这是通过调用 window.URL.revokeObjectURL() 方法来完成的，用 img.src 传入指定的 URL 对象字符串。</li>
+<li>添加新的列表项到列表之中。</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/form/" rel="tag">#form</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/01/Object类型详解/" rel="next" title="Object类型详解">
+                <i class="fa fa-chevron-left"></i> Object类型详解
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/03/flexbox兼容写法（包括微信，复制即用）/" rel="prev" title="flexbox兼容写法（包括微信）">
+                flexbox兼容写法（包括微信） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/public/images/fg.png"
+               alt="Su Wen" />
+          <p class="site-author-name" itemprop="name">Su Wen</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/goodpan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/suwen0603" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表单"><span class="nav-number">2.</span> <span class="nav-text">表单</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#action"><span class="nav-number">2.1.</span> <span class="nav-text">action</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#method方法"><span class="nav-number">2.2.</span> <span class="nav-text">method方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表单元素"><span class="nav-number">3.</span> <span class="nav-text">表单元素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#input"><span class="nav-number">3.1.</span> <span class="nav-text">input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#textarea"><span class="nav-number">3.2.</span> <span class="nav-text">textarea</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#select"><span class="nav-number">3.3.</span> <span class="nav-text">select</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#button"><span class="nav-number">3.4.</span> <span class="nav-text">button</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Meters-and-progress"><span class="nav-number">3.5.</span> <span class="nav-text">Meters and progress</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件上传File"><span class="nav-number">3.6.</span> <span class="nav-text">文件上传File</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取所选文件的信息"><span class="nav-number">3.6.1.</span> <span class="nav-text">获取所选文件的信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过拖放操作选择文件"><span class="nav-number">3.6.2.</span> <span class="nav-text">通过拖放操作选择文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用对象URL"><span class="nav-number">3.6.3.</span> <span class="nav-text">使用对象URL</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Su Wen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

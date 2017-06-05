@@ -1,0 +1,667 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="基本概念数组是值的有序集合，每个值叫做一个元素，每个元素在数组中有一个位置，以数字表示，称为索引。 和其他强类型语言不同，在 JavaScript 中，数组是无类型的，可以容纳任何类型的值，可以是字符串、数字、对象（ object ），甚至是其他数组（多维数组就是通过这种方式来实现的）：
+1234var a = [ 1, &quot;2&quot;, [3] ];a.length; // 3a[0] === 1; /">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript数组详解(一)">
+<meta property="og:url" content="http://yoursite.com/2016/10/24/javascript数组详解（一）/index.html">
+<meta property="og:site_name" content="goodpan">
+<meta property="og:description" content="基本概念数组是值的有序集合，每个值叫做一个元素，每个元素在数组中有一个位置，以数字表示，称为索引。 和其他强类型语言不同，在 JavaScript 中，数组是无类型的，可以容纳任何类型的值，可以是字符串、数字、对象（ object ），甚至是其他数组（多维数组就是通过这种方式来实现的）：
+1234var a = [ 1, &quot;2&quot;, [3] ];a.length; // 3a[0] === 1; /">
+<meta property="og:updated_time" content="2016-10-24T08:40:36.626Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript数组详解(一)">
+<meta name="twitter:description" content="基本概念数组是值的有序集合，每个值叫做一个元素，每个元素在数组中有一个位置，以数字表示，称为索引。 和其他强类型语言不同，在 JavaScript 中，数组是无类型的，可以容纳任何类型的值，可以是字符串、数字、对象（ object ），甚至是其他数组（多维数组就是通过这种方式来实现的）：
+1234var a = [ 1, &quot;2&quot;, [3] ];a.length; // 3a[0] === 1; /">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6343434069862254000',
+      author: '文仔'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/24/javascript数组详解（一）/"/>
+
+
+  <title> javascript数组详解(一) | goodpan </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">goodpan</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                javascript数组详解(一)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-24T10:44:19+08:00" content="2016-10-24">
+              2016-10-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>数组是值的有序集合，每个值叫做一个元素，每个元素在数组中有一个位置，以数字表示，称为索引。 和其他强类型语言不同，在 JavaScript 中，数组是无类型的，可以容纳任何类型的值，可以是字符串、数字、对象（ object ），甚至是其他数组（多维数组就是通过这种方式来实现的）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = [ 1, <span class="string">"2"</span>, [3] ];</div><div class="line">a.length; // 3</div><div class="line">a[0] === 1; // <span class="literal">true</span></div><div class="line">a[2][0] === 3; // <span class="literal">true</span></div></pre></td></tr></table></figure>
+<p>对数组声明后即可向其中加入值，不需要预先设定大小</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var a = [ ];</div><div class="line">a.length; // 0</div><div class="line">a[0] = 1;</div><div class="line">a[1] = <span class="string">"2"</span>;</div><div class="line">a[2] = [ 3 ];</div><div class="line">a.length; // 3</div></pre></td></tr></table></figure>
+<p>使用 delete 运算符可以将单元从数组中删除，但是请注意，单元删除后，数组的 length 属性并不会发生变化。 在创建 “ 稀疏 “ 数组（ sparse array ，即含有空白或空缺单元的数组）时要特别注意：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var a = [ ];</div><div class="line">a[0] = 1;</div><div class="line">//  此处没有设置 a[1] 单元</div><div class="line">a[2] = [ 3 ];</div><div class="line">a[1]; // undefined</div><div class="line">a.length; // 3</div></pre></td></tr></table></figure>
+<p>上面的代码可以正常运行，但其中的 “ 空白单元 “ （ empty slot ）可能会导致出人意料的结果。 a[1] 的值为 undefined ，但这 与将其显式赋值为 undefined （ a[1] = undefined ）还是有所区别。 数组通过数字进行索引，但有趣的是它们也是对象，所以也可以包含字符串键值和属性（但这些并不计算在数组长度内）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var a = [ ];</div><div class="line">a[0] = 1;</div><div class="line">a[<span class="string">"foobar"</span>] = 2;</div><div class="line">a.length; // 1</div><div class="line">a[<span class="string">"foobar"</span>]; // 2</div><div class="line">a.foobar; // 2</div></pre></td></tr></table></figure>
+<p>这里有个问题需要特别注意，如果字符串键值能够被强制类型转换为十进制数字的话，它就会被当作数字索引来处理。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [ ];</div><div class="line">a[<span class="string">"13"</span>] = 42;</div><div class="line">a.length; // 14</div></pre></td></tr></table></figure>
+<p>在数组中加入字符串键值 / 属性并不是一个好主意。建议使用对象来存放键值 / 属性值，用数组来存放数字索引值。</p>
+<p>数组继承自Array.prototype中的属性，它定义了一套丰富的数组操作方法。</p>
+<h1 id="类数组（伪数组）"><a href="#类数组（伪数组）" class="headerlink" title="类数组（伪数组）"></a>类数组（伪数组）</h1><p>有时需要将类数组（一组通过数字索引的值）转换为真正的数组，这一般通过数组工具函数（如 indexOf(..) 、 concat(..) 、 forEach(..) 等）来实现。</p>
+<p>例如，一些 DOM 查询操作会返回 DOM 元素列表，它们并非真正意义上的数组，但十分类似。另一个例子是通过 arguments 对象（类数组）将函数的参数当作列表来访问（从 ES6 开始已废止）。 工具函数 slice(..) 经常被用于这类转换：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">foo</span></span>() &#123;</div><div class="line">var arr = Array.prototype.slice.call( arguments );</div><div class="line">arr.push( <span class="string">"bam"</span> );</div><div class="line">console.log( arr );</div><div class="line">&#125;</div><div class="line">foo( <span class="string">"bar"</span>, <span class="string">"baz"</span> ); // [<span class="string">"bar"</span>,<span class="string">"baz"</span>,<span class="string">"bam"</span>]</div></pre></td></tr></table></figure>
+<p>如上所示， slice() 返回参数列表（上例中是一个类数组）的一个数组复本。 用 ES6 中的内置工具函数 Array.from(..) 也能实现同样的功能：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">var arr = Array.from( arguments );</div></pre></td></tr></table></figure>
+<h1 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h1><h2 id="字面量方式"><a href="#字面量方式" class="headerlink" title="字面量方式"></a>字面量方式</h2><p>使用字面量是创建数组的最简单的方法。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var empty = []; var primes = [1,2,3,4,5]; var misc = [1.1,<span class="literal">true</span>,<span class="string">"a"</span>];</div></pre></td></tr></table></figure>
+<p>数组字面量中的值，不一定要是常量，它可以是任意的表达式：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var base = 1024; var table = [base,base+1,base+2,base+3];</div></pre></td></tr></table></figure>
+<p>它可以包含对象直接量或其他数组直接量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var b = [[1,&#123;x:1,y:2&#125;],[2,&#123;x:3,y:4&#125;]];</div></pre></td></tr></table></figure>
+<p>如果省略数组直接量中的某个值，省略的元素将被赋予undefined值：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var count = [1,,3];//数组有3个元素，中间元素值为undefined</div><div class="line">var undefs = [,,];//数组有2个元素，都是undefined</div></pre></td></tr></table></figure></p>
+<p>因为数组直接量语法允许有可选的结尾的逗号，所以[,,]只有2个元素而非3个。</p>
+<h2 id="调用构造函数Array-创建数组"><a href="#调用构造函数Array-创建数组" class="headerlink" title="调用构造函数Array()创建数组"></a>调用构造函数Array()创建数组</h2><ul>
+<li>调用时没有参数<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr = new Array();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>该方法创建一个没有任何元素的空数组，等同于数组字面量[]。</p>
+<ul>
+<li>调用时传入 数值参数，指定数组长度<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr = new Array(10);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>该方式创建指定长度的数组。当预先知道所需元素个数时，这种形式的Array()构造函数可以用来预先分配一个数组空间。注意，数组中没有存储值，甚至数组的索引”0”、”1”等还未定义。</p>
+<ul>
+<li>显示指定2个或者多个数组元素或数组的一个非数值元素：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr = new Array(5,4,3,2,1,<span class="string">"testing,testing"</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>以这种形式，构造函数的参数将会成为新数组的元素。使用数组字面量比这样使用Array()构造函数简单多了。</p>
+<h1 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h1><p>稀疏数组就是包含从0开始的不连续索引的数组。通常，数组的length属性值代表数组中元素的个数。如果数组是稀疏的，length属性值大于元素的个数。可以用Array()构造函数或简单地指定数组的索引值大于当前的数组长度来创建稀疏数组。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = new Array(5);//数组没有元素，但是a.length是5。</div><div class="line">arr = [];//创建一个空数组，length = 0;</div><div class="line">arr[1000] = 0;//赋值添加一个元素，但是设置length为1001；</div></pre></td></tr></table></figure></p>
+<p>足够稀疏的数组实际上比稠密的数组更慢，内存利用率更高，在这样的数组中查找元素的时间与常规对象属性的查找时间一样。<br>注意：当在数组字面量中省略值时不会创建稀疏数组。省略元素在数组中是存在的，其值为undefined。这和数组元素根本不存在是有一些微妙的区别的。可以用in操作符检测两者之间的区别。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a1 = [,,,];//数组是[undefinded,undefinded,undefinded];</div><div class="line">var a2 = new Array(3);//该数组根本没有元素</div><div class="line">0 <span class="keyword">in</span> a1     //=&gt; <span class="literal">true</span>:a1 在索引0处有一个元素。</div><div class="line">0 <span class="keyword">in</span> a2     //=&gt; <span class="literal">false</span>:a2 在索引0处没有元素</div></pre></td></tr></table></figure></p>
+<p>在一些旧版本的浏览器中，在存在连续逗号的情况下，插入undefined值的操作则与此不同，在这些实现中，[1,,3]和[1,undefinde,3]是一模一样的。</p>
+<h1 id="length属性"><a href="#length属性" class="headerlink" title="length属性"></a>length属性</h1><p>每个数组都有一个length属性，就是这个属性使其区别于常规的javascript对象。稠密数组的length值比数组最大索引大1。<br>而稀疏数组的length属性则大于元素的个数。<br>当设置length属性为一个小于当前长度的非负整数n时，当前数组中那些索引值大于或等于n的元素将从中删除。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [1,2,3,4,5];//从5个元素的数组开始</div><div class="line">a.length = 3;//现在a为[1,2,3]</div><div class="line">a.length = 5;//长度为5，但是没有元素，就像new Array(5);</div></pre></td></tr></table></figure></p>
+<p>当设置length属性为一个大于当前长度的非负整数n时，实际上这不会向数组中添加新的元素，它只是在数组尾部创建一个空的区域。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = [1,2,3];</div><div class="line">Object.defineProperty(a,<span class="string">"length"</span>,&#123;writable,<span class="literal">false</span>&#125;);</div><div class="line">a.length = 0;</div></pre></td></tr></table></figure></p>
+<p>在ECMAScript 5中，可以用Object.defineProperty()让数组的length属性变成只读的。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/21/javascript类型详解/" rel="next" title="javascript类型详解">
+                <i class="fa fa-chevron-left"></i> javascript类型详解
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/25/javascript数组详解（二）/" rel="prev" title="javascript数组详解（二）">
+                javascript数组详解（二） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/public/images/fg.png"
+               alt="Su Wen" />
+          <p class="site-author-name" itemprop="name">Su Wen</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/goodpan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/suwen0603" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类数组（伪数组）"><span class="nav-number">2.</span> <span class="nav-text">类数组（伪数组）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建数组"><span class="nav-number">3.</span> <span class="nav-text">创建数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字面量方式"><span class="nav-number">3.1.</span> <span class="nav-text">字面量方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用构造函数Array-创建数组"><span class="nav-number">3.2.</span> <span class="nav-text">调用构造函数Array()创建数组</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#稀疏数组"><span class="nav-number">4.</span> <span class="nav-text">稀疏数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#length属性"><span class="nav-number">5.</span> <span class="nav-text">length属性</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Su Wen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

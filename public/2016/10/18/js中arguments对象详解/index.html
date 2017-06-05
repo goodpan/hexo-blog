@@ -1,0 +1,660 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="概念arguments对象时一个类数组的对象，代表传给一个function的参数列表。arguments并不是真正的数组，它是一个类数组对象。
+length属性arguments包含一个length属性，通过arguments.length可获得参数个数。
+argumens转数组Array.prototype.slice通常使用下面的方法来将 arguments 转换成数组：1Array.prot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js中arguments对象详解">
+<meta property="og:url" content="http://yoursite.com/2016/10/18/js中arguments对象详解/index.html">
+<meta property="og:site_name" content="goodpan">
+<meta property="og:description" content="概念arguments对象时一个类数组的对象，代表传给一个function的参数列表。arguments并不是真正的数组，它是一个类数组对象。
+length属性arguments包含一个length属性，通过arguments.length可获得参数个数。
+argumens转数组Array.prototype.slice通常使用下面的方法来将 arguments 转换成数组：1Array.prot">
+<meta property="og:updated_time" content="2016-10-24T08:40:46.429Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js中arguments对象详解">
+<meta name="twitter:description" content="概念arguments对象时一个类数组的对象，代表传给一个function的参数列表。arguments并不是真正的数组，它是一个类数组对象。
+length属性arguments包含一个length属性，通过arguments.length可获得参数个数。
+argumens转数组Array.prototype.slice通常使用下面的方法来将 arguments 转换成数组：1Array.prot">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6343434069862254000',
+      author: '文仔'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/18/js中arguments对象详解/"/>
+
+
+  <title> js中arguments对象详解 | goodpan </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">goodpan</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                js中arguments对象详解
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-18T08:40:53+08:00" content="2016-10-18">
+              2016-10-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>arguments对象时一个类数组的对象，代表传给一个function的参数列表。<br>arguments并不是真正的数组，它是一个类数组对象。</p>
+<h2 id="length属性"><a href="#length属性" class="headerlink" title="length属性"></a>length属性</h2><p>arguments包含一个length属性，通过arguments.length可获得参数个数。</p>
+<h2 id="argumens转数组"><a href="#argumens转数组" class="headerlink" title="argumens转数组"></a>argumens转数组</h2><h3 id="Array-prototype-slice"><a href="#Array-prototype-slice" class="headerlink" title="Array.prototype.slice"></a>Array.prototype.slice</h3><p>通常使用下面的方法来将 arguments 转换成数组：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Array.prototype.slice.call(arguments);</div></pre></td></tr></table></figure></p>
+<p>简写：<br>[].slice.call(arguments);<br>在这里，只是简单地调用了空数组的 slice 方法，而没有从 Array 的原型层面调用。<br>通过借用Array的slice方法可以将类数组（伪数组）转换为数组。slice方法得到的结果是一个数组，参数为arguments。<br>事实上，满足一定条件的对象都能被slice方法转换为数组。如:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">const obj = &#123;0:<span class="string">"A"</span>,1:<span class="string">"B"</span>,2:<span class="string">"C"</span>,length:3&#125;;</div><div class="line">const result = [].slice.call(obj);</div><div class="line">console.log(Array.isArray(result), result);</div></pre></td></tr></table></figure></p>
+<p>结果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="literal">true</span> [<span class="string">"A"</span>, <span class="string">"B"</span>]</div></pre></td></tr></table></figure></p>
+<p>通过上面的例子可以发现，满足伪数组的条件：</p>
+<p>1) 属性为 0，1，2…；<br>2） 具有 length 属性；</p>
+<h2 id="arguments-泄露或者传递的问题"><a href="#arguments-泄露或者传递的问题" class="headerlink" title="arguments 泄露或者传递的问题"></a>arguments 泄露或者传递的问题</h2><p>不能将函数的 arguments 泄露或者传递出去。什么意思呢？看下面的几个泄露 arguments 的例子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">// Leaking arguments example1:</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">getArgs</span></span>()&#123;</div><div class="line">    returnarguments;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Leaking arguments example2:</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">getArgs</span></span>()&#123;</div><div class="line">    const args = [].slice.call(arguments);</div><div class="line">    <span class="built_in">return</span> args;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Leaking arguments example3:</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">getArgs</span></span>()&#123;</div><div class="line">    const args = arguments;</div><div class="line">    <span class="function"><span class="title">returnfunction</span></span>()&#123;</div><div class="line">        <span class="built_in">return</span> args;</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上面的做法就直接将函数的 arguments 对象泄露出去了，最终的结果就是 V8 引擎将会跳过优化，导致相当大的性能损失。</p>
+<p>你可以这么做：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">getArgs</span></span>()&#123;</div><div class="line">    const args = new Array(arguments.length);</div><div class="line">    <span class="keyword">for</span>(<span class="built_in">let</span> i = 0; i &lt; args.length; ++i) &#123;</div><div class="line">        args[i] = arguments[i];</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> args;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>那就很好奇了，我们每次使用 arguments 时通常第一步都会将其转换为数组，同时 arguments 使用不当还容易导致性能损失，那么为什么不将 arguments 直接设计成数组对象呢？</p>
+<p>这需要从这门语言的一开始说起。arguments 在语言的早期就引入了，当时的 Array 对象具有 4 个方法： toString、 join、 reverse 和 sort。arguments 继承于 Object 的很大原因是不需要这四个方法。而现在，Array 添加了很多强大的方法，比如 forEach、map、filter 等等。那为什么现在不在新的版本里让 arguments 重新继承自 Array呢？其实 ES5 的草案中就包含这一点，但为了向前兼容，最终还是被委员会否决了。</p>
+<h2 id="修改-arguments-值"><a href="#修改-arguments-值" class="headerlink" title="修改 arguments 值"></a>修改 arguments 值</h2><p>在严格模式与非严格模式下，修改函数参数值表现的结果不一样。看下面的两个例子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> foo(a)&#123;</div><div class="line">    <span class="string">"use strict"</span>;</div><div class="line">    console.log(a, arguments[0]);</div><div class="line">    a = 10;</div><div class="line">    console.log(a, arguments[0]);</div><div class="line">    arguments[0] = 20;</div><div class="line">    console.log(a, arguments[0]);</div><div class="line">&#125;</div><div class="line">foo(1);</div></pre></td></tr></table></figure></p>
+<p>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">11</div><div class="line">101</div><div class="line">1020</div></pre></td></tr></table></figure></p>
+<p>另一个非严格模式的例子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> foo(a)&#123;</div><div class="line">    console.log(a, arguments[0]);</div><div class="line">    a = 10;</div><div class="line">    console.log(a, arguments[0]);</div><div class="line">    arguments[0] = 20;</div><div class="line">    console.log(a, arguments[0]);</div><div class="line">&#125;</div><div class="line">foo(1);</div></pre></td></tr></table></figure></p>
+<p>从上面的两个例子中可以看出，在严格模式下，函数中的参数与 arguments 对象没有联系，修改一个值不会改变另一个值。而在非严格模式下，两个会互相影响。</p>
+<h2 id="将参数从一个函数传递到另一个函数"><a href="#将参数从一个函数传递到另一个函数" class="headerlink" title="将参数从一个函数传递到另一个函数"></a>将参数从一个函数传递到另一个函数</h2><p>下面是将参数从一个函数传递到另一个函数的推荐做法。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">foo</span></span>()&#123;</div><div class="line">    bar.apply(this, arguments);</div><div class="line">&#125;</div><div class="line">functionbar(a, b, c)&#123;</div><div class="line">    // logic</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>注：这种方式经常在框架中使用，通过在构造函数中调用原型的init方法，把参数传递给init方法。</p>
+<h2 id="arguments-与重载"><a href="#arguments-与重载" class="headerlink" title="arguments 与重载"></a>arguments 与重载</h2><p>很多语言中都有重载，但 JavaScript 中没有。先看个例子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> add(num1, num2)&#123;</div><div class="line">    console.log(<span class="string">"Method one"</span>);</div><div class="line">        <span class="built_in">return</span> num1 + num2;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"><span class="keyword">function</span> add(num1, num2, num3)&#123;</div><div class="line">    console.log(<span class="string">"Method two"</span>);</div><div class="line">    <span class="built_in">return</span> num1 + num2 + num3;</div><div class="line">&#125;</div><div class="line"></div><div class="line">add(1, 2);</div><div class="line">add(1, 2, 3);</div></pre></td></tr></table></figure></p>
+<p>执行结果为：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Method two</div><div class="line">Method two</div></pre></td></tr></table></figure></p>
+<p>所以，JavaScript 中，函数并没有根据参数的不同而产生不同的调用。<br>是不是 JavaScript 中就没有重载了呢？并不是，我们可以利用 arguments 模拟重载。还是上面的例子。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> add(num1, num2, num3)&#123;</div><div class="line">    <span class="keyword">if</span> (arguments.length === 2) &#123;</div><div class="line">    console.log(<span class="string">"Result is "</span> + (num1 + num2));</div><div class="line">    &#125;</div><div class="line">    elseif (arguments.length === 3) &#123;</div><div class="line">        console.log(<span class="string">"Result is "</span> + (num1 + num2 + num3));</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">add(1, 2);</div><div class="line">add(1, 2, 3)</div></pre></td></tr></table></figure></p>
+<p>执行结果如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Result is 3</div><div class="line">Result is 6</div></pre></td></tr></table></figure></p>
+<h2 id="ES6-中的-arguments"><a href="#ES6-中的-arguments" class="headerlink" title="ES6 中的 arguments"></a>ES6 中的 arguments</h2><h3 id="扩展操作符"><a href="#扩展操作符" class="headerlink" title="扩展操作符"></a>扩展操作符</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">func</span></span>()&#123;</div><div class="line">    console.log(...arguments);</div><div class="line">&#125;</div><div class="line"></div><div class="line">func(1, 2, 3);</div></pre></td></tr></table></figure>
+<p>执行结果是：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">123</div></pre></td></tr></table></figure></p>
+<p>而不是[1,2,3]<br>简洁地讲，扩展操作符可以将 arguments 展开成独立的参数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">### Rest 参数</span></div><div class="line"><span class="keyword">function</span> func(firstArg, ...restArgs)&#123;</div><div class="line">    console.log(Array.isArray(restArgs));</div><div class="line">    console.log(firstArg, restArgs);</div><div class="line">&#125;</div><div class="line"></div><div class="line">func(1, 2, 3);</div></pre></td></tr></table></figure></p>
+<p>执行结果是：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="literal">true</span></div><div class="line">1 [2, 3]</div></pre></td></tr></table></figure></p>
+<p>从上面的结果可以看出，Rest参数表示除了明确指定外，剩下的参数集合，类型是 Array。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">### 默认参数</span></div><div class="line"><span class="keyword">function</span> func(firstArg = 0, secondArg = 1)&#123;</div><div class="line">    console.log(arguments[0], arguments[1]);</div><div class="line">    console.log(firstArg, secondArg);</div><div class="line">&#125;</div><div class="line">func(99);</div></pre></td></tr></table></figure></p>
+<p>执行结果是：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">99undefined</div><div class="line">991</div></pre></td></tr></table></figure></p>
+<p>可见，默认参数对 arguments 没有影响，arguments 还是仅仅表示调用函数时所传入的所有参数。</p>
+<h3 id="es6中-arguments-转数组"><a href="#es6中-arguments-转数组" class="headerlink" title="es6中 arguments 转数组"></a>es6中 arguments 转数组</h3><p>Array.from() 是个非常推荐的方法，其可以将所有类数组对象转换成数组。<br>有时我们会遇到这样的场景，需要创建一个包含从0到99(n)的连续整数的数组。以前我们会这样写:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr = [];</div><div class="line"><span class="keyword">for</span>(var i = 0; i &lt;= 99; i++) &#123;</div><div class="line">    arr.push(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这种方法最直观了，性能也很好。只是不喜欢写 for循环 的同学可能不会这样写，所以有人搞出了下面这种写法:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr = Array(100).join(<span class="string">' '</span>).split(<span class="string">''</span>).map(<span class="keyword">function</span>(item,index)&#123;<span class="built_in">return</span> index&#125;);</div></pre></td></tr></table></figure></p>
+<p>这种方法中 Array(100) 创建了一个包含100个 undefined 的数组。但是这样的数组是没法迭代的(参考 forEach 方法的 定义 )，所以要通过字符串转换，覆盖 undefined ，最后调用 map 修改元素值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr = Array.from(&#123;length:100&#125;).map(<span class="keyword">function</span>(item,index)&#123;<span class="built_in">return</span> index&#125;);</div></pre></td></tr></table></figure></p>
+<p>这种方法中 Array.from({length:100}) 也是创建了一个包含100个 undefined 的数组，Array.from 创建的数组是可以迭代的([].slice.call({length:100})创建的不可迭代)，即使元素值都是 undefined,可以直接调用 map 方法。所以 Array.from 还可以用来实现次数确定的循环遍历。例如在写 React 组件时，有时要 map 迭代确定次数，生成 html。<br>Array.from 好用归好用，不过在性能上却有些尴尬。上面三种方法第一种性能最好，第二种次之，第三种最差。</p>
+<h2 id="数组与类数组对象"><a href="#数组与类数组对象" class="headerlink" title="数组与类数组对象"></a>数组与类数组对象</h2><p>数组具有一个基本特征：索引。这是一般对象所没有的。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const obj = &#123; 0: <span class="string">"a"</span>, 1: <span class="string">"b"</span> &#125;;</div><div class="line">const arr = [ <span class="string">"a"</span>, <span class="string">"b"</span> ];</div></pre></td></tr></table></figure></p>
+<p>我们利用 obj[0]、arr[0] 都能取得自己想要的数据，但取得数据的方式确实不同的。obj[0] 是利用对象的键值对存取数据，而 arr[0] 却是利用数组的索引。事实上，Object 与 Array 的唯一区别就是 Object 的属性是 string，而 Array 的索引是 number。</p>
+<p>下面看看类数组对象。<br>伪数组的特性就是长得像数组，包含一组数据以及拥有一个 length 属性，但是没有任何 Array 的方法。再具体的说，length 属性是个非负整数，上限是 JavaScript 中能精确表达的最大数字；另外，类数组对象的 length 值无法自动改变。</p>
+<p>如何自己创建一个类数组对象？<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">Foo</span></span>()&#123;&#125;</div><div class="line">Foo.prototype = Object.create(Array.prototype);</div><div class="line"></div><div class="line">const foo = new Foo();</div><div class="line">foo.push(<span class="string">'A'</span>);</div><div class="line">console.log(foo, foo.length);</div><div class="line">console.log(<span class="string">"foo is an array? "</span> + Array.isArray(foo));</div></pre></td></tr></table></figure></p>
+<p>执行结果是：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[<span class="string">"A"</span>] 1</div><div class="line">foo is an array? <span class="literal">false</span></div></pre></td></tr></table></figure></p>
+<p>也就是说 Foo 的示例拥有 Array 的所有方法，但类型不是 Array。<br>如果不需要 Array 的所有方法，只需要部分怎么办呢？<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">Bar</span></span>()&#123;&#125;</div><div class="line">Bar.prototype.push = Array.prototype.push;</div><div class="line">const bar = new Bar();</div><div class="line">bar.push(<span class="string">'A'</span>);</div><div class="line">bar.push(<span class="string">'B'</span>);</div><div class="line">console.log(bar);</div></pre></td></tr></table></figure></p>
+<p>执行结果是：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Bar &#123;0: <span class="string">"A"</span>, 1: <span class="string">"B"</span>, length: 2&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/18/hello-world/" rel="prev" title="hexo">
+                hexo <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/public/images/fg.png"
+               alt="Su Wen" />
+          <p class="site-author-name" itemprop="name">Su Wen</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/goodpan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/suwen0603" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#length属性"><span class="nav-number">2.</span> <span class="nav-text">length属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#argumens转数组"><span class="nav-number">3.</span> <span class="nav-text">argumens转数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-slice"><span class="nav-number">3.1.</span> <span class="nav-text">Array.prototype.slice</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#arguments-泄露或者传递的问题"><span class="nav-number">4.</span> <span class="nav-text">arguments 泄露或者传递的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改-arguments-值"><span class="nav-number">5.</span> <span class="nav-text">修改 arguments 值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将参数从一个函数传递到另一个函数"><span class="nav-number">6.</span> <span class="nav-text">将参数从一个函数传递到另一个函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#arguments-与重载"><span class="nav-number">7.</span> <span class="nav-text">arguments 与重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6-中的-arguments"><span class="nav-number">8.</span> <span class="nav-text">ES6 中的 arguments</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展操作符"><span class="nav-number">8.1.</span> <span class="nav-text">扩展操作符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#es6中-arguments-转数组"><span class="nav-number">8.2.</span> <span class="nav-text">es6中 arguments 转数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组与类数组对象"><span class="nav-number">9.</span> <span class="nav-text">数组与类数组对象</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Su Wen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

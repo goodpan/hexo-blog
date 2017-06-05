@@ -1,0 +1,624 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="容器display123456789/*块级*/.box&amp;#123;     display:-webkit-box;/* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */    display:-moz-box;/* 老版本语法: Firefox (buggy) */    display:-ms-flexbox;/*">
+<meta property="og:type" content="article">
+<meta property="og:title" content="flexbox兼容写法（包括微信）">
+<meta property="og:url" content="http://yoursite.com/2017/01/03/flexbox兼容写法（包括微信，复制即用）/index.html">
+<meta property="og:site_name" content="goodpan">
+<meta property="og:description" content="容器display123456789/*块级*/.box&amp;#123;     display:-webkit-box;/* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */    display:-moz-box;/* 老版本语法: Firefox (buggy) */    display:-ms-flexbox;/*">
+<meta property="og:updated_time" content="2017-01-03T03:17:44.291Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="flexbox兼容写法（包括微信）">
+<meta name="twitter:description" content="容器display123456789/*块级*/.box&amp;#123;     display:-webkit-box;/* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */    display:-moz-box;/* 老版本语法: Firefox (buggy) */    display:-ms-flexbox;/*">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6343434069862254000',
+      author: '文仔'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/01/03/flexbox兼容写法（包括微信，复制即用）/"/>
+
+
+  <title> flexbox兼容写法（包括微信） | goodpan </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">goodpan</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                flexbox兼容写法（包括微信）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-03T11:12:34+08:00" content="2017-01-03">
+              2017-01-03
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="容器display"><a href="#容器display" class="headerlink" title="容器display"></a>容器display</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/*块级*/</div><div class="line">.box&#123;</div><div class="line">     display:-webkit-box;/* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */</div><div class="line">    display:-moz-box;/* 老版本语法: Firefox (buggy) */</div><div class="line">    display:-ms-flexbox;/* 混合版本语法: IE 10 */</div><div class="line">    display:-webkit-flex;/* 新版本语法: Chrome 21+ */</div><div class="line">    display: flex;/* 新版本语法: Opera 12.1, Firefox 22+ */</div><div class="line">    display: box;/*wexin x5*/</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/*精简去注释*/</div><div class="line">.box&#123;</div><div class="line">     display:-webkit-box;</div><div class="line">    display:-moz-box;</div><div class="line">    display:-ms-flexbox;</div><div class="line">    display:-webkit-flex;</div><div class="line">    display: flex;</div><div class="line">    display: box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/*行内*/</div><div class="line">.box&#123;</div><div class="line">    display: inline-flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="子元素的显示方向"><a href="#子元素的显示方向" class="headerlink" title="子元素的显示方向"></a>子元素的显示方向</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*从左到到右*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-direction: normal;</div><div class="line">    -webkit-box-orient: horizontal;</div><div class="line">    -moz-flex-direction: row;</div><div class="line">    -webkit-flex-direction: row;</div><div class="line">    flex-direction: row;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/*从右到左*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack:end;</div><div class="line">    -webkit-box-direction: reverse;</div><div class="line">    -webkit-box-orient: horizontal;</div><div class="line">    -moz-flex-direction: row-reverse;</div><div class="line">    -webkit-flex-direction: row-reverse;</div><div class="line">    flex-direction: row-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*从上到下*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-direction: normal;</div><div class="line">    -webkit-box-orient: vertical;</div><div class="line">    -moz-flex-direction: column;</div><div class="line">    -webkit-flex-direction: column;</div><div class="line">    flex-direction: column;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/*从下到上*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack:end;</div><div class="line">    -webkit-box-direction: reverse;</div><div class="line">    -webkit-box-orient: vertical;</div><div class="line">    -moz-flex-direction: column-reverse;</div><div class="line">    -webkit-flex-direction: column-reverse;</div><div class="line">    flex-direction: column-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="子元素主轴对齐方式"><a href="#子元素主轴对齐方式" class="headerlink" title="子元素主轴对齐方式"></a>子元素主轴对齐方式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*总*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack: flex-start | flex-end| center | space-between | space-around;</div><div class="line">    -moz-justify-content: flex-start | flex-end| center | space-between | space-around;</div><div class="line">    -webkit-justify-content: flex-start | flex-end| center | space-between | space-around;</div><div class="line">    justify-content: flex-start | flex-end| center | space-between | space-around;</div><div class="line">    box-pack: start |end| center | justify;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*左*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack: flex-start;</div><div class="line">    -moz-justify-content: flex-start;</div><div class="line">    -webkit-justify-content: flex-start;</div><div class="line">    justify-content: flex-start;</div><div class="line">    box-pack: start;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*右*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack: center ;</div><div class="line">    -moz-justify-content: center ;</div><div class="line">    -webkit-justify-content: center;</div><div class="line">    justify-content:center;</div><div class="line">    box-pack: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*中*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack: space-between;</div><div class="line">    -moz-justify-content: space-between;</div><div class="line">    -webkit-justify-content: space-between;</div><div class="line">    justify-content:space-between;</div><div class="line">    box-pack: justify;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/*左右*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack: flex-end;</div><div class="line">    -moz-justify-content: flex-end;</div><div class="line">    -webkit-justify-content: flex-end;</div><div class="line">    justify-content: flex-end;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*留空白*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-pack: space-around;</div><div class="line">    -moz-justify-content: space-around;</div><div class="line">    -webkit-justify-content: space-around;</div><div class="line">    justify-content: space-around;</div><div class="line">    box-pack: space-around;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="子元素交叉轴对齐方式"><a href="#子元素交叉轴对齐方式" class="headerlink" title="子元素交叉轴对齐方式"></a>子元素交叉轴对齐方式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*总*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-align: flex-start | flex-end| center | baseline | stretch;</div><div class="line">    -moz-align-items: flex-start | flex-end| center | baseline | stretch;</div><div class="line">    -webkit-align-items: flex-start | flex-end| center | baseline | stretch;</div><div class="line">    align-items: flex-start | flex-end| center | baseline | stretch;</div><div class="line">    box-align: start |end| center | baseline | stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*上*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-align: flex-start;</div><div class="line">    -moz-align-items: flex-start;</div><div class="line">    -webkit-align-items: flex-start;</div><div class="line">    align-items: flex-start;</div><div class="line">    box-align: start;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*下*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-align: center;</div><div class="line">    -moz-align-items:center ;</div><div class="line">    -webkit-align-items:center ;</div><div class="line">    align-items:center;</div><div class="line">    box-align: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*中*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-align: flex-end;</div><div class="line">    -moz-align-items: flex-end;</div><div class="line">    -webkit-align-items: flex-end;</div><div class="line">    align-items: flex-end;</div><div class="line">    box-align: end;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*基线*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-align: baseline ;</div><div class="line">    -moz-align-items: baseline ;</div><div class="line">    -webkit-align-items: baseline ;</div><div class="line">    align-items: baseline ;</div><div class="line">    box-align: baseline ;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*拉伸*/</div><div class="line">.box&#123;</div><div class="line">    -webkit-box-align: stretch;</div><div class="line">    -moz-align-items: stretch;</div><div class="line">    -webkit-align-items: stretch;</div><div class="line">    align-items: stretch;</div><div class="line">    box-align: stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="子元素伸缩"><a href="#子元素伸缩" class="headerlink" title="子元素伸缩"></a>子元素伸缩</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">    -webkit-box-flex:1.0;</div><div class="line">    -moz-flex-grow:1;</div><div class="line">    -webkit-flex-grow:1;</div><div class="line">    flex-grow:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">    -webkit-box-flex:1.0;</div><div class="line">    -moz-flex-shrink:1;</div><div class="line">    -webkit-flex-shrink:1;</div><div class="line">    flex-shrink:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="子元素的显示次序"><a href="#子元素的显示次序" class="headerlink" title="子元素的显示次序"></a>子元素的显示次序</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">    -webkit-box-ordinal-group:1;</div><div class="line">    -moz-order:1;</div><div class="line">    -webkit-order:1;</div><div class="line">    order:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/*总*/</div><div class="line">.box&#123;</div><div class="line">    flex-wrap: nowrap | wrap | wrap-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/*不换行*/</div><div class="line">.box&#123;</div><div class="line">    flex-wrap: nowrap;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/*以相反的顺序换行*/</div><div class="line">.box&#123;</div><div class="line">    flex-wrap: wrap ;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag">#css</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/02/HTML表单详解/" rel="next" title="HTML表单详解">
+                <i class="fa fa-chevron-left"></i> HTML表单详解
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/03/javascript继承方式汇总/" rel="prev" title="javascript继承方式汇总">
+                javascript继承方式汇总 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/public/images/fg.png"
+               alt="Su Wen" />
+          <p class="site-author-name" itemprop="name">Su Wen</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/goodpan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/suwen0603" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#容器display"><span class="nav-number">1.</span> <span class="nav-text">容器display</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子元素的显示方向"><span class="nav-number">2.</span> <span class="nav-text">子元素的显示方向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子元素主轴对齐方式"><span class="nav-number">3.</span> <span class="nav-text">子元素主轴对齐方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子元素交叉轴对齐方式"><span class="nav-number">4.</span> <span class="nav-text">子元素交叉轴对齐方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子元素伸缩"><span class="nav-number">5.</span> <span class="nav-text">子元素伸缩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子元素的显示次序"><span class="nav-number">6.</span> <span class="nav-text">子元素的显示次序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#换行"><span class="nav-number">7.</span> <span class="nav-text">换行</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Su Wen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
